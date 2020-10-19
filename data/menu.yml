@@ -1,0 +1,88 @@
+main:
+  - title: Main
+    class: col-md-2
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+      - text: About
+        link: '#'
+  - title: Contact Us
+    class: col-md-4
+    links:
+      - text: Schedule a call
+        link: '#'
+      - text: Send an Email
+        link: '#'
+  - title: Industries
+    class: col-md-3
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+      - text: About
+        link: '#'
+  - title: Services
+    class: col-md-3
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+      - text: About
+        link: '#'
+footer:
+  - title: Contact Us
+    class: col-md-4 big
+    links:
+      - text: Book a call
+        link: '#'
+      - text: Send an message
+        link: '#'
+  - title: Main
+    class: col-md-2
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+      - text: About
+        link: '#'
+  - title: Work
+    class: col-md-2
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+  - title: Lorem
+    class: col-md-2
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+  - title: Lorem
+    class: col-md-2
+    links:
+      - text: Home
+        link: ''
+      - text: Case Studies
+        link: '#'
+      - text: Articles
+        link: '#'
+    

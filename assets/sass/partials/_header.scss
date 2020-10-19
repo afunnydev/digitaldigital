@@ -1,6 +1,5 @@
 #header-main {
     overflow: hidden;
-    max-width: $maxwidth;
     margin-left: auto;
     margin-right: auto;
     background-color: $white;
@@ -17,18 +16,26 @@
         margin-right: -0.5rem;
     }
     .logo {
-        display: block;
-        img {
-            max-width: 80%;
-            height: auto;
-        }
+        display: inline-block;
+        font-size: 1.0625rem;
+        line-height: 1.59em;
+        vertical-align: middle;
     }
     button {
         outline: none !important;
         z-index: 12;
         position: relative;
-        display: block;
-        margin-left: auto;
+        display: inline-block;
+        margin-left: 100px;
+        vertical-align: middle;
+        font-size: 1.0625rem;
+        line-height: 1.59em;
+        color: white;
+        font-weight: 300;
+    }
+    .hamburger-box {
+        margin-right: 20px;
+        vertical-align: middle;
     }
     ul {
         list-style-type: none;
@@ -100,48 +107,27 @@
     display: none;
     opacity: 0;
     transition: opacity 0.2s;
+    padding-top: 200px;
+    p.title {
+        font-size: 1.75rem;
+        line-height: 1.36em;
+        color: $white;
+    }
     ul {
         margin-top: 100px;
-        padding-left: 30px;
+        padding-left: 0px;
         list-style: none;
         li {
-            margin-top: 0.7rem;
-            margin-bottom: 0.7rem;
-            @media screen and (max-height: 560px) {
-                margin-top: 0.2rem;
-                margin-bottom: 0.2rem;
-            }
             a {
                 color: white !important;
                 text-decoration: none;
-                font-size: 1.625rem;
-                line-height: 2.375rem;
+                font-size: 1.0625rem;
+                line-height: 2.18em;
                 display: block;
-                box-sizing: border-box;
             }
-            &.has-submenu {
-                margin-bottom: 0;
-                a {
-                    font-weight: bold;
-                }
-            }
-            &.is-submenu {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-        }
-    }
-    div.cta {
-        position: absolute;
-        bottom: 10px;
-        left: 30px;
-        width: calc(100% - 60px);
-        margin: auto;
-        a {
-            display: block;
-            border-color: $black;
-            span {
-                font-weight: bold;
+            &.active a {
+                text-decoration: underline;
+                font-weight: 600;
             }
         }
     }
@@ -154,23 +140,21 @@
         opacity: 1;
     }
     #header {
-        .logo svg {
-            fill: white;
+        .logo, ul li a {
+            color: white;
         }
         .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
             background-color: white;
         }
     }
-    #header-container {
+    #header-main {
         z-index: 12;
+        position: relative;
         background: $black;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        a, li {
+            position: relative;
+            z-index: 12;
+        }
     }
-}
-#header-container {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background: white;
-    z-index: 10;
 }

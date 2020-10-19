@@ -1,5 +1,39 @@
-<header class="site-header" role="banner">
+<header id="header-main">
+    <div class="container">
+        <div class="row middle-xs between-xs" id="header">
+            <div class="col-xs-6 col-sm-3">
+                <a href="{{- $.Site.BaseURL -}}" title="DigitalDigital" class="logo">
+                    DigitalDigital
+                </a>
+                <button class="hamburger hamburger--squeeze" type="button" id="menu-icon">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    Esc
+                </button>
+            </div>
+            <div class="col-xs-6 col-sm-9">
+                <ul class="right">
+                    <li><a href="#" title="Contact">Contact</a></li>
+                </ul>
+            </div>
 
-    <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
-    
+        </div>
+    </div>
 </header>
+<div id="menu-overlay">
+    <div class="container">
+        <div class="row">
+            {{- range $.Site.Data.menu.main -}}
+            <div class="{{- .class -}}">
+                <p class="title">{{- .title -}}</p>
+                <ul>
+                    {{- range .links -}}
+                    <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
+                    {{- end -}}
+                </ul>
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>

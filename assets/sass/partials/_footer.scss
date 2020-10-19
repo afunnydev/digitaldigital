@@ -1,4 +1,34 @@
 .site-footer {
-    background-color: $accent;
+    background-color: $black;
     color: white;
+    padding: 40px 0 0;
+    .subfooter {
+        margin-top: 40px;
+    }
+    p.small {
+        font-weight: 600;
+    }
+    ul {
+        margin-top: 20px;
+        padding-left: 0px;
+        list-style: none;
+        li {
+            a {
+                color: white !important;
+                text-decoration: none;
+                font-size: 1.0625rem;
+                line-height: 2em;
+                display: block;
+            }
+            &.active a {
+                text-decoration: underline;
+                font-weight: 600;
+            }
+        }
+    }
+    .big {
+        ul li a {
+            font-size: 1.75rem;
+        }
+    }
 }
