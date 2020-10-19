@@ -1,6 +1,6 @@
-baseURL = "/"
-languageCode = "en-gb"
-title = "{TITLE}"
+baseURL = "https://sad-mahavira-ae3c1a.netlify.app/"
+languageCode = "en-ca"
+title = "DigitalDigital"
 
 enableRobotsTXT = true
 disableAliases = true

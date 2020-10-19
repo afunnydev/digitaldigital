@@ -1,0 +1,172 @@
+// HTML elements
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    color: $black;
+    margin: 0;
+    font-family: $pfont;
+}
+
+// Elements
+
+.btn {
+    background-color: $accent;
+    border: 0.125rem solid $accent;
+    color: white;
+    border-radius: 4px;
+    padding: 0.3rem 1rem 0.4rem;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: -0.5px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    display: inline-block;
+    font-weight: 700;
+    &:hover {
+        background-color: darken($accent, 5);
+        border-color: darken($accent, 5);
+    }
+    &:focus {
+        box-shadow: 0 0 0.1875em 0.1875em transparentize($accent, 0.5);
+    }
+    &.btn-md {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+    &.btn-lg {
+        padding-top: 1.35rem 3.125rem 1.4rem;
+    }
+    &.btn-white {
+        color: $accent;
+        background-color: white;
+    }
+}
+
+// Layout
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.hide-sm {
+    display: none !important;
+    @include breakpoint(sm) {
+        display: block !important;
+    }
+}
+
+.hide-sm-up {
+    @include breakpoint(sm) {
+        display: none !important;
+    }
+}
+
+.hide-md {
+    display: none !important;
+    @include breakpoint(lg) {
+        display: block !important;
+    }
+}
+
+.hide-md-up {
+    @include breakpoint(md) {
+        display: none !important;
+    }
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include breakpoint(lg) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+#site-main {
+    overflow: hidden;
+    max-width: $maxwidth;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.row.spaced {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    > div {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+// Utils
+
+.p-tb-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.p-tb-80 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.m-tb-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.m-tb-80 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @include breakpoint(lg) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+.m-tb-160 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @include breakpoint(lg) {
+        margin-top: 160px;
+        margin-bottom: 160px;
+    }
+}
+
+// Form
+input.styled {
+    display: inline-block;
+    height: 3.2em;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 1em 0.9375em;
+    color: #212326;
+    font-size: 1em;
+    box-shadow: 0 0 0 1px #6b7177;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: padding 150ms;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

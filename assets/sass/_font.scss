@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-Light-WebS.woff") format('woff'),
+        url("/fonts/SuisseIntl-Light-WebS.woff2") format('woff2');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-Medium-WebS.woff") format('woff'),
+        url("/fonts/SuisseIntl-Medium-WebS.woff2") format('woff2');
+    font-weight: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $hfont;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 6.25rem;
+    line-height: 6.875rem;
+    &.home {
+        font-size: 5.3125rem;
+        line-height: 1.35em;
+        letter-spacing: -1px;
+    }
+}
+
+h2 {
+    font-size: 3.4375rem;
+    line-height: 1.27em;
+}
+
+h3 {
+    font-size: 2.5rem;
+    line-height: 1.32em;
+}
+
+h4 {
+    font-size: 2.1875rem;
+    line-height: 1.40em;
+}
+
+h5 {
+    font-size: 1.75rem;
+    line-height: 1.36em;
+}
+
+h6 {
+    font-size: 1.25rem;
+    line-height: 1.50em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.59em;
+    &.small {
+        font-size: 0.9375rem;
+    }
+    &.smaller {
+        font-size: 0.875rem;
+    }
+    &.tiny {
+        font-size: 0.75rem;
+    }
+}
+
+#article-main {
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+a {
+    font-weight: 300;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+    &.small {
+        font-size: 0.9375em;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+ul, ol, li {
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.59em;
+}
