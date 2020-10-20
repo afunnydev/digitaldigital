@@ -16,11 +16,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $hfont;
     font-weight: 300;
     margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 h1 {
     font-size: 6.25rem;
     line-height: 6.875rem;
+    margin-bottom: 4rem;
     &.home {
         font-size: 5.3125rem;
         line-height: 1.35em;
@@ -31,26 +33,31 @@ h1 {
 h2 {
     font-size: 3.4375rem;
     line-height: 1.27em;
+    margin-bottom: 4rem;
 }
 
 h3 {
     font-size: 2.5rem;
     line-height: 1.32em;
+    margin-bottom: 2rem;
 }
 
 h4 {
     font-size: 2.1875rem;
     line-height: 1.40em;
+    margin-bottom: 2rem;
 }
 
 h5 {
     font-size: 1.75rem;
     line-height: 1.36em;
+    margin-bottom: 2rem;
 }
 
 h6 {
     font-size: 1.25rem;
     line-height: 1.50em;
+    margin-bottom: 2rem;
 }
 
 p {

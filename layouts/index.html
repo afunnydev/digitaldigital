@@ -8,4 +8,37 @@
         </div>
     </div>
 </div>
+<div id="home-portfolio">
+    <div id="carousel-container">
+        <div id="carousel">
+            {{- range .Params.portfolio -}}
+            <div class="home-slides">
+                {{- range .images -}}
+                <a href="{{- .url -}}" title="{{- .title -}}">
+                    <img src="{{- .src -}}" alt="{{- .title -}}">
+                </a>
+                {{- end -}}
+            </div>
+            {{- end -}}
+        </div> 
+    </div>
+</div>
+{{- with .Params.section3 -}}
+<div id="home-we-do" class="section">
+    <div class="container">
+        <h2>{{- .title -}}</h2>
+        {{- range .services -}}
+        <h4><a href="{{- .url -}}">{{- .name -}}</a></h4>
+        {{- end -}}
+        <div class="row sub">
+            <div class="col-sm-6">
+                <h2>{{- .subtitle -}}</h2>
+            </div>
+            <div class="col-sm-6">
+                <p>{{- .description | markdownify -}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{- end -}}
 {{- end -}}
