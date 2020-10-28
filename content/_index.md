@@ -80,5 +80,35 @@ section3:
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing 
+section4:
+  title: Our Work
+  subtitle: We partner with companies in fast growing industries to drive customer acquisition
+  casestudy:
+    - name: Kohezion
+    - tagline: Multi-channel international health and supplements brand.
+    - url: '#'
+    - review: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - author:
+      - name: Thierry Tremblay
+      - position: Executive Director
+      - imgUrl: '#'
+    - data:
+      - name: Gor lorem ipsum
+      - value: 120k
+      - name: Growth ipsum
+      - value: +10k
+  industries:
+    - title: Direct to consumer
+    - url: '#'
+    - title: E-Commerce
+    - url: '#'
+    - title: Digital Brands
+    - url: '#'
+    - title: Lorem Ipsum
+    - url: '#'
+    - title: Lorem Ipsum
+    - url: '#'
+    - title: Lorem Ipsum
+    - url: '#'   
 ---
 
