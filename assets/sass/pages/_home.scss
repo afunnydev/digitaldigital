@@ -1,3 +1,4 @@
+$sub-section-spacing: 100px 0px;
 #home-hero {
 	.row {
 		height: calc(100vh - 5.25em);
@@ -57,7 +58,8 @@
 #home-our-work {
 	background-color: $black;
 	color: $white;
-	.top {
+	.header {
+		margin: $sub-section-spacing;
 		h2 {
 			font-size: xx-large;
 			max-width: 450px;
@@ -74,9 +76,53 @@
 			}
 			margin-top: 0;
 		}
-    }
-    .casestudy{
-        background-color: $white;
-        color: $black;
-    }
+	}
+	.casestudy {
+		margin: $sub-section-spacing;
+		background-color: $white;
+		color: $black;
+	}
+
+	.industries {
+		margin: $sub-section-spacing;
+		h1 {
+			margin: 0;
+			font-size: 45px;
+		}
+		.list {
+			.item {
+				.inner {
+					position: relative;
+					min-height: 160px;
+					color: $black;
+					background-color: $white;
+					margin: 10px 5px;
+					padding-left: 25px;
+					border-bottom: 3px solid #D7D7D7;
+					transition:  0.15s cubic-bezier( 0.45, 0.21, 0.24, 0.87 );
+					display: flex;
+					p {
+						align-self: flex-end;
+					}
+					.link-arrow {
+						transition: 0.4s cubic-bezier( 0.45, 0.21, 0.24, 0.87 );
+						text-align: right;
+						opacity: 0;
+						svg {
+							margin: 18px 10px;
+						}
+						transform: translateY(10px);
+					}
+					&:hover {
+						border-bottom: 8px solid #0066ff;
+						cursor: pointer;
+						&:hover .link-arrow {
+							opacity: 1;
+							transform: translateY(0px);
+						}
+					}
+				}
+			}
+		}
+	}
 }

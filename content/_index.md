@@ -100,17 +100,24 @@ section4:
         name: Growth ipsum
         value: +10k
   industries:
-    - title: Direct to consumer
-    - url: '#'
-    - title: E-Commerce
-    - url: '#'
-    - title: Digital Brands
-    - url: '#'
-    - title: Lorem Ipsum
-    - url: '#'
-    - title: Lorem Ipsum
-    - url: '#'
-    - title: Lorem Ipsum
-    - url: '#'   
+    title: Industries
+    list:
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+      - name: Direct to consumer
+        url: '#'
+   
 ---
 
