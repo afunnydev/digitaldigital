@@ -84,19 +84,21 @@ section4:
   title: Our Work
   subtitle: We partner with companies in fast growing industries to drive customer acquisition
   casestudy:
-    - name: Kohezion
-    - tagline: Multi-channel international health and supplements brand.
-    - url: '#'
-    - review: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    - author:
-      - name: Thierry Tremblay
-      - position: Executive Director
-      - imgUrl: '#'
-    - data:
-      - name: Gor lorem ipsum
-      - value: 120k
-      - name: Growth ipsum
-      - value: +10k
+    infos:
+        name: Kohezion
+        tagline: Multi-channel international health and supplements brand.
+        url: '#'
+    review: 
+        text: “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.” et dolore magna aliqua. Ut enim ad minim veniam.”
+        author:
+            name: Thierry Tremblay
+            position: Executive Director
+            imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyscorporate.com%2Fwp-content%2Fuploads%2F2017%2F09%2FPhoto-de-profil-professionnelle-par-photographe-6.jpg&f=1&nofb=1'
+    stats:
+        name: Gor lorem ipsum
+        value: 120k
+        name: Growth ipsum
+        value: +10k
   industries:
     - title: Direct to consumer
     - url: '#'
