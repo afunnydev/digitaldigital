@@ -13,29 +13,17 @@ body {
 // Elements
 
 .btn {
-  inset: all;
-  background-color: $black;
-  color: white;
-  border: none;
-  padding: 12px 36px;
-  font-size: 15px;
+	inset: all;
+	background-color: $black;
+	color: white;
+	border: none;
+	padding: 12px 36px;
+	font-size: 15px;
+	transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
+	cursor: pointer;
     &:hover {
-
-    }
-    &:focus {
-       
-    }
-    &.btn-md {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-    }
-    &.btn-lg {
-        padding-top: 1.35rem 3.125rem 1.4rem;
-    }
-    &.btn-white {
-        color: $accent;
-        background-color: white;
-    }
+        padding: 12px 45px;
+	}
 }
 
 // Layout

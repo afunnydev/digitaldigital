@@ -41,25 +41,26 @@
     </div>
 </div>
 {{- end -}}
-{{ with .Params.section4 }}
+{{- with .Params.section4 -}}
 <div id="home-our-work" class="section">
     <div class="container">
         <div class="row header">
             <div class="col-sm-8">
-                <h2>{{.subtitle }}</h2>
+                <h2>{{- .subtitle -}}</h2>
             </div>
             <div class="col-sm-4 end-sm">
-                <p>{{ .title }}</p>
+                <p>{{- .title -}}</p>
             </div>
         </div>
-        <!-- Passing casestudy content to the partial -->
-        {{ partial "site/casestudy" .casestudy }}
-        {{ with .industries }}
+        <!-- Passing casestudy content to the case study partial -->
+        {{- partial "site/casestudy" .casestudy -}}
+        {{- with .industries -}}
         <div class="industries">
-            <h1>{{ .title }}</h1>
+            <h1>{{- .title -}}</h1>
             <div class="row list">
-                {{ range .list }}
-                {{ partial "site/linkcard" (dict "name" .name "info" "" "url" "#") }}
+                {{- range .list -}}
+                <!-- Passing dict @name @info @url content to the link card partial -->
+                {{- partial "site/linkcard" (dict "name" .name "info" "" "url" "#") -}}
                 {{- end -}}
             </div>
         </div>

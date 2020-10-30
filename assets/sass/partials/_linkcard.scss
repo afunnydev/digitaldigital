@@ -1,21 +1,19 @@
 .link-card {
+	width: 100%;
 	.inner {
 		position: relative;
 		min-height: 160px;
-		bottom: 0;
 		color: $black;
 		background-color: $white;
 		margin: 10px 5px;
 		border-bottom: 3px solid #d7d7d7;
 		transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
 		display: flex;
-
 		&.with-info {
 			min-height: 260px;
 		}
 		.content {
 			padding: 25px;
-			bottom: 0;
 			align-self: flex-end;
 			h4 {
 				font-size: 17px;
@@ -32,8 +30,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			transition: 0.4s cubic-bezier(0.45, 0.21, 0.24, 0.87);
-			text-align: right;
+			transition: 0.4s cubic-bezier(0.45, 0.20, 0.25, 0.85);
 			opacity: 0;
 			svg {
 				margin: 15px 14px;

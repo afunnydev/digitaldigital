@@ -1,18 +1,18 @@
-<div class="col-sm-3  link-card ">
-    <a href={{ .url }}>
-        <div class="inner {{ if .info }} with-info {{ end }}">
-            <div class="content">
-                <h4 class=""> {{ .name }} </h4>
-                {{ if .info }}
-                <p> {{ .info }} </p>
-                {{ end }}
-            </div>
-            <div class="link-arrow"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.55176 1H17.6935V13.7865" stroke="black" />
-                    <path d="M17.6935 1L1 17.6935" stroke="black" />
-                </svg>
-            </div>
-        </div>
-    </a>
+<div class="col-sm-3 link-card">
+	<a href="{{- .url -}}">
+		<div class="inner {{- if .info -}} with-info {{- end -}}">
+			<div class="content">
+				<h4>{{- .name -}}</h4>
+				{{- if .info -}}
+				<p>{{- .info -}}</p>
+				{{- end -}}
+			</div>
+			<div class="link-arrow">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path d="M4.55176 1H17.6935V13.7865" stroke="black" />
+					<path d="M17.6935 1L1 17.6935" stroke="black" />
+				</svg>
+			</div>
+		</div>
+	</a>
 </div>
