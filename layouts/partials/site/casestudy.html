@@ -3,7 +3,7 @@
         {{- if .infos -}}
         <div class="col-sm-3 infos center-block">
             <section>
-                <h1>{{- .infos.name -}}</h1>
+                <h4>{{- .infos.name -}}</h4>
                 <p>{{- .infos.tagline -}}</p>
                 <a href="{{- .infos.url -}}"><button class="btn">View case study</button></a>
             </section>
@@ -30,7 +30,7 @@
             <section>
                 {{- range .stats -}}
                 <div class="col-sm-12">
-                    <h2>{{- .value -}}</h2>
+                    <h4>{{- .value -}}</h4>
                     <p>{{- .name -}}</p>
                 </div>
                 {{- end -}}

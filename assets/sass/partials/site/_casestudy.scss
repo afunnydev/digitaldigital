@@ -8,17 +8,15 @@
 	justify-content: center;
 	.infos {
 		align-self: center;
-		h1 {
-			font-size: 35px;
+		h4 {
 			margin: initial;
-			line-height: initial;
 		}
 		p {
 			color: #626262;
 			font-size: 14px;
 			margin: 8px 0px;
 		}
-		.btn{
+		.btn {
 			margin-top: 40px;
 		}
 	}
@@ -40,7 +38,7 @@
 				padding-left: 15px;
 				line-height: 22px;
 				margin: 0;
-				font-size: 13px;
+				font-size: 14px;
 			}
 			h4 {
 				font-weight: 500;
@@ -54,12 +52,9 @@
 		div {
 			padding: 25px 0px;
 		}
-		h2,
+		h4,
 		p {
 			margin: 0;
-		}
-		h2 {
-			font-size: 35px;
 		}
 		p {
 			font-size: 14px;

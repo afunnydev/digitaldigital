@@ -15,7 +15,7 @@
 		.content {
 			padding: 25px;
 			align-self: flex-end;
-			h4 {
+			h5 {
 				font-size: 17px;
 				margin: 0;
 			}
@@ -30,7 +30,7 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			transition: 0.4s cubic-bezier(0.45, 0.20, 0.25, 0.85);
+			transition: 0.4s cubic-bezier(0.45, 0.2, 0.25, 0.85);
 			opacity: 0;
 			svg {
 				margin: 15px 14px;

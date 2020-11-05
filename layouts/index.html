@@ -46,17 +46,17 @@
     <div class="container">
         <div class="row header">
             <div class="col-sm-8">
-                <h2>{{- .subtitle -}}</h2>
+                <h4>{{- .subtitle -}}</h4>
             </div>
             <div class="col-sm-4 end-sm">
-                <p>{{- .title -}}</p>
+                <h6>{{- .title -}}</h6>
             </div>
         </div>
         <!-- Passing casestudy content to the case study partial -->
         {{- partial "site/casestudy" .casestudy -}}
         {{- with .industries -}}
         <div class="industries">
-            <h1>{{- .title -}}</h1>
+            <h2>{{- .title -}}</h2>
             <div class="row list">
                 {{- range .list -}}
                 <!-- Passing dict @name @info @url content to the link card partial -->
