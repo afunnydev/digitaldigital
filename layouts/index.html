@@ -60,7 +60,7 @@
             <div class="row list">
                 {{- range .list -}}
                 <!-- Passing dict @name @info @url content to the link card partial -->
-                {{- partial "site/linkcard" (dict "name" .name "info" "" "url" "#") -}}
+                {{- partial "site/linkcard" (dict "context" . "name" .name "info" "" "url" "#") -}}
                 {{- end -}}
             </div>
         </div>
