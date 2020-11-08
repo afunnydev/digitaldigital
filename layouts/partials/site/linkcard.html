@@ -1,0 +1,16 @@
+<div class="col-sm-3 link-card">
+	<a href="{{- .url -}}">
+		<div class="inner {{- if .info -}} with-info {{- end -}}">
+			<div class="content">
+				<h5>{{- .name -}}</h5>
+				{{- if .info -}}
+				<p>{{- .info -}}</p>
+				{{- end -}}
+			</div>
+			<div class="link-arrow">
+				<!-- Passing casestudy content to the case study partial -->
+				{{- partial "icons/arrow-right.html" -}}
+			</div>
+		</div>
+	</a>
+</div>
