@@ -31,13 +31,18 @@
         {{- range .services -}}
         <h4><a href="{{- .url -}}">{{- .name -}}</a></h4>
         {{- end -}}
-        <div class="row sub">
-            <div class="col-sm-6">
+        <div class="row sub between-xs">
+            <div class="col-md-6 col-lg-6">
                 <h2>{{- .subtitle -}}</h2>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6 col-lg-5">
                 <p>{{- .description | markdownify -}}</p>
             </div>
+        </div>
+        <div class="row middle-xs between-xs logos">
+            {{- range .logos -}}
+                {{- partial (printf "icons/%s.html" .icon) -}}
+            {{- end -}}
         </div>
     </div>
 </div>

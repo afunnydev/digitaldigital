@@ -79,7 +79,14 @@ section3:
   subtitle: '& believe in strategic creativity based on data and analytics.'
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing 
+    Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing
+  logos:
+    - icon: nissan
+    - icon: got-milk
+    - icon: new-balance
+    - icon: moose
+    - icon: nac
+    - icon: bedtime
 section4:
   title: Our Work
   subtitle: We partner with companies in fast growing industries to drive customer acquisition
