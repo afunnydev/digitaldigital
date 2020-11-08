@@ -23,6 +23,7 @@
         </div>
     </div>
 </div>
+
 {{- with .Params.section3 -}}
 <div id="home-we-do" class="section">
     <div class="container">
@@ -41,28 +42,27 @@
     </div>
 </div>
 {{- end -}}
+
 {{- with .Params.section4 -}}
 <div id="home-our-work" class="section">
     <div class="container">
-        <div class="row header">
-            <div class="col-sm-8">
+        <div class="row between-xs">
+            <div class="col-sm-8 col-md-5">
                 <h4>{{- .subtitle -}}</h4>
             </div>
-            <div class="col-sm-4 end-sm">
-                <h6>{{- .title -}}</h6>
+            <div class="col-sm-4 align-right">
+                <h6 class="with-dash">{{- .title -}}</h6>
             </div>
         </div>
-        <!-- Passing casestudy content to the case study partial -->
         {{- partial "site/casestudy" .casestudy -}}
         {{- with .industries -}}
-        <div class="industries">
-            <h2>{{- .title -}}</h2>
-            <div class="row list">
-                {{- range .list -}}
-                <!-- Passing dict @name @info @url content to the link card partial -->
-                {{- partial "site/linkcard" (dict "context" . "name" .name "info" "" "url" "#") -}}
-                {{- end -}}
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>{{- .title -}}</h2>
             </div>
+            {{- range .list -}}
+            {{- partial "site/linkcard" (dict "context" . "name" .name "info" "" "url" "#" "class" "col-xs-12 col-sm-4 col-md-3") -}}
+            {{- end -}}
         </div>
         {{- end -}}
     </div>

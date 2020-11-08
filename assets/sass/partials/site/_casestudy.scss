@@ -1,19 +1,12 @@
 .casestudy {
-	background-color: $white;
-	color: $black;
-	margin: 25px 0px;
 	padding: 125px 60px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	.infos {
 		align-self: center;
 		h4 {
 			margin: initial;
 		}
 		p {
-			color: #626262;
-			font-size: 14px;
+			color: $black_sub1;
 			margin: 8px 0px;
 		}
 		.btn {
@@ -23,8 +16,8 @@
 	.quote {
 		align-self: center;
 		padding: 0px 50px;
-		p {
-			font-size: 14px;
+		.quote-text {
+			margin-bottom: 50px;
 		}
 		.author {
 			img {
@@ -33,15 +26,9 @@
 				height: 40px;
 				object-fit: cover;
 			}
-			h4,
 			p {
-				padding-left: 15px;
 				line-height: 22px;
 				margin: 0;
-				font-size: 14px;
-			}
-			h4 {
-				font-weight: 500;
 			}
 		}
 	}
@@ -49,15 +36,12 @@
 	.stats {
 		border-left: 1px solid #00000011;
 		text-align: center;
-		div {
+		> div {
 			padding: 25px 0px;
 		}
 		h4,
 		p {
 			margin: 0;
-		}
-		p {
-			font-size: 14px;
 		}
 	}
 }

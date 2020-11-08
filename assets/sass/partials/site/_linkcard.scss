@@ -1,45 +1,48 @@
+$link-card-height: 160px;
+$link-card-with-info-height: 260px;
 .link-card {
-	width: 100%;
+	margin-bottom: 1rem;
 	.inner {
 		position: relative;
-		min-height: 160px;
+		min-height: $link-card-height;
 		color: $black;
 		background-color: $white;
-		margin: 10px 5px;
 		border-bottom: 3px solid #d7d7d7;
 		transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
 		display: flex;
+		padding: 25px;
+		cursor: pointer;
 		&.with-info {
-			min-height: 260px;
+			min-height: $link-card-with-info-height;
 		}
 		.content {
-			padding: 25px;
 			align-self: flex-end;
-			h5 {
-				font-size: 17px;
-				margin: 0;
-			}
 			p {
-				margin: 0;
-				padding-top: 15px;
-				opacity: 0.7;
-				font-size: 13px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&.info {
+					color: $black_sub2;
+				}
 			}
 		}
 		.link-arrow {
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: 15px;
+			right: 14px;
 			transition: 0.4s cubic-bezier(0.45, 0.2, 0.25, 0.85);
 			opacity: 0;
-			svg {
-				margin: 15px 14px;
-			}
 			transform: translateY(10px);
 		}
 		&:hover {
 			border-bottom: 8px solid #0066ff;
-			cursor: pointer;
+			// 8px is 0.5rem, which is the half of the spacing between the cards.
+			// Can't use .rem because not the same unit.
+			min-height: $link-card-height + 8px;
+			margin-top: -8px;
+			&.with-info {
+				min-height: $link-card-with-info-height + 8px;
+			}
 			&:hover .link-arrow {
 				opacity: 1;
 				transform: translateY(0px);

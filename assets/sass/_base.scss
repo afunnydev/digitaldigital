@@ -20,7 +20,8 @@ body {
 	padding: 12px 36px;
 	font-size: 16px;
 	transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
-	cursor: pointer;
+    cursor: pointer;
+    display: inline-block;
     &:hover {
         padding: 12px 45px;
 	}

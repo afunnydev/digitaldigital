@@ -1,41 +1,31 @@
 <div class="casestudy">
-    <div class="row around-sm">
-        {{- if .infos -}}
+    <div class="row">
         <div class="col-sm-3 infos center-block">
-            <section>
-                <h4>{{- .infos.name -}}</h4>
-                <p>{{- .infos.tagline -}}</p>
-                <a href="{{- .infos.url -}}"><button class="btn">View case study</button></a>
-            </section>
+            <h4>{{- .infos.name -}}</h4>
+            <p class="tiny">{{- .infos.tagline -}}</p>
+            <a href="{{- .infos.url -}}" class="btn">View case study</a>
         </div>
-        {{- end -}}
-        {{- if .quote -}}
         <div class="col-sm-5 quote">
-            <section>
-                <p>{{- .quote.text -}}</p>
-                 <div class="author row middle-sm">
-                    <div class="col-sm-2 ">
-                        <img src="{{- .quote.author.imgUrl -}}" alt="{{- .quote.author.name -}}">
-                    </div>
-                    <div class="col-sm-10">
-                        <h4>{{- .quote.author.name -}}</h4>
-                        <p>{{- .quote.author.position -}}</p>
-                    </div>
+            <p class="small quote-text">{{- .quote.text -}}</p>
+            <div class="author row middle-sm">
+                <div class="col-xs-2">
+                    <img src="{{- .quote.author.imgUrl -}}" alt="{{- .quote.author.name -}}">
                 </div>
-            </section>
+                <div class="col-xs-10">
+                    <p class="tiny">
+                        <strong>{{- .quote.author.name -}}</strong><br>
+                        {{- .quote.author.position -}}
+                    </p>
+                </div>
+            </div>
         </div>
-        {{- end -}}
-        {{- if .stats -}}
         <div class="col-sm-4 stats">
-            <section>
-                {{- range .stats -}}
-                <div class="col-sm-12">
-                    <h4>{{- .value -}}</h4>
-                    <p>{{- .name -}}</p>
-                </div>
-                {{- end -}}
-            </section>
+            {{- range .stats -}}
+            <div>
+                <h4>{{- .value -}}</h4>
+                <p class="smaller">{{- .name -}}</p>
+            </div>
+            {{- end -}}
         </div>
-        {{- end -}}
     </div>
 </div>
