@@ -58,6 +58,27 @@ h6 {
     font-size: 1.25rem;
     line-height: 1.50em;
     margin-bottom: 2rem;
+    &.with-dash {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        &:before {
+			content: '';
+            transition: 0.4s;
+            position: absolute;
+            border-bottom: 1px solid black;
+            left: -45px;
+            width: 35px;
+            top: calc(50% - 1px);
+        }
+        &.white::before {
+            border-color: white;
+        }
+        &:hover::before {
+            left: -60px;
+            width: 50px;
+        }
+    }
 }
 
 p {

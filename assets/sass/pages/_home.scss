@@ -59,16 +59,56 @@
 #home-our-work {
 	background-color: $black;
 	color: $white;
-	.with-dash {
-		&:before {
-			content: '—';
-			padding-right: 10px;
-			transition: 0.4s;
-		}
-	}
 	.casestudy {
 		margin: 80px 0;
 		background-color: $white;
 		color: $black;
+	}
+}
+
+#home-we-write {
+	.featured {
+		position: relative;
+		overflow: hidden;
+		.content {
+			position: absolute;
+			background: black;
+			color: white;
+			width: 300px;
+			right: -300px;
+			top: 0;
+			transition: right 0.6s;
+			// There's weird 5px gap under the card..
+			height: calc(100% - 5px);
+			img {
+				// To prevent the space under inline img
+				display: block;
+			}
+			p {
+				position: absolute;
+				margin-bottom: 0;
+				left: 30px;
+				right: 30px;
+				bottom: 30px;
+			}
+		}
+		&:hover {
+			.content {
+				right: 0;
+			}
+		}
+	}
+}
+
+#our-subsidiary-companies {
+	border-top: 1px solid $black_sub3;
+	.companies {
+		margin-top: 80px;
+		svg {
+			margin-bottom: 20px;
+		}
+		a {
+			text-decoration: underline;
+		}
 	}
 }

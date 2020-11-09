@@ -125,6 +125,31 @@ section4:
         url: '#'
       - name: Direct to consumer
         url: '#'
-   
+section5:
+  title: All Articles
+  subtitle: '& we write stuff, from time to time.'
+  features:
+    - img: /img/featured-shopify.png
+      text: Guest posting, and other things alike.
+      link: '#'
+    - img: /img/featured-shopify.png
+      text: Guest posting, and other things alike.
+      link: '#'
+section6:
+  title: Owned by DigitalDigital
+  subtitle: Our Subsidiary Companies
+  companies:
+    - icon: inbeat
+      text: Inbeat is an influencer search engine enabling  massive influencer outreach campaigns. By DigitalDigital, 2019.
+      link: '#'
+    - icon: hashtag-food
+      text: Hashtag Food is a set of systemized services for franchised restaurants to optimize their digital strategies. By DigitalDigital, 2015.
+      link: '#'
+    - icon: leadlabs
+      text: Leadlabs is a technical SEO agency that specializes in large-scale optimization procedures. By DigitalDigital, 2014.
+      link: '#'
+    - icon: inbeat
+      text: Inbeat.agency is a cross-platform influencer agency that builds & deploys creative influencer marketing campaigns. By DigitalDigital, 2018.
+      link: '#'
 ---
 

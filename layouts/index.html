@@ -56,7 +56,9 @@
                 <h4>{{- .subtitle -}}</h4>
             </div>
             <div class="col-sm-4 align-right">
-                <h6 class="with-dash">{{- .title -}}</h6>
+                <h6 class="with-dash white">
+                    <a href="#" title="{{- .title -}}">{{- .title -}}</a>
+                </h6>
             </div>
         </div>
         {{- partial "site/casestudy" .casestudy -}}
@@ -70,6 +72,63 @@
             {{- end -}}
         </div>
         {{- end -}}
+    </div>
+</div>
+{{- end -}}
+
+{{- with .Params.section5 -}}
+<div id="home-we-write" class="section">
+    <div class="container">
+        <div class="row between-xs">
+            <div class="col-md-6 col-lg-5">
+                <h2>{{- .subtitle -}}</h2>
+            </div>
+            <div class="col-md-6 align-right">
+                <h6 class="with-dash">
+                    <a href="#" title="{{- .title -}}">{{- .title -}}</a>
+                </h6>
+            </div>
+            {{- range .features -}}
+            <div class="col-xs-12 col-md-6 featured">
+                <a href="{{- .link -}}">
+                    <img src="{{- .img -}}">
+                    <div class="content">
+                        <p>
+                            {{- .text -}}
+                            <br><br>
+                            Read
+                        </p>
+                    </div>
+                </a>
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+{{- end -}}
+
+{{- with .Params.section6 -}}
+<div id="our-subsidiary-companies" class="section">
+    <div class="container">
+        <div class="row between-xs">
+            <div class="col-md-6 col-lg-5">
+                <h2>{{- .subtitle -}}</h2>
+            </div>
+            <div class="col-md-6 align-right">
+                <h6>{{- .title -}}</h6>
+            </div>
+        </div>
+        <div class="row between-xs spaced companies">
+            {{- range .companies -}}
+            <div class="col-sm-6 col-md-3">
+                {{- partial (printf "icons/%s.html" .icon) -}}
+                <p>
+                    {{- .text -}}<br><br>
+                    <a href="{{- .link -}}">Visit Website</a>
+                </p>
+            </div>
+            {{- end -}}
+        </div>
     </div>
 </div>
 {{- end -}}
