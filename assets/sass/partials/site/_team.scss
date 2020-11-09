@@ -1,0 +1,32 @@
+#team-section {
+    background: black;
+    color: white;
+    .row {
+        // Cannot use a border because the row has 0.5rem negative margins left/right.
+        &:before {
+            content: '';
+            width: calc(100% - 1rem);
+            margin-left: 0.5rem;
+            border-bottom: 1px solid $black_sub2;
+        }
+        &:last-of-type {
+            &:after {
+                content: '';
+                width: calc(100% - 1rem);
+                margin-left: 0.5rem;
+                border-bottom: 1px solid $black_sub2;
+            }
+        }
+        .gif {
+            display: none;
+            height: calc(100% - 10px);
+            width: auto;
+            margin-top: 5px;
+        }
+        &:hover {
+            .gif {
+                display: block;
+            }
+        }
+    }
+}

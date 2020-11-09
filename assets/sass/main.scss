@@ -6,9 +6,11 @@
 
 @import "base";
 @import "partials/header";
+@import "hamburgers";
 @import "partials/footer";
-@import "partials/site/casestudy";
-@import "partials/site/linkcard";
 @import "pages/home";
 
-@import "hamburgers";
+@import "partials/site/casestudy";
+@import "partials/site/linkcard";
+@import "partials/site/cta";
+@import "partials/site/team";

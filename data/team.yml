@@ -1,0 +1,41 @@
+members:
+  - name: Alexandra Kazakova
+    city: Budapest
+    gif: /img/team/daniel-test.gif
+    position: Operations
+  - name: Catherine Morin
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Content
+  - name: Daniel Cruz
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Direction
+  - name: David Morneau
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Direction
+  - name: Félix DeBlois-Beaucage
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Programming
+  - name: John Barry
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Design
+  - name: Michael Parasotskiy 
+    city: Russia
+    gif: /img/team/daniel-test.gif
+    position: User Experience
+  - name: Myesha Alleyne
+    city: New York
+    gif: /img/team/daniel-test.gif
+    position: Relations
+  - name: Robin Lamoureux
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Operations
+  - name: Ye Fang Kuang
+    city: Ottawa
+    gif: /img/team/daniel-test.gif
+    position: Programming

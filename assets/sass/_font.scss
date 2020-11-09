@@ -62,21 +62,25 @@ h6 {
         position: relative;
         display: inline-block;
         cursor: pointer;
+        padding-left: 45px;
+        transition: 0.4s;
         &:before {
-			content: '';
+            content: '';
             transition: 0.4s;
             position: absolute;
             border-bottom: 1px solid black;
-            left: -45px;
+            left: 0px;
             width: 35px;
             top: calc(50% - 1px);
         }
         &.white::before {
             border-color: white;
         }
-        &:hover::before {
-            left: -60px;
-            width: 50px;
+        &:hover {
+            padding-left: 60px;
+            &:before {
+                width: 50px;
+            }
         }
     }
 }
