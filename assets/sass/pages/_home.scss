@@ -57,6 +57,9 @@
 	.logos {
 		margin-left: 0;
 		margin-right: 0;
+		svg {
+			fill: black;
+		}
 	}
 }
 
@@ -71,6 +74,7 @@
 }
 
 #home-we-write {
+	border-bottom: 1px solid $black_sub3;
 	.featured {
 		position: relative;
 		overflow: hidden;
@@ -100,19 +104,6 @@
 			.content {
 				right: 0;
 			}
-		}
-	}
-}
-
-#our-subsidiary-companies {
-	border-top: 1px solid $black_sub3;
-	.companies {
-		margin-top: 80px;
-		svg {
-			margin-bottom: 20px;
-		}
-		a {
-			text-decoration: underline;
 		}
 	}
 }

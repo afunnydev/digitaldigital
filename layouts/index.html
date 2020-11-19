@@ -28,8 +28,8 @@
 <div id="home-we-do" class="section">
     <div class="container">
         <h2>{{- .title -}}</h2>
-        {{- range .services -}}
-        <h4><a href="{{- .url -}}">{{- .name -}}</a></h4>
+        {{ range where $.Site.RegularPages "Type" "services" }}
+        <h4><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
         {{- end -}}
         <div class="row sub between-xs">
             <div class="col-md-6 col-lg-6">
@@ -107,32 +107,7 @@
 </div>
 {{- end -}}
 
-{{- with .Params.section6 -}}
-<div id="our-subsidiary-companies" class="section">
-    <div class="container">
-        <div class="row between-xs">
-            <div class="col-md-6 col-lg-5">
-                <h2>{{- .subtitle -}}</h2>
-            </div>
-            <div class="col-md-6 align-right">
-                <h6>{{- .title -}}</h6>
-            </div>
-        </div>
-        <div class="row between-xs spaced companies">
-            {{- range .companies -}}
-            <div class="col-sm-6 col-md-3">
-                {{- partial (printf "icons/%s.html" .icon) -}}
-                <p>
-                    {{- .text -}}<br><br>
-                    <a href="{{- .link -}}">Visit Website</a>
-                </p>
-            </div>
-            {{- end -}}
-        </div>
-    </div>
-</div>
-
+{{- partial "site/companies" . -}}
 {{- partial "site/cta" . -}}
 {{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
-{{- end -}}
 {{- end -}}

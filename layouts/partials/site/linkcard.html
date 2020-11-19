@@ -1,8 +1,12 @@
+{{- $title := (printf "<p>%s</p>" .name) -}}
+{{- if .big -}}
+{{- $title = (printf "<h5>%s</h5>" .name) -}}
+{{- end -}}
 <div class="link-card {{ .class }}">
 	<a href="{{- .url -}}" title="{{- .name -}}">
 		<div class="inner{{ if .info }} with-info{{ end }}">
 			<div class="content">
-				<p>{{- .name -}}</p>
+				{{- $title | safeHTML -}}
 				{{- if .info -}}
 				<p class="info tiny">{{- .info -}}</p>
 				{{- end -}}

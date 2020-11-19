@@ -1,0 +1,48 @@
+{{- define "main" -}}
+<div id="services-hero">
+    <div class="container">
+        <div class="row middle-xs">
+            <div class="col-md-10">
+                <h1>{{- .Params.h1 -}}</h1>
+                <h6 class="with-dash white">
+                    <a href="#" title="Contact us">Contact us</a>
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services-list" class="section">
+    <div class="container">
+        <div class="row middle-xs">
+            {{- range .Pages -}}
+            {{- partial "site/linkcard" (dict "context" . "name" .Params.h1 "info" .Params.explanation "url" "#" "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
+            {{- end -}}
+        </div>
+    </div>
+</div>
+
+<div id="services-full" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Full capabilites:</h2>
+            </div>
+            {{- range where .Pages "Params.h1" "!=" "User Interface & Experience" -}}
+            <div class="col-lg-2">
+                <p class="small">{{- .Params.h1 -}}</p>
+                <ul>
+                {{- range .Params.services -}}
+                <li>{{- .name -}}</li>
+                {{- end -}}
+                </ul>
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+
+{{- partial "site/companies" . -}}
+{{- partial "site/cta" . -}}
+{{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
+{{- end -}}

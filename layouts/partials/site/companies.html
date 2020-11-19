@@ -1,0 +1,25 @@
+{{- with .Site.Data.companies.content -}}
+<div id="our-subsidiary-companies" class="section">
+    <div class="container">
+        <div class="row between-xs">
+            <div class="col-md-6 col-lg-5">
+                <h2>{{- .subtitle -}}</h2>
+            </div>
+            <div class="col-md-6 align-right">
+                <h6>{{- .title -}}</h6>
+            </div>
+        </div>
+        <div class="row between-xs spaced companies">
+            {{- range .companies -}}
+            <div class="col-sm-6 col-md-3">
+                {{- partial (printf "icons/%s.html" .icon) -}}
+                <p>
+                    {{- .text -}}<br><br>
+                    <a href="{{- .link -}}">Visit Website</a>
+                </p>
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+{{- end -}}

@@ -1,0 +1,42 @@
+#services-hero {
+	background-color: black;
+    .row {
+		height: calc(100vh - 5.25em);
+		h1 {
+			color: white;
+			margin-bottom: 2rem;
+		}
+		h6 {
+			color: white;
+		}
+	}
+}
+
+#services-list, #services-full, #services-single-clients {
+	background-color: black;
+	color: white;
+}
+
+#services-full {
+	.small {
+		color: $black_sub1;
+	}
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+
+#services-single-hero {
+    .row {
+		height: calc(100vh - 5.25em);
+	}
+}
+
+#services-single-clients {
+	.logos svg {
+		fill: white;
+	}
+}
+	
