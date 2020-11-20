@@ -41,7 +41,7 @@
         </div>
         <div class="row middle-xs between-xs logos">
             {{- range .logos -}}
-                {{- partial (printf "icons/%s.html" .icon) -}}
+               <div class="col-xs-4 col-sm-2"> {{- partial (printf "icons/%s.html" .icon) -}} </div>
             {{- end -}}
         </div>
     </div>

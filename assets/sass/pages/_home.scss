@@ -60,7 +60,14 @@
 	.logos {
 		margin-left: 0;
 		margin-right: 0;
+		@include breakpoint(sm-down) {
+			>div{
+				margin: 25px 0;
+			}
+		}
 		svg {
+			display: block;
+			margin: auto;
 			fill: black;
 		}
 	}
