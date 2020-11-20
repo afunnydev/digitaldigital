@@ -43,6 +43,9 @@
         line-height: 1.59em;
         color: white;
         font-weight: 300;
+        @include breakpoint(sm-down) {
+            float: right;
+        }
     }
     .hamburger-box {
         margin-right: 20px;
@@ -56,6 +59,9 @@
         font-family: $hfont;
         &.right {
             float: right;
+            @include breakpoint(sm-down) {
+                display: none;
+            }
         }
     }
     li {

@@ -89,6 +89,7 @@ function homeSlider() {
         offsetUnit = -0.05;
     var viewportWidth = window.innerWidth;
     var carousel = document.getElementById('carousel');
+    carousel.style.width =  window.innerWidth  + 'px';
     if (!carousel) return;
     
     var slides = document.getElementsByClassName('home-slides');
