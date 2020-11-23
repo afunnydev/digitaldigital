@@ -41,7 +41,7 @@
     <div class="container">
             {{- range $.Site.Data.menu.mobile -}}
                 <ul {{ if .links }} class="has-sublinks"  {{ end }}>
-                <h6 class="title" data-toggle="collapse" data-target=".collapse{{- .title -}}">
+                <h6 class="title row middle-xs" data-toggle="collapse" data-target=".collapse{{- .title -}}">
                     {{- .title -}} 
                     {{ if .links }}
                         <span class="plus-icon">{{- partial "icons/plus.html" -}}</span>

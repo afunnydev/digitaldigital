@@ -178,10 +178,8 @@
         }
         &.has-sublinks{
             h6{
-                display: flex;
                 span{
-                    align-self: center;
-                    margin-right: 25px;
+                    display: flex;
                     margin-left: auto;
                 }
                 .arrow-top-icon{
@@ -192,20 +190,17 @@
                         display: none;
                     }
                     .arrow-top-icon{
-                        display: block;
+                        display: flex;
                     }
                 }
             }
             .content{
-                display: none;
-                overflow: hidden;
                 li:last-child{
                     padding-bottom: 25px;
                 }
                 &.collapse {
                   display: none;
                   overflow: hidden;
-                  transition: all .1s cubic-bezier(0.45, 0.2, 0.25, 0.85);
                   &.show {
                    display: block;
                   }
