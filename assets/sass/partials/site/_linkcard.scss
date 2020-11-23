@@ -12,6 +12,14 @@ $link-card-with-info-height: 260px;
 		display: flex;
 		padding: 25px;
 		cursor: pointer;
+		@include breakpoint(sm-down) {
+			min-height: auto;
+			border-bottom: none;
+			border-left: 8px solid #0066ff;
+			p{
+				margin: 0;
+			}
+		}
 		&.with-info {
 			min-height: $link-card-with-info-height;
 		}
@@ -35,6 +43,7 @@ $link-card-with-info-height: 260px;
 			transform: translateY(10px);
 		}
 		&:hover {
+			@include breakpoint(sm) {
 			border-bottom: 8px solid #0066ff;
 			// 8px is 0.5rem, which is the half of the spacing between the cards.
 			// Can't use .rem because not the same unit.
@@ -43,9 +52,12 @@ $link-card-with-info-height: 260px;
 			&.with-info {
 				min-height: $link-card-with-info-height + 8px;
 			}
-			&:hover .link-arrow {
-				opacity: 1;
-				transform: translateY(0px);
+
+				&:hover .link-arrow {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+	
 			}
 		}
 	}
