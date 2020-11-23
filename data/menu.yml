@@ -41,14 +41,14 @@ main:
         link: '#'
 footer:
   - title: Contact Us
-    class: col-md-4 big
+    class: col-md-4 col-xs-12 big
     links:
       - text: Book a call
         link: '#'
       - text: Send an message
         link: '#'
   - title: Main
-    class: col-md-2
+    class: col-sm-3 col-md-2 col-xs-6
     links:
       - text: Home
         link: ''
@@ -59,7 +59,7 @@ footer:
       - text: About
         link: '#'
   - title: Work
-    class: col-md-2
+    class: col-sm-3 col-md-2 col-xs-6
     links:
       - text: Home
         link: ''
@@ -68,7 +68,7 @@ footer:
       - text: Articles
         link: '#'
   - title: Lorem
-    class: col-md-2
+    class: col-sm-3 col-md-2 col-xs-6
     links:
       - text: Home
         link: ''
@@ -77,7 +77,7 @@ footer:
       - text: Articles
         link: '#'
   - title: Lorem
-    class: col-md-2
+    class: col-sm-3 col-md-2 col-xs-6
     links:
       - text: Home
         link: ''

@@ -1,12 +1,16 @@
 .site-footer {
     background-color: $black;
     color: white;
+    border-top: 1px solid white;
     padding: 40px 0 0;
     .subfooter {
         margin-top: 40px;
     }
     p.small {
         font-weight: 600;
+        @include breakpoint(sm-down) {
+            display: none;
+        }
     }
     ul {
         margin-top: 20px;
