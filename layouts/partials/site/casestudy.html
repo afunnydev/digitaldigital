@@ -1,11 +1,11 @@
 <div class="casestudy">
     <div class="row">
-        <div class="col-md-4 col-xs-12 infos center-block">
+        <div class="col-xs-12 col-md-4 infos center-block">
             <h4>{{- .infos.name -}}</h4>
             <p class="tiny">{{- .infos.tagline -}}</p>
             <a href="{{- .infos.url -}}" class="btn smaller">View case study</a>
         </div>
-        <div class="col-md-5 col-xs-12  quote">
+        <div class="col-xs-12 col-md-5 quote">
             <p class="small quote-text">{{- .quote.text -}}</p>
             <div class="author row middle-sm">
                 <div>
@@ -19,13 +19,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-xs-12 stats">
-            {{- range .stats -}}
-            <div>
-                <h4>{{- .value -}}</h4>
-                <p class="smaller">{{- .name -}}</p>
+        <div class="col-xs-12 col-md-3 stats">
+            <div class="row between-md"> 
+                {{- range .stats -}}
+                <div class="col-xs-12 col-sm-6 col-md-12 value">
+                    <h4>{{- .value -}}</h4>
+                    <p class="smaller">{{- .name -}}</p>
+                </div>
+                {{- end -}}            
             </div>
-            {{- end -}}
         </div>
     </div>
 </div>
