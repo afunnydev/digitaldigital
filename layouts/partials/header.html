@@ -21,7 +21,7 @@
         </div>
     </div>
 </header>
-<div id="menu-overlay hide-sm">
+<div id="menu-overlay" class="hide-sm">
     <div class="container">
         <div class="row">
             {{- range $.Site.Data.menu.main -}}
@@ -39,17 +39,21 @@
 </div>
 <div id="menu-overlay-mobile">
     <div class="container">
-        <div class="row">
-            {{- range $.Site.Data.menu.main -}}
-            <div class="{{- .class -}}">
-                <p class="title">{{- .title -}}</p>
-                <ul>
-                    {{- range .links -}}
-                    <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
-                    {{- end -}}
+            {{- range $.Site.Data.menu.mobile -}}
+                <ul {{ if .links }} class="has-sublinks"  {{ end }}>
+                <h6 class="title" data-toggle="collapse" data-target=".collapse{{- .title -}}">
+                    {{- .title -}} 
+                    {{ if .links }}
+                        <span class="plus-icon">{{- partial "icons/plus.html" -}}</span>
+                        <span class="arrow-top-icon">{{- partial "icons/arrow-top.html" -}}</span>
+                    {{ end }}
+                </h6> 
+                   <div class="content collapse collapse{{- .title -}}"> 
+                        {{- range .links -}}
+                        <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
+                        {{- end -}}                   
+                   </div>
                 </ul>
-            </div>
             {{- end -}}
-        </div>
     </div>
 </div>

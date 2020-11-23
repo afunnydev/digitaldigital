@@ -156,6 +156,18 @@ function homeSlider() {
     });
 }
 
+function mobileMenu(){
+    var collapseTrigger = document.getElementsByClassName('has-sublinks');
+    for(let i = 0 ; i < collapseTrigger.length ; i++){
+        collapseTrigger[i].addEventListener('click', (ev) => {
+            const elm = ev.target;
+            const selector = elm.getAttribute('data-target');
+            elm.classList['toggle']('active');
+            document.querySelectorAll(selector)[0].classList['toggle']('show');
+        });
+    }
+}
+
 function home() {
     homeSlider();
 }
@@ -164,4 +176,5 @@ function home() {
     scrollTo();
     header();
     home();
+    mobileMenu();
 })();

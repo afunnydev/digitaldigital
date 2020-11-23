@@ -59,9 +59,6 @@
         font-family: $hfont;
         &.right {
             float: right;
-            @include breakpoint(sm-down) {
-                display: none;
-            }
         }
     }
     li {
@@ -112,17 +109,16 @@
         line-height: 3.125rem;
     }
 }
-
-#menu-overlay {
+@mixin menu-overlay() {
     position: fixed;
     z-index: 11;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $black;
-    display: none;
     opacity: 0;
+    display: none; 
+    background-color: $black;
     transition: opacity 0.2s;
     padding-top: 200px;
     p.title {
@@ -134,6 +130,7 @@
         margin-top: 100px;
         padding-left: 0px;
         list-style: none;
+        color: white;
         li {
             a {
                 color: white !important;
@@ -149,12 +146,75 @@
         }
     }
 }
-
+#menu-overlay {
+    @include menu-overlay();
+}
+#menu-overlay-mobile{
+    @include menu-overlay();
+    display: none;
+    padding-top: 100px;
+    ul{
+        margin: 0;
+        border-bottom: 1px solid $white;
+        &:last-of-type {
+            border-bottom: 1px solid $white;
+        }
+        .title{
+            margin: 0;
+            padding: 15px 0;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &.has-sublinks{
+            h6{
+                display: flex;
+                span{
+                    align-self: center;
+                    margin-right: 25px;
+                    margin-left: auto;
+                }
+                .arrow-top-icon{
+                    display: none;
+                }
+                &.active {
+                    .plus-icon{
+                        display: none;
+                    }
+                    .arrow-top-icon{
+                        display: block;
+                    }
+                }
+            }
+            .content{
+                display: none;
+                overflow: hidden;
+                li:last-child{
+                    padding-bottom: 25px;
+                }
+                &.collapse {
+                  display: none;
+                  overflow: hidden;
+                  transition: all .1s cubic-bezier(0.45, 0.2, 0.25, 0.85);
+                  &.show {
+                   display: block;
+                  }
+                }
+            }
+        }
+    }
+} 
 .with-menu {
     overflow-y: hidden;
     #menu-overlay {
         display: block;
         opacity: 1;
+    }
+    @include breakpoint(sm-down) {
+        #menu-overlay-mobile{
+            opacity: 1;
+            display: block;  
+        }
     }
     #header {
         .logo, ul li a {
