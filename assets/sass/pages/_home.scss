@@ -88,6 +88,10 @@
 	.featured {
 		position: relative;
 		overflow: hidden;
+		img {
+			//fit img in container
+			width: 100%;
+		}
 		.content {
 			position: absolute;
 			background: black;
@@ -98,10 +102,7 @@
 			transition: right 0.6s;
 			// There's weird 5px gap under the card..
 			height: calc(100% - 5px);
-			img {
-				// To prevent the space under inline img
-				display: block;
-			}
+
 			p {
 				position: absolute;
 				margin-bottom: 0;
@@ -109,10 +110,22 @@
 				right: 30px;
 				bottom: 30px;
 			}
+			@include breakpoint(sm-down) {
+				display: none;
+			}
 		}
 		&:hover {
 			.content {
 				right: 0;
+			}
+		}
+	}
+	.featured-mobile {
+		display: none;
+		@include breakpoint(sm-down) {
+			display: block;
+			p {
+				margin: 0 0 35px 0;
 			}
 		}
 	}
