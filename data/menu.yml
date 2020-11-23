@@ -1,6 +1,6 @@
 main:
   - title: Main
-    class: col-md-2
+    class: col-md-2 col-sm-6
     links:
       - text: Home
         link: ''
@@ -11,33 +11,45 @@ main:
       - text: About
         link: '#'
   - title: Contact Us
-    class: col-md-4
+    class: col-md-2 col-md-offset-1 col-sm-6
     links:
       - text: Schedule a call
         link: '#'
       - text: Send an Email
         link: '#'
   - title: Industries
-    class: col-md-3
+    class: col-md-3 col-md-offset-1 col-sm-6
     links:
-      - text: Home
+      - text: Search Engine Optimization
         link: ''
-      - text: Case Studies
+      - text: E-Commerce
         link: '#'
-      - text: Articles
+      - text: Consulting + Advising
         link: '#'
-      - text: About
+      - text: Digital Strategy Building
+        link: '#'
+      - text: User Interface & Experience
+        link: '#'
+      - text: Software + Web Developpement
+        link: '#'
+      - text: Design & Branding Systems
         link: '#'
   - title: Services
-    class: col-md-3
+    class: col-md-3 col-sm-6
     links:
-      - text: Home
+      - text: Search Engine Optimization
         link: ''
-      - text: Case Studies
+      - text: E-Commerce
         link: '#'
-      - text: Articles
+      - text: Consulting + Advising
         link: '#'
-      - text: About
+      - text: Digital Strategy Building
+        link: '#'
+      - text: User Interface & Experience
+        link: '#'
+      - text: Software + Web Developpement
+        link: '#'
+      - text: Design & Branding Systems
         link: '#'
 mobile:
   - title: Home

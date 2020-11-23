@@ -148,12 +148,23 @@
 }
 #menu-overlay {
     @include menu-overlay();
+    @include breakpoint(md-down) {
+        padding-top: 150px;
+        ul{
+            margin: 0;
+            padding-bottom: 50px;
+        }
+    }
 }
 #menu-overlay-mobile{
+    .container{
+        padding: 0;
+    }
     @include menu-overlay();
     display: none;
     padding-top: 100px;
-    ul{
+    ul{ 
+        padding: 0 20px;
         margin: 0;
         border-bottom: 1px solid $white;
         &:last-of-type {
