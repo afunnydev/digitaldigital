@@ -1,4 +1,9 @@
 #our-subsidiary-companies {
+	@include breakpoint(md-down) {
+		h6{
+			text-align: left;
+		}
+	}
 	.companies {
 		margin-top: 80px;
 		svg {
