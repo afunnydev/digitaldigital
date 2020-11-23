@@ -10,9 +10,6 @@
     }
 
     @include breakpoint(sm-down) {
-        h6{
-            display: none;
-        }
         .btn{
             display: block;
         }

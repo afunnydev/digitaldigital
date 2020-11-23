@@ -3,7 +3,7 @@
         <div class="row">
             {{- range $.Site.Data.menu.footer -}}
             <div class="{{- .class -}}">
-                <p class="small">{{- .title -}}</p>
+                <p class="small hide-sm">{{- .title -}}</p>
                 <ul>
                     {{- range .links -}}
                     <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>

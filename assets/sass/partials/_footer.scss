@@ -8,9 +8,6 @@
     }
     p.small {
         font-weight: 600;
-        @include breakpoint(sm-down) {
-            display: none;
-        }
     }
     ul {
         margin-top: 20px;

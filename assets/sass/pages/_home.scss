@@ -110,9 +110,6 @@
 				right: 30px;
 				bottom: 30px;
 			}
-			@include breakpoint(sm-down) {
-				display: none;
-			}
 		}
 		&:hover {
 			.content {

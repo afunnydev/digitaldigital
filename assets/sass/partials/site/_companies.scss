@@ -16,11 +16,6 @@
 		}
 		@include breakpoint(sm-down) {
 			.content{
-				display: flex;
-				align-self: center;
-				p{
-					display: none;
-				}
 				svg{
 					margin: 0;
 				}
