@@ -1,17 +1,17 @@
 <div class="casestudy">
     <div class="row">
-        <div class="col-sm-3 infos center-block">
+        <div class="col-md-4 col-xs-12 infos center-block">
             <h4>{{- .infos.name -}}</h4>
             <p class="tiny">{{- .infos.tagline -}}</p>
             <a href="{{- .infos.url -}}" class="btn smaller">View case study</a>
         </div>
-        <div class="col-sm-5 quote">
+        <div class="col-md-5 col-xs-12  quote">
             <p class="small quote-text">{{- .quote.text -}}</p>
             <div class="author row middle-sm">
-                <div class="col-xs-2">
+                <div>
                     <img src="{{- .quote.author.imgUrl -}}" alt="{{- .quote.author.name -}}">
                 </div>
-                <div class="col-xs-10">
+                <div>
                     <p class="tiny">
                         <strong>{{- .quote.author.name -}}</strong><br>
                         {{- .quote.author.position -}}
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 stats">
+        <div class="col-md-3 col-xs-12 stats">
             {{- range .stats -}}
             <div>
                 <h4>{{- .value -}}</h4>
