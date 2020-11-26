@@ -36,15 +36,14 @@
 		height: calc(100vh - 5.25em);
 		@include breakpoint(sm-down) {
 			height: calc(100vh - 21.875em);
-			h1{
-				margin: 0;
-				line-height: 3.46875rem;
-			}
 		}
 	}
 }
 
 #services-single-clients {
+	div{
+		padding-top: 25px;
+	}
 	.logos svg {
 		fill: white;
 	}
