@@ -9,6 +9,9 @@
 		h6 {
 			color: white;
 		}
+		@include breakpoint(sm-down) {
+			height: calc(100vh - 20em);	
+		}
 	}
 }
 

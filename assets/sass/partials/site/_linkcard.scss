@@ -20,8 +20,10 @@ $link-card-with-info-height: 260px;
 				margin: 0;
 			}
 		}
-		&.with-info {
-			min-height: $link-card-with-info-height;
+		@include breakpoint(sm) {
+			&.with-info {
+				min-height: $link-card-with-info-height;
+			}
 		}
 		.content {
 			align-self: flex-end;
@@ -31,6 +33,11 @@ $link-card-with-info-height: 260px;
 				}
 				&.info {
 					color: $black_sub1;
+				}
+			}
+			@include breakpoint(sm-down) {
+				h5{
+					margin: 0;
 				}
 			}
 		}
