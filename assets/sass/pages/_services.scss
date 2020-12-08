@@ -20,6 +20,7 @@
 #services-full {
 	.small {
 		color: $black_sub1;
+		font-weight: 500;
 	}
 	ul {
 		list-style: none;
@@ -34,9 +35,12 @@
 	}
 }
 
-#services-single-clients {
-	.logos svg {
-		fill: white;
+#services-list {
+	.logos {
+		padding-top: 8em;
+		svg {
+			fill: white;
+		}
 	}
 }
 	

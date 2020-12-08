@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row middle-xs">
             {{- range .Pages -}}
-            {{- partial "site/linkcard" (dict "context" . "name" .Params.h1 "info" .Params.explanation "url" "#" "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
+            {{- partial "site/linkcard" (dict "context" . "name" .Params.h1 "info" .Params.explanation "url" .Permalink "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
             {{- end -}}
         </div>
     </div>
