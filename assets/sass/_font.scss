@@ -17,6 +17,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 2rem;
+    &.no-margin {
+        margin-bottom: 0;
+    }
 }
 
 h1 {
@@ -97,6 +100,10 @@ p {
     }
     &.tiny {
         font-size: 0.75rem;
+    }
+    &.no-margin {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 

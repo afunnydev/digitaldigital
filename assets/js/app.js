@@ -159,8 +159,29 @@ function home() {
     homeSlider();
 }
 
+function icons() {
+    var icon = document.getElementById('service-icon');
+    if (!icon) {
+        return;
+    }
+    var anim = bodymovin.loadAnimation({
+        container: icon, // Required
+        path: '/animations/test.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+    });
+    icon.addEventListener('mouseenter', function(e) {
+        anim.play();
+    });
+    icon.addEventListener('mouseleave', function(e) {
+        anim.stop();
+    }); 
+}
+
 (function() {
     scrollTo();
     header();
     home();
+    icons();
 })();

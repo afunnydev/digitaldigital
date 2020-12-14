@@ -1,24 +1,24 @@
+{{- $simple := and (isset . "simple") .simple -}}
 <div class="casestudy">
-    <div class="row">
-        <div class="col-sm-3 infos center-block">
+    <div class="row {{ if not $simple }}middle-xs{{- end -}}">
+        <div class="{{ if $simple }}col-sm-4{{ else }}col-sm-3{{ end }} infos center-block">
             <h4>{{- .infos.name -}}</h4>
             <p class="tiny">{{- .infos.tagline -}}</p>
+            {{- if not $simple -}}
             <a href="{{- .infos.url -}}" class="btn">View case study</a>
+            {{- end -}}
         </div>
-        <div class="col-sm-5 quote">
+        <div class="{{ if $simple }}col-sm-8{{ else }}col-sm-5{{ end }} quote">
             <p class="small quote-text">{{- .quote.text -}}</p>
             <div class="author row middle-sm">
-                <div class="col-xs-2">
-                    <img src="{{- .quote.author.imgUrl -}}" alt="{{- .quote.author.name -}}">
-                </div>
-                <div class="col-xs-10">
-                    <p class="tiny">
-                        <strong>{{- .quote.author.name -}}</strong><br>
-                        {{- .quote.author.position -}}
-                    </p>
-                </div>
+                <img src="{{- .quote.author.imgUrl -}}" alt="{{- .quote.author.name -}}">
+                <p class="tiny">
+                    <strong>{{- .quote.author.name -}}</strong><br>
+                    {{- .quote.author.position -}}
+                </p>
             </div>
         </div>
+        {{- if not $simple -}}
         <div class="col-sm-4 stats">
             {{- range .stats -}}
             <div>
@@ -27,5 +27,6 @@
             </div>
             {{- end -}}
         </div>
+        {{- end -}}
     </div>
 </div>

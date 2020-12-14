@@ -28,7 +28,7 @@
 <div id="home-we-do" class="section">
     <div class="container">
         <h2>{{- .title -}}</h2>
-        {{ range where $.Site.RegularPages "Type" "services" }}
+        {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
         <h4><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
         {{- end -}}
         <div class="row sub between-xs">

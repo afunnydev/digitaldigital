@@ -90,6 +90,9 @@ img {
 .section {
     padding-top: 8em;
     padding-bottom: 8em;
+    & > .container > .header {
+        margin-bottom: 4rem;
+    }
 }
 
 .row.spaced {
