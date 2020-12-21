@@ -19,7 +19,7 @@
 
         {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
 
-        <main class="site-main" role="main">
+        <main class='site-main{{ if and (eq .Type "articles") .IsPage }} article{{ end }}' role="main">
 
             {{ block "main" . }}{{ end }}
 

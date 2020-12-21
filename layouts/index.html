@@ -88,19 +88,8 @@
                     <a href="#" title="{{- .title -}}">{{- .title -}}</a>
                 </h6>
             </div>
-            {{- range .features -}}
-            <div class="col-xs-12 col-md-6 featured">
-                <a href="{{- .link -}}">
-                    <img src="{{- .img -}}">
-                    <div class="content">
-                        <p>
-                            {{- .text -}}
-                            <br><br>
-                            Read
-                        </p>
-                    </div>
-                </a>
-            </div>
+            {{- range where (where $.Site.RegularPages "Type" "articles") "Params.external" true -}}
+            {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Params.canonical "class" "col-xs-12 col-md-6") -}}
             {{- end -}}
         </div>
     </div>

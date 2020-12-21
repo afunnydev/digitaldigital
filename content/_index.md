@@ -1,5 +1,6 @@
 ---
-title: ""
+title: DigitalDigital
+description: DigitalDigital
 date: 2019-03-17T18:18:43Z
 h1: is a digital marketing agency that specializes in client and lead aquisitions
 portfolio:
@@ -61,21 +62,6 @@ portfolio:
       src: /img/cna-portfolio.png
 section3:
   title: We do
-  services:
-    - name: Search engine optimization
-      url: '#'
-    - name: Digital Marketing
-      url: '#'
-    - name: Consulting + Advising
-      url: '#'
-    - name: Digital Strategy Building
-      url: '#'
-    - name: User Interface & Experience
-      url: '#'
-    - name: Software + Web Developpement
-      url: '#'
-    - name: Design & Branding Systems
-      url: '#'
   subtitle: '& believe in strategic creativity based on data and analytics.'
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -129,13 +115,6 @@ section4:
 section5:
   title: All Articles
   subtitle: '& we write stuff, from time to time.'
-  features:
-    - img: /img/featured-shopify.png
-      text: Guest posting, and other things alike.
-      link: '#'
-    - img: /img/featured-shopify.png
-      text: Guest posting, and other things alike.
-      link: '#'
 section6:
   title: Owned by DigitalDigital
   subtitle: Our Subsidiary Companies

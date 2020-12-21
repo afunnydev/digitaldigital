@@ -107,9 +107,33 @@ p {
     }
 }
 
-#article-main {
+#article-content {
+    h2, h3, h4, h5, h6 {
+        font-weight: 500;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    h3 {
+        font-size: 1.875rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
     p {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.72em;
     }
 }
 

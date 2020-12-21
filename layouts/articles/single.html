@@ -1,0 +1,15 @@
+{{- define "main" -}}
+<div id="article-info" class="section">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        <h6>By {{ .Params.author }}, {{ .ReadingTime }} min read  |  {{.Date.Format "Jan 2 2006"}}</h6>
+        <img src="{{- .Params.image -}}" alt="">
+    </div>
+</div>
+
+<div id="article-content">
+    <div class="container">
+        {{ .Content }}
+    </div>
+</div>
+{{- end -}}
