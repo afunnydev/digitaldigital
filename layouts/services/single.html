@@ -33,12 +33,9 @@
 {{- with .Params.clients -}}
 <div id="services-single-clients" class="section">
     <div class="container">
-        <h2>{{- .title -}}</h2>
         <div class="row middle-xs between-xs logos">
             {{- range .logos -}}
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                 {{- partial (printf "icons/%s.html" .icon) -}}           
-            </div>
+                <div class="icons"> {{- partial (printf "icons/%s.html" .icon) -}} </div>       
             {{- end -}}
         </div>
     </div>

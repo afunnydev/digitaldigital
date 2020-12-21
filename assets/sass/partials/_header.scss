@@ -109,7 +109,8 @@
         line-height: 3.125rem;
     }
 }
-@mixin menu-overlay() {
+
+#menu-overlay {
     position: fixed;
     z-index: 11;
     top: 0;
@@ -117,7 +118,7 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    display: none; 
+    display: none;
     background-color: $black;
     transition: opacity 0.2s;
     padding-top: 200px;
@@ -145,22 +146,9 @@
             }
         }
     }
-}
-#menu-overlay {
-    @include menu-overlay();
-    @include breakpoint(md-down) {
-        padding-top: 150px;
-        ul{
-            margin: 0;
-            padding-bottom: 50px;
-        }
-    }
-}
-#menu-overlay-mobile{
     .container{
         padding: 0;
     }
-    @include menu-overlay();
     padding-top: 100px;
     ul{ 
         padding: 0 20px;
@@ -208,19 +196,27 @@
             }
         }
     }
-} 
+    @include breakpoint(sm) {
+        padding-top: 150px;
+        display: none;
+        ul{
+            margin: 0;
+            padding: 0 0 50px 0;
+            border-bottom: none;
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
 .with-menu {
     overflow-y: hidden;
     #menu-overlay {
         display: block;
         opacity: 1;
     }
-    @include breakpoint(sm-down) {
-        #menu-overlay-mobile{
-            opacity: 1;
-            display: block;  
-        }
-    }
+
     #header {
         .logo, ul li a {
             color: white;

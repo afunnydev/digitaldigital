@@ -1,32 +1,29 @@
 #our-subsidiary-companies {
-	@include breakpoint(md-down) {
-		h6{
-			text-align: left;
+	h6{
+		text-align: left;
+		@include breakpoint(md) {
+			text-align: right;
 		}
 	}
+
 	.companies {
 		margin-top: 80px;
-		svg {
-			margin-bottom: 20px;
-		}
 		a {
 			text-decoration: underline;
 		}
 		.content{
 			padding-top: 25px;
 			padding-bottom: 25px;
+			svg{
+				margin: 0;
+			}
 		}
 		.content-mobile{
-			display: none;
+			display: block;
 		}
-		@include breakpoint(sm-down) {
-			.content{
-				svg{
-					margin: 0;
-				}
-			}
+		@include breakpoint(sm) {
 			.content-mobile{
-				display: block;
+				display: none;
 			}
 		}
 	}

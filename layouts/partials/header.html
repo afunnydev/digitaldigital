@@ -22,7 +22,7 @@
     </div>
 </header>
 <div id="menu-overlay">
-    <div class="container">
+    <div class="container hide-sm">
         <div class="row">
             {{- range $.Site.Data.menu.main -}}
             <div class="{{- .class -}}">
@@ -36,9 +36,7 @@
             {{- end -}}
         </div>
     </div>
-</div>
-<div id="menu-overlay-mobile">
-    <div class="container">
+    <div class="container hide-sm-up">
             {{- range $.Site.Data.menu.mobile -}}
                 <ul {{ if .links }} class="has-sublinks"  {{ end }}>
                 <h6 class="title row middle-xs" data-toggle="collapse" data-target=".collapse{{- .title -}}">

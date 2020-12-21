@@ -6,12 +6,9 @@
         max-width: 400px;
     }
     .btn{
-        display: none;
-    }
-
-    @include breakpoint(sm-down) {
-        .btn{
-            display: block;
+        display: block;
+        @include breakpoint(sm) {
+            display: none;
         }
     }
 }

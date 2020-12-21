@@ -4,30 +4,23 @@ $link-card-with-info-height: 260px;
 	margin-bottom: 1rem;
 	.inner {
 		position: relative;
-		min-height: $link-card-height;
+		min-height: auto;
 		color: $black;
 		background-color: $white;
-		border-bottom: 3px solid #d7d7d7;
+		border-bottom: none;
+		border-left: 8px solid #0066ff;
 		transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
 		display: flex;
 		padding: 25px;
 		cursor: pointer;
-		@include breakpoint(sm-down) {
-			min-height: auto;
-			border-bottom: none;
-			border-left: 8px solid #0066ff;
-			p{
-				margin: 0;
-			}
-		}
-		@include breakpoint(sm) {
-			&.with-info {
-				min-height: $link-card-with-info-height;
-			}
-		}
+	
 		.content {
 			align-self: flex-end;
+			h5{
+				margin: 0;
+			}
 			p {
+				margin: 0;
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -35,10 +28,18 @@ $link-card-with-info-height: 260px;
 					color: $black_sub1;
 				}
 			}
-			@include breakpoint(sm-down) {
+		}
+		@include breakpoint(sm) {
+			.content{
 				h5{
-					margin: 0;
+					margin-bottom: 1em;
 				}
+			}
+			min-height: $link-card-height;
+			border-bottom: 3px solid #d7d7d7;
+			border-left:none;
+			&.with-info {
+				min-height: $link-card-with-info-height;
 			}
 		}
 		.link-arrow {
@@ -64,7 +65,6 @@ $link-card-with-info-height: 260px;
 					opacity: 1;
 					transform: translateY(0px);
 				}
-	
 			}
 		}
 	}

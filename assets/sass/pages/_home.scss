@@ -1,8 +1,9 @@
 #home-hero {
 	.row {
-		height: calc(100vh - 5.25em);
-		@include breakpoint(sm-down) {
-			height: calc(100vh - 18em);	
+    height: calc(100vh - 18em);	
+
+		@include breakpoint(sm) {
+      height: calc(100vh - 5.25em);			
 		}
 	}
 }
@@ -57,19 +58,31 @@
 		margin-top: 150px;
 		margin-bottom: 150px;
 	}
-	.logos {
-		margin-left: 0;
-		margin-right: 0;
-		@include breakpoint(sm-down) {
-			>div{
-				margin: 25px 0;
+
+	.icons {
+		@include breakpoint(md-down) {
+			flex-basis:33.33333%;
+			&:nth-child(3n + 2) {
+				text-align: center;
+			}
+			&:nth-child(3n) {
+				text-align: right;
+			}
+			svg {
+				margin-bottom: 3rem;
 			}
 		}
-		svg {
-			display: block;
-			margin: auto;
-			fill: black;
+		@include breakpoint(sm-down) {
+			svg {
+				max-width: 70%;
+				max-height: 2.5rem;
+			}
 		}
+	}
+	svg {
+		display: block;
+		margin: auto;
+		fill: black;
 	}
 }
 
@@ -118,12 +131,12 @@
 		}
 	}
 	.featured-mobile {
-		display: none;
-		@include breakpoint(sm-down) {
-			display: block;
-			p {
-				margin: 0 0 35px 0;
-			}
+    display: block;
+    p {
+      margin: 0 0 35px 0;
+    }
+		@include breakpoint(sm) {
+      display: none;
 		}
 	}
 }

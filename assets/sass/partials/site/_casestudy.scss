@@ -1,7 +1,7 @@
 .casestudy {
-	padding: 125px 60px;
-	@include breakpoint(md-down) {
-		padding: 50px 50px;
+	padding: 50px 50px;
+	@include breakpoint(md) {
+		padding: 125px 60px;
 	}
 	.infos {
 		align-self: center;
@@ -17,10 +17,10 @@
 		}
 	}
 	.quote {
-		align-self: center;
-		padding-left: 50px;
-		@include breakpoint(md-down) {
-			padding: 50px 0;
+		padding: 50px 0;
+		@include breakpoint(md) {
+			align-self: center;
+			padding-right: 50px;	
 		}
 		.quote-text {
 			margin-bottom: 50px;
@@ -41,13 +41,13 @@
 	}
 
 	.stats {
-		border-left: 1px solid #00000011;
 		text-align: center;
-		@include breakpoint(md-down) {
-			padding-top: 60px;
-			border-left: none;
-			border-top: 1px solid #00000011;
-
+		padding-top: 60px;
+		border-left: none;
+		border-top: 1px solid #00000011;
+		@include breakpoint(md) {
+			border-top: none;
+			border-left: 1px solid #00000011;
 		}
 		.value{
 			padding: 35px 0px;

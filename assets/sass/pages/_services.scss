@@ -1,7 +1,8 @@
 #services-hero {
 	background-color: black;
     .row {
-		height: calc(100vh - 5.25em);
+    
+    height: calc(100vh - 20em);
 		h1 {
 			color: white;
 			margin-bottom: 2rem;
@@ -9,8 +10,8 @@
 		h6 {
 			color: white;
 		}
-		@include breakpoint(sm-down) {
-			height: calc(100vh - 20em);	
+		@include breakpoint(sm) {
+		  height: calc(100vh - 5.25em);	
 		}
 	}
 }
@@ -33,22 +34,41 @@
 
 #services-single-hero {
     .row {
-		height: calc(100vh - 5.25em);
-		@include breakpoint(sm-down) {
-			height: calc(100vh - 21.875em);
+    height: calc(100vh - 21.875em);
+		@include breakpoint(sm) {
+      height: calc(100vh - 5.25em);
 		}
 	}
 }
 
 #services-single-clients {
-	.logos {
-		svg{
+  .row{
+    @include breakpoint(md-down) {
+        margin: 0 auto;
+    }
+  .icons {
+      @include breakpoint(md-down) {
+          flex-basis:33.33333%;
+          &:nth-child(3n + 2) {
+              text-align: center;
+          }
+          &:nth-child(3n) {
+              text-align: right;
+          }
+          svg {
+              margin-bottom: 4rem;
+          }
+      }
+      @include breakpoint(sm-down) {
+          svg {
+              max-width: 70%;
+              max-height: 2.5rem;
+          }
+      }
+  }
+	svg {
 			fill: white;
 		}
-		div{
-			padding-top: 25px;
-			padding-bottom: 25px;
-		}
-	}
+  }
 }
 	
