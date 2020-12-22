@@ -18,13 +18,5 @@
 				margin: 0;
 			}
 		}
-		.content-mobile{
-			display: block;
-		}
-		@include breakpoint(sm) {
-			.content-mobile{
-				display: none;
-			}
-		}
 	}
 }

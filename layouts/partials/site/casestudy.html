@@ -1,14 +1,14 @@
 {{- $simple := and (isset . "simple") .simple -}}
 <div class="casestudy">
     <div class="row {{ if not $simple }}middle-xs{{- end -}}">
-        <div class="{{ if $simple }}col-sm-4{{ else }}col-sm-3{{ end }} infos center-block">
+        <div class="col-sm-4{{ if not $simple }} col-md-3{{ end }} infos center-block">
             <h4>{{- .infos.name -}}</h4>
             <p class="tiny">{{- .infos.tagline -}}</p>
             {{- if not $simple -}}
             <a href="{{- .infos.url -}}" class="btn">View case study</a>
             {{- end -}}
         </div>
-        <div class="{{ if $simple }}col-sm-8{{ else }}col-sm-5{{ end }} quote">
+        <div class="col-sm-8{{ if not $simple }} col-md-5{{ end }} quote">
             <p class="small quote-text">{{- .quote.text -}}</p>
             <div class="author row middle-sm">
                 <img src="{{- .quote.author.imgUrl -}}" alt="{{- .quote.author.name -}}">
@@ -19,11 +19,18 @@
             </div>
         </div>
         {{- if not $simple -}}
-        <div class="col-sm-4 stats">
-            {{- range .stats -}}
-            <div>
-                <h4>{{- .value -}}</h4>
-                <p class="smaller">{{- .name -}}</p>
+        <div class="col-xs-12 col-md-4 stats">
+            <div class="row">
+                {{- $class := "col-xs-6 col-sm-6" -}}
+                {{- if eq (len .stats) 3 -}}
+                {{- $class = "col-xs-4 col-sm-4" -}}
+                {{- end -}}
+                {{- range .stats -}}
+                <div class="{{ $class }} col-md-12">
+                    <h4>{{- .value -}}</h4>
+                    <p class="smaller">{{- .name -}}</p>
+                </div>
+                {{- end -}}
             </div>
         </div>
         {{- end -}}

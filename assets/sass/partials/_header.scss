@@ -47,8 +47,14 @@
             float: right;
         }
     }
+    span.text {
+        display: none;
+        @include breakpoint(sm) {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
     .hamburger-box {
-        margin-right: 20px;
         vertical-align: middle;
     }
     ul {
@@ -75,35 +81,6 @@
             color: inherit;
             text-decoration: none;
         }
-        &.has-submenu {
-            ul {
-                display: none;
-                position: absolute;
-                top: 80%;
-                border: 1px solid #DFDFDF;
-                box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
-                padding: 0px 20px;
-                width: 14rem;
-                z-index: 5;
-                background: white;
-            }
-            li {
-                float: none;
-                padding-left: 0.625rem;
-                border-bottom: 1px solid #DFDFDF;
-                a {
-                    line-height: 4.5rem;
-                }
-                &:last-child {
-                    border: none;
-                }
-            }
-            &:hover {
-                ul {
-                    display: block;
-                }
-            }
-        }
     }
     .col-xs-7 li {
         line-height: 3.125rem;
@@ -122,76 +99,79 @@
     background-color: $black;
     transition: opacity 0.2s;
     padding-top: 200px;
+    overflow-y: auto;
     p.title {
         font-size: 1.75rem;
         line-height: 1.36em;
         color: $white;
     }
-    ul {
+    ul.desktop-main {
         margin-top: 100px;
         padding-left: 0px;
         list-style: none;
         color: white;
-        li {
-            a {
-                color: white !important;
-                text-decoration: none;
-                font-size: 1.0625rem;
-                line-height: 2.18em;
-                display: block;
-            }
-            &.active a {
-                text-decoration: underline;
-                font-weight: 600;
-            }
+    }
+    li {
+        a {
+            color: white !important;
+            text-decoration: none;
+            font-size: 1.0625rem;
+            line-height: 2.18em;
+            display: block;
+        }
+        &.active a {
+            text-decoration: underline;
+            font-weight: 600;
         }
     }
     .container{
         padding: 0;
     }
     padding-top: 100px;
-    ul{ 
+    ul.mobile-main { 
         padding: 0 20px;
         margin: 0;
-        border-bottom: 1px solid $white;
-        &:last-of-type {
-            border-bottom: 1px solid $white;
-        }
-        .title{
-            margin: 0;
+        a {
             padding: 15px 0;
             &:hover{
                 cursor: pointer;
             }
         }
-        &.has-sublinks{
-            h6{
-                span{
+        li {
+            border-bottom: 1px solid $white;
+            a {
+                font-size: 1.375rem;
+                line-height: 1.5em;
+            }
+            &.has-sublinks {
+                a {
                     display: flex;
-                    margin-left: auto;
+                    justify-content: space-between;
                 }
-                .arrow-top-icon{
+                .arrow-top-icon {
                     display: none;
                 }
-                &.active {
+                .content {
+                    display: none;
+                    li:last-child {
+                        padding-bottom: 25px;
+                    }
+                }
+                li {
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+                &.opened {
                     .plus-icon{
                         display: none;
                     }
                     .arrow-top-icon{
                         display: flex;
                     }
-                }
-            }
-            .content{
-                li:last-child{
-                    padding-bottom: 25px;
-                }
-                &.collapse {
-                  display: none;
-                  overflow: hidden;
-                  &.show {
-                   display: block;
-                  }
+                    .content {
+                        display: block;
+                    }
                 }
             }
         }
@@ -199,7 +179,7 @@
     @include breakpoint(sm) {
         padding-top: 150px;
         display: none;
-        ul{
+        ul {
             margin: 0;
             padding: 0 0 50px 0;
             border-bottom: none;

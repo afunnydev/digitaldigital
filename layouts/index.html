@@ -39,11 +39,7 @@
                 <p>{{- .description | markdownify -}}</p>
             </div>
         </div>
-        <div class="row middle-xs between-xs logos">
-            {{- range .logos -}}
-              <div class="icons">{{- partial (printf "icons/%s.html" .icon) -}} </div>
-            {{- end -}}
-        </div>
+        {{- partial "site/logos" (dict "context" . "logos" .logos) -}}
     </div>
 </div>
 {{- end -}}

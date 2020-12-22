@@ -57,6 +57,12 @@ icons:
       description: >-
         Discover the right way to build your website to convert visitors into market-qualified leads.
       icon: conversion
+  logos:
+    - icon: got-milk
+    - icon: mogo
+    - icon: new-balance
+    - icon: 7-eleven
+    - icon: nac
 checklist:
   h2: Technical checklist
   points:

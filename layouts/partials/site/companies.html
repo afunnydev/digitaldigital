@@ -11,15 +11,12 @@
         </div>
         <div class="row between-xs middle-xs spaced companies">
             {{- range .companies -}}
-            <div class="col-xs-6 col-md-3 content">
+            <div class="col-xs-12 col-sm-6 col-md-3 content">
                 {{- partial (printf "icons/%s.html" .icon) -}}
-                <p class="hide-sm">
+                <p>
                     {{- .text -}}<br><br>
                     <a href="{{- .link -}}">Visit Website</a>
                 </p>
-            </div>
-            <div class="col-xs-6 col-md-3 content-mobile">
-            <p>{{- .mobileText -}}</p>
             </div>
             {{- end -}}
         </div>

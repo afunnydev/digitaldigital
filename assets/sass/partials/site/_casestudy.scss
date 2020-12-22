@@ -1,8 +1,4 @@
 .casestudy {
-	padding: 50px 50px;
-	@include breakpoint(md) {
-		padding: 125px 60px;
-	}
 	.infos {
 		h4 {
 			margin: initial;
@@ -17,9 +13,12 @@
 	}
 	.quote {
 		padding: 50px 0;
-		@include breakpoint(md) {
+		@include breakpoint(sm) {
 			align-self: center;
-			padding-right: 50px;	
+			padding: 0 30px;	
+		}
+		@include breakpoint(md) {
+			padding: 0 50px;	
 		}
 		.quote-text {
 			margin-bottom: 50px;
@@ -44,15 +43,17 @@
 
 	.stats {
 		text-align: center;
-		padding-top: 60px;
-		border-left: none;
-		border-top: 1px solid #00000011;
+		padding-top: 30px;
+		border-top: 1px solid #0001;
+		margin-top: 30px;
 		@include breakpoint(md) {
+			padding-top: 0;
+			margin-top: 0;
 			border-top: none;
-			border-left: 1px solid #00000011;
-		}
-		.value{
-			padding: 35px 0px;
+			border-left: 1px solid #0001;
+			& > div > div {
+				padding-bottom: 25px;
+			}
 		}
 		h4,
 		p {

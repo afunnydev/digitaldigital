@@ -9,7 +9,7 @@
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
-                    Esc
+                    <span class="text">Esc</span>
                 </button>
             </div>
             <div class="col-xs-6 col-sm-6 hide-sm">
@@ -27,7 +27,7 @@
             {{- range $.Site.Data.menu.main -}}
             <div class="{{- .class -}}">
                 <p class="title">{{- .title -}}</p>
-                <ul>
+                <ul class="desktop-main">
                     {{- range .links -}}
                     <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
                     {{- end -}}
@@ -37,21 +37,28 @@
         </div>
     </div>
     <div class="container hide-sm-up">
+        <ul class="mobile-main">
             {{- range $.Site.Data.menu.mobile -}}
-                <ul {{ if .links }} class="has-sublinks"  {{ end }}>
-                <h6 class="title row middle-xs" data-toggle="collapse" data-target=".collapse{{- .title -}}">
-                    {{- .title -}} 
-                    {{ if .links }}
-                        <span class="plus-icon">{{- partial "icons/plus.html" -}}</span>
-                        <span class="arrow-top-icon">{{- partial "icons/arrow-top.html" -}}</span>
-                    {{ end }}
-                </h6> 
-                   <div class="content collapse collapse{{- .title -}}"> 
-                        {{- range .links -}}
-                        <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
-                        {{- end -}}                   
-                   </div>
-                </ul>
+            <li>
+                <a href="{{- $.Site.BaseURL -}}{{- .link -}}">{{- .title -}}</a>
+            </li>
             {{- end -}}
+            <li class="has-sublinks">
+                <a href="{{- $.Site.BaseURL -}}services">
+                    <span>Services</span>
+                    <span class="icon plus-icon">{{- partial "icons/plus.html" -}}</span>
+                    <span class="icon arrow-top-icon">{{- partial "icons/arrow-top.html" -}}</span>
+                </a>
+                <ul class="content collapse collapse-services"> 
+                    {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
+                    <li><a href="{{ .Permalink }}" title="{{- .Params.h1 -}}">{{- .Params.h1 -}}</a></li>
+                    {{- end -}}
+                    {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
+                    <li><a href="{{ .Permalink }}" title="{{- .Params.h1 -}}">{{- .Params.h1 -}}</a></li>
+                    {{- end -}}
+                    <li><a href="{{- $.Site.BaseURL -}}services" title="All Services">All Services</a></li>                
+               </ul>
+            </li>
+        </ul>
     </div>
 </div>

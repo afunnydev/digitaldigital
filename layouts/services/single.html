@@ -47,7 +47,7 @@
 </div>
 {{- end -}}
 
-{{- with .Params.icons}}
+{{- with .Params.icons -}}
 <div id="services-single-icons" class="section">
     <div class="container">
         <div class="row between-xs middle-xs header">
@@ -69,7 +69,9 @@
             </div>
             {{- end -}}
         </div>
-        {{/*  For Clients Logo: <div class="row"></div>  */}}
+        {{- if isset . "logos" -}}
+        {{- partial "site/logos" (dict "context" . "logos" .logos) -}}
+        {{- end -}}
     </div>
 </div>
 {{- end -}}

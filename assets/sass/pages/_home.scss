@@ -59,29 +59,7 @@
 		margin-bottom: 150px;
 	}
 
-	.icons {
-		@include breakpoint(md-down) {
-			flex-basis:33.33333%;
-			&:nth-child(3n + 2) {
-				text-align: center;
-			}
-			&:nth-child(3n) {
-				text-align: right;
-			}
-			svg {
-				margin-bottom: 3rem;
-			}
-		}
-		@include breakpoint(sm-down) {
-			svg {
-				max-width: 70%;
-				max-height: 2.5rem;
-			}
-		}
-	}
 	svg {
-		display: block;
-		margin: auto;
 		fill: black;
 	}
 }
@@ -93,8 +71,10 @@
 		margin: 80px 0;
 		background-color: $white;
 		color: $black;
-		padding-top: 125px;
-		padding-bottom: 125px;
+		padding: 50px 50px;
+		@include breakpoint(lg) {
+			padding: 125px 60px;
+		}
 	}
 }
 
