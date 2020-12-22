@@ -15,6 +15,9 @@
                 width: calc(100% - 1rem);
                 margin-left: 0.5rem;
                 border-bottom: 1px solid $black_sub2;
+                @include breakpoint(sm-down) {
+                    padding: 10px 0;  
+                }
             }
         }
         .gif {
@@ -26,6 +29,20 @@
         &:hover {
             .gif {
                 display: block;
+            }
+        }
+        @include breakpoint(sm-down) {
+			.name {
+				padding-top: 20px;
+			}
+			padding: 10px 0;
+            .gif{
+                margin: 0;
+                display: block;
+                margin-left: auto;
+            }
+            p{
+                margin: 0;
             }
         }
     }

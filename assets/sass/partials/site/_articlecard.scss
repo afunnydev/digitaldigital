@@ -34,4 +34,13 @@
             right: 0;
         }
     }
+    .featured-mobile {
+        display: block;
+        p {
+            margin: 0 0 35px 0;
+        }
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
 }

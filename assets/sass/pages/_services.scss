@@ -10,13 +10,17 @@
 #services-all-hero {
 	background-color: black;
     .row {
-		height: calc(100vh - 5.25em);
+    
+    height: calc(100vh - 20em);
 		h1 {
 			color: white;
 			margin-bottom: 2rem;
 		}
 		h6 {
 			color: white;
+		}
+		@include breakpoint(sm) {
+		  height: calc(100vh - 5.25em);	
 		}
 	}
 }
@@ -40,7 +44,10 @@
 
 #services-list-hero {
     .row {
-		height: calc(100vh - 5.25em);
+    height: calc(100vh - 21.875em);
+		@include breakpoint(sm) {
+      height: calc(100vh - 5.25em);
+		}
 	}
 }
 
@@ -100,6 +107,29 @@
 		.title {
 			font-weight: 500;
 		}
+	}
+	.icons {
+		@include breakpoint(md-down) {
+			flex-basis:33.33333%;
+			&:nth-child(3n + 2) {
+				text-align: center;
+			}
+			&:nth-child(3n) {
+				text-align: right;
+			}
+			svg {
+				margin-bottom: 4rem;
+			}
+		}
+		@include breakpoint(sm-down) {
+			svg {
+				max-width: 70%;
+				max-height: 2.5rem;
+			}
+		}
+	}
+	svg {
+		fill: white;
 	}
 }
 

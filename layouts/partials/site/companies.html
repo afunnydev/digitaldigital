@@ -2,21 +2,24 @@
 <div id="our-subsidiary-companies" class="section">
     <div class="container">
         <div class="row between-xs">
-            <div class="col-md-6 col-lg-5">
+            <div class="xol-xs-12 col-md-6 col-lg-5">
                 <h2>{{- .subtitle -}}</h2>
             </div>
-            <div class="col-md-6 align-right">
+            <div class="col-xs-12 col-md-6 align-right first-xs last-md">
                 <h6>{{- .title -}}</h6>
             </div>
         </div>
-        <div class="row between-xs spaced companies">
+        <div class="row between-xs middle-xs spaced companies">
             {{- range .companies -}}
-            <div class="col-sm-6 col-md-3">
+            <div class="col-xs-6 col-md-3 content">
                 {{- partial (printf "icons/%s.html" .icon) -}}
-                <p>
+                <p class="hide-sm">
                     {{- .text -}}<br><br>
                     <a href="{{- .link -}}">Visit Website</a>
                 </p>
+            </div>
+            <div class="col-xs-6 col-md-3 content-mobile">
+            <p>{{- .mobileText -}}</p>
             </div>
             {{- end -}}
         </div>
