@@ -1,7 +1,7 @@
 <header id="header-main" class="{{- if .Params.blackheader -}}black{{- end -}}">
     <div class="container">
         <div class="row middle-xs between-xs" id="header">
-            <div class="col-xs-6 col-sm-3">
+            <div class="col-xs-12 col-sm-6">
                 <a href="{{- $.Site.BaseURL -}}" title="DigitalDigital" class="logo">
                     DigitalDigital
                 </a>
@@ -12,7 +12,7 @@
                     Esc
                 </button>
             </div>
-            <div class="col-xs-6 col-sm-9">
+            <div class="col-xs-6 col-sm-6 hide-sm">
                 <ul class="right">
                     <li><a href="#" title="Contact">Contact</a></li>
                 </ul>
@@ -22,7 +22,7 @@
     </div>
 </header>
 <div id="menu-overlay">
-    <div class="container">
+    <div class="container hide-sm">
         <div class="row">
             {{- range $.Site.Data.menu.main -}}
             <div class="{{- .class -}}">
@@ -35,5 +35,23 @@
             </div>
             {{- end -}}
         </div>
+    </div>
+    <div class="container hide-sm-up">
+            {{- range $.Site.Data.menu.mobile -}}
+                <ul {{ if .links }} class="has-sublinks"  {{ end }}>
+                <h6 class="title row middle-xs" data-toggle="collapse" data-target=".collapse{{- .title -}}">
+                    {{- .title -}} 
+                    {{ if .links }}
+                        <span class="plus-icon">{{- partial "icons/plus.html" -}}</span>
+                        <span class="arrow-top-icon">{{- partial "icons/arrow-top.html" -}}</span>
+                    {{ end }}
+                </h6> 
+                   <div class="content collapse collapse{{- .title -}}"> 
+                        {{- range .links -}}
+                        <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
+                        {{- end -}}                   
+                   </div>
+                </ul>
+            {{- end -}}
     </div>
 </div>

@@ -1,6 +1,10 @@
 #home-hero {
 	.row {
-		height: calc(100vh - 5.25em);
+    height: calc(100vh - 18em);	
+
+		@include breakpoint(sm) {
+      height: calc(100vh - 5.25em);			
+		}
 	}
 }
 
@@ -54,12 +58,31 @@
 		margin-top: 150px;
 		margin-bottom: 150px;
 	}
-	.logos {
-		margin-left: 0;
-		margin-right: 0;
-		svg {
-			fill: black;
+
+	.icons {
+		@include breakpoint(md-down) {
+			flex-basis:33.33333%;
+			&:nth-child(3n + 2) {
+				text-align: center;
+			}
+			&:nth-child(3n) {
+				text-align: right;
+			}
+			svg {
+				margin-bottom: 3rem;
+			}
 		}
+		@include breakpoint(sm-down) {
+			svg {
+				max-width: 70%;
+				max-height: 2.5rem;
+			}
+		}
+	}
+	svg {
+		display: block;
+		margin: auto;
+		fill: black;
 	}
 }
 

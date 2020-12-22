@@ -1,7 +1,7 @@
 {{- define "main" -}}
 <div id="home-hero">
     <div class="container">
-        <div class="row bottom-xs">
+        <div class="row middle-xs bottom-sm">
             <div class="col-md-10">
                 <h1 class="home">{{- .Params.h1 -}}</h1>
             </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="row middle-xs between-xs logos">
             {{- range .logos -}}
-                {{- partial (printf "icons/%s.html" .icon) -}}
+              <div class="icons">{{- partial (printf "icons/%s.html" .icon) -}} </div>
             {{- end -}}
         </div>
     </div>
@@ -89,7 +89,7 @@
                 </h6>
             </div>
             {{- range where (where $.Site.RegularPages "Type" "articles") "Params.external" true -}}
-            {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Params.canonical "class" "col-xs-12 col-md-6") -}}
+            {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Params.canonical "class" "col-xs-12 col-sm-6") -}}
             {{- end -}}
         </div>
     </div>

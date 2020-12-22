@@ -1,5 +1,8 @@
 .casestudy {
-	padding: 60px 60px;
+	padding: 50px 50px;
+	@include breakpoint(md) {
+		padding: 125px 60px;
+	}
 	.infos {
 		h4 {
 			margin: initial;
@@ -13,7 +16,11 @@
 		}
 	}
 	.quote {
-		padding: 0px 50px;
+		padding: 50px 0;
+		@include breakpoint(md) {
+			align-self: center;
+			padding-right: 50px;	
+		}
 		.quote-text {
 			margin-bottom: 50px;
 		}
@@ -22,23 +29,30 @@
 			margin-left: 0;
 			img {
 				border-radius: 100%;
-				width: 40px;
-				height: 40px;
+				width: 2.5rem;
+				height: 2.5rem;
 				object-fit: cover;
 				margin-right: 20px;
 			}
 			p {
 				line-height: 22px;
 				margin: 0;
+				padding-left: 15px;
 			}
 		}
 	}
 
 	.stats {
-		border-left: 1px solid #00000011;
 		text-align: center;
-		> div {
-			padding: 25px 0px;
+		padding-top: 60px;
+		border-left: none;
+		border-top: 1px solid #00000011;
+		@include breakpoint(md) {
+			border-top: none;
+			border-left: 1px solid #00000011;
+		}
+		.value{
+			padding: 35px 0px;
 		}
 		h4,
 		p {

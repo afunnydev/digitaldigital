@@ -4,7 +4,7 @@ $link-card-with-info-height: 260px;
 	margin-bottom: 1rem;
 	.inner {
 		position: relative;
-		min-height: $link-card-height;
+		min-height: auto;
 		color: $black;
 		background-color: $white;
 		border-bottom: 3px solid $black_sub3;
@@ -12,18 +12,33 @@ $link-card-with-info-height: 260px;
 		display: flex;
 		padding: 25px;
 		cursor: pointer;
-		&.with-info {
-			min-height: $link-card-with-info-height;
-		}
+	
 		.content {
 			align-self: flex-end;
+			h5{
+				margin: 0;
+			}
 			p {
+				margin: 0;
 				&:last-child {
 					margin-bottom: 0;
 				}
 				&.info {
 					color: $black_sub1;
 				}
+			}
+		}
+		@include breakpoint(sm) {
+			.content{
+				h5{
+					margin-bottom: 1em;
+				}
+			}
+			min-height: $link-card-height;
+			border-bottom: 3px solid #d7d7d7;
+			border-left:none;
+			&.with-info {
+				min-height: $link-card-with-info-height;
 			}
 		}
 		.link-arrow {
@@ -35,6 +50,7 @@ $link-card-with-info-height: 260px;
 			transform: translateY(10px);
 		}
 		&:hover {
+			@include breakpoint(sm) {
 			border-bottom: 8px solid #0066ff;
 			// 8px is 0.5rem, which is the half of the spacing between the cards.
 			// Can't use .rem because not the same unit.
@@ -43,9 +59,11 @@ $link-card-with-info-height: 260px;
 			&.with-info {
 				min-height: $link-card-with-info-height + 8px;
 			}
-			&:hover .link-arrow {
-				opacity: 1;
-				transform: translateY(0px);
+
+				&:hover .link-arrow {
+					opacity: 1;
+					transform: translateY(0px);
+				}
 			}
 		}
 	}

@@ -5,4 +5,10 @@
     h3 {
         max-width: 400px;
     }
+    .btn{
+        display: block;
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
 }
