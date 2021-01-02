@@ -1,0 +1,24 @@
+.logos-partial {
+	margin-right: 0;
+	margin-left: 0;
+    .icons {
+		@include breakpoint(md-down) {
+			flex-basis:33.33333%;
+			&:nth-child(3n + 2) {
+				text-align: center;
+			}
+			&:nth-child(3n) {
+				text-align: right;
+			}
+			svg {
+				margin-bottom: 3rem;
+			}
+		}
+		@include breakpoint(sm-down) {
+			svg {
+				max-width: 70%;
+				max-height: 2.5rem;
+			}
+		}
+	}
+}

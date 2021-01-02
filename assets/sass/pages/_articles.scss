@@ -1,0 +1,49 @@
+#articles-hero {
+	.row {
+		height: calc(70vh - 5.25em);
+	}
+}
+
+.articles-list {
+    &.first {
+        padding-top: 0;
+    }
+}
+
+main.article {
+    .container {
+        max-width: 650px;
+    }
+}
+
+#article-info {
+    h1 {
+        font-size: 3.4365rem;
+        line-height: 1.27em;
+        margin-bottom: 2rem;
+    }
+    img {
+        margin-top: 2rem;
+        @media screen and (min-width: 800px) {
+            width: 118%;
+            max-width: 118%;
+            margin-left: -9%;
+        }
+    }
+}
+
+#article-content {
+    margin-bottom: 8em;
+    .pro-tip {
+        background: #F2F2F2;
+        padding: 40px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        h5 {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

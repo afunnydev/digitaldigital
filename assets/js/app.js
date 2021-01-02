@@ -85,12 +85,13 @@ function scrollAnchors(e, respond) {
 function homeSlider() {
     // Infinite slider that slides and stops on hover.
     var hovered = false,
-        offset = 0,
-        offsetUnit = -0.05;
+        offset = 0;
     var viewportWidth = window.innerWidth;
+    // A bit arbitrary, but the wider the screen, the less fast we want it to scroll.
+    var offsetUnit = -100 / viewportWidth;
     var carousel = document.getElementById('carousel');
     if (!carousel) return;
-    carousel.style.width =  window.innerWidth  + 'px';
+    carousel.style.width =  viewportWidth  + 'px';
     var slides = document.getElementsByClassName('home-slides');
     var nbSlides = slides.length;
 
@@ -158,11 +159,9 @@ function homeSlider() {
 function mobileMenu(){
     var collapseTrigger = document.getElementsByClassName('has-sublinks');
     for(let i = 0 ; i < collapseTrigger.length ; i++){
-        collapseTrigger[i].addEventListener('click', (ev) => {
-            const elm = ev.target;
-            const selector = elm.getAttribute('data-target');
-            elm.classList['toggle']('active');
-            document.querySelectorAll(selector)[0].classList['toggle']('show');
+        collapseTrigger[i].firstElementChild.addEventListener('click', (e) => {
+            e.preventDefault();
+            collapseTrigger[i].classList['toggle']('opened');
         });
     }
 }
@@ -171,9 +170,30 @@ function home() {
     homeSlider();
 }
 
+function icons() {
+    var icon = document.getElementById('service-icon');
+    if (!icon) {
+        return;
+    }
+    var anim = bodymovin.loadAnimation({
+        container: icon, // Required
+        path: '/animations/test.json', // Required
+        renderer: 'svg', // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+    });
+    icon.addEventListener('mouseenter', function(e) {
+        anim.play();
+    });
+    icon.addEventListener('mouseleave', function(e) {
+        anim.stop();
+    }); 
+}
+
 (function() {
     scrollTo();
     header();
     home();
+    icons();
     mobileMenu();
 })();

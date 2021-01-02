@@ -53,18 +53,15 @@ main:
         link: '#'
 mobile:
   - title: Home
+    link: 
   - title: Case Studies
+    link: '#'
   - title: Articles
+    link: articles
   - title: About
+    link: 
   - title: Careers
-  - title: Industries
-    links: 
-      - text: Search Engine Optimization
-      - text: Digital Marketing
-  - title: Services
-    links: 
-      - text: Search Engine Optimization
-      - text: Digital Marketing
+    link: 
 footer:
   - title: Contact Us
     class: col-md-4 col-xs-12 big

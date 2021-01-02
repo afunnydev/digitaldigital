@@ -28,7 +28,7 @@
 <div id="home-we-do" class="section">
     <div class="container">
         <h2>{{- .title -}}</h2>
-        {{ range where $.Site.RegularPages "Type" "services" }}
+        {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
         <h4><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
         {{- end -}}
         <div class="row sub between-xs">
@@ -39,11 +39,7 @@
                 <p>{{- .description | markdownify -}}</p>
             </div>
         </div>
-        <div class="row middle-xs between-xs logos">
-            {{- range .logos -}}
-              <div class="icons">{{- partial (printf "icons/%s.html" .icon) -}} </div>
-            {{- end -}}
-        </div>
+        {{- partial "site/logos" (dict "context" . "logos" .logos) -}}
     </div>
 </div>
 {{- end -}}
@@ -88,23 +84,9 @@
                     <a href="#" title="{{- .title -}}">{{- .title -}}</a>
                 </h6>
             </div>
-            <div class="row">
-                {{- range .features -}}
-                <div class="col-xs-12 col-sm-6 featured">
-                    <a href="{{- .link -}}">
-                        <img src="{{- .img -}}">
-                        <div class="content hide-sm">
-                            <p>{{- .text -}} <br><br>Read</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 featured-mobile">
-                    <p>
-                        {{- .text -}}
-                    </p>
-                </div>
-                {{- end -}}           
-            </div>
+            {{- range where (where $.Site.RegularPages "Type" "articles") "Params.external" true -}}
+            {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Params.canonical "class" "col-xs-12 col-sm-6") -}}
+            {{- end -}}
         </div>
     </div>
 </div>

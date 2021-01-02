@@ -17,12 +17,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 2rem;
+    &.no-margin {
+        margin-bottom: 0;
+    }
 }
 
 h1 {
     font-size: 2.813rem;
     margin: 0;
     line-height: 3.46875rem;
+    @include breakpoint(sm) {
+        font-size: 6.25rem;
+        line-height: 6.875rem;
+        margin-bottom: 4rem;
+    }
     &.home {
         font-size: 2.813rem;
         line-height: 1.35em;
@@ -31,54 +39,51 @@ h1 {
             font-size: 5.3125rem;    
         }
     }
+}
+
+h2 {
+    font-size: 2.1875rem;
+    margin-bottom: 2.8125rem;
+    line-height: 1.27em;
     @include breakpoint(sm) {
-        font-size: 6.25rem;
-        line-height: 6.875rem;
+        font-size: 3.4375rem;
         margin-bottom: 4rem;
     }
 }
 
-h2 {
-    font-size: 3.4375rem;
-    margin-bottom: 4rem;
-    line-height: 1.27em;
+h3 {
+    font-size: 1.875rem;
+    line-height: 1.32em;
+    margin-bottom: 2rem;
     @include breakpoint(sm) {
-        margin-bottom:  2.8125rem;
+        font-size: 2.5rem;
+    }
+}
+
+h4 {
+    font-size: 1.688rem;
+    line-height: 1.40em;
+    margin-bottom: 2rem;
+    @include breakpoint(sm) {
         font-size: 2.1875rem;
     }
 }
 
-h3 {
-    font-size: 2.5rem;
-    line-height: 1.32em;
-    margin-bottom: 2rem;
-}
-
-h4 {
-    font-size: 2.1875rem;
-    line-height: 1.40em;
-    margin-bottom: 2rem;
-    @include breakpoint(sm) {
-        font-size: 1.688rem;
-    }
-}
-
 h5 {
-    
-    font-size: 1.75rem;
+    font-size: 1.5625rem; 
     line-height: 1.36em;
     margin-bottom: 2rem;
     @include breakpoint(sm) {
-        font-size: 1.5625rem;  
+        font-size: 1.75rem; 
     }
 }
 
 h6 {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     line-height: 1.50em;
     margin-bottom: 2rem;
     @include breakpoint(sm) {
-        font-size: 1.25rem; 
+        font-size: 1.375rem; 
     }
     &.with-dash {
         position: relative;
@@ -135,11 +140,39 @@ p {
             font-size: 0.75rem;   
         }
     }
+    &.no-margin {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
-#article-main {
+#article-content {
+    h2, h3, h4, h5, h6 {
+        font-weight: 500;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    h3 {
+        font-size: 1.875rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.5rem;
+    }
+    h6 {
+        font-size: 1rem;
+    }
     p {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.72em;
     }
 }
 

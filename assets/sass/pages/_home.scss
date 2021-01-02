@@ -59,29 +59,7 @@
 		margin-bottom: 150px;
 	}
 
-	.icons {
-		@include breakpoint(md-down) {
-			flex-basis:33.33333%;
-			&:nth-child(3n + 2) {
-				text-align: center;
-			}
-			&:nth-child(3n) {
-				text-align: right;
-			}
-			svg {
-				margin-bottom: 3rem;
-			}
-		}
-		@include breakpoint(sm-down) {
-			svg {
-				max-width: 70%;
-				max-height: 2.5rem;
-			}
-		}
-	}
 	svg {
-		display: block;
-		margin: auto;
 		fill: black;
 	}
 }
@@ -93,50 +71,13 @@
 		margin: 80px 0;
 		background-color: $white;
 		color: $black;
+		padding: 50px 50px;
+		@include breakpoint(lg) {
+			padding: 125px 60px;
+		}
 	}
 }
 
 #home-we-write {
 	border-bottom: 1px solid $black_sub3;
-	.featured {
-		position: relative;
-		overflow: hidden;
-		img {
-			//fit img in container
-			width: 100%;
-		}
-		.content {
-			position: absolute;
-			background: black;
-			color: white;
-			width: 300px;
-			right: -300px;
-			top: 0;
-			transition: right 0.6s;
-			// There's weird 5px gap under the card..
-			height: calc(100% - 5px);
-
-			p {
-				position: absolute;
-				margin-bottom: 0;
-				left: 30px;
-				right: 30px;
-				bottom: 30px;
-			}
-		}
-		&:hover {
-			.content {
-				right: 0;
-			}
-		}
-	}
-	.featured-mobile {
-    display: block;
-    p {
-      margin: 0 0 35px 0;
-    }
-		@include breakpoint(sm) {
-      display: none;
-		}
-	}
 }

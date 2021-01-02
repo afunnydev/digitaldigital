@@ -1,4 +1,13 @@
-#services-hero {
+#services-list {
+	.logos {
+		padding-top: 8em;
+		svg {
+			fill: white;
+		}
+	}
+}
+
+#services-all-hero {
 	background-color: black;
     .row {
     
@@ -16,14 +25,15 @@
 	}
 }
 
-#services-list, #services-full, #services-single-clients {
+#services-list, #services-all-full, #services-list-clients {
 	background-color: black;
 	color: white;
 }
 
-#services-full {
+#services-all-full {
 	.small {
 		color: $black_sub1;
+		font-weight: 500;
 	}
 	ul {
 		list-style: none;
@@ -32,7 +42,7 @@
 	}
 }
 
-#services-single-hero {
+#services-list-hero {
     .row {
     height: calc(100vh - 21.875em);
 		@include breakpoint(sm) {
@@ -41,34 +51,123 @@
 	}
 }
 
-#services-single-clients {
-  .row{
-    @include breakpoint(md-down) {
-        margin: 0 auto;
-    }
-  .icons {
-      @include breakpoint(md-down) {
-          flex-basis:33.33333%;
-          &:nth-child(3n + 2) {
-              text-align: center;
-          }
-          &:nth-child(3n) {
-              text-align: right;
-          }
-          svg {
-              margin-bottom: 4rem;
-          }
-      }
-      @include breakpoint(sm-down) {
-          svg {
-              max-width: 70%;
-              max-height: 2.5rem;
-          }
-      }
-  }
-	svg {
-			fill: white;
+#services-single-hero {
+	background-color: black;
+	color: white;
+	h1 {
+		margin-top: 4rem;
+		margin-bottom: 14rem;
+	}
+	p {
+		margin-top: 0;
+	}
+	.card {
+		margin-top: 6rem;
+		background: white;
+		color: black;
+		.content {
+			padding: 60px;
 		}
-  }
+		.with-dash {
+			margin-top: 2rem;
+			margin-bottom: 0;
+		}
+		.icon-ctn {
+			height: 100%;
+		}
+	}
+}
+
+#services-single-case {
+	background: #F2F5FF;
+	.casestudy {
+		margin: 80px 0;
+		background-color: $white;
+		color: $black;
+		padding: 60px;
+	}
+}
+
+#services-single-icons {
+	.points {
+		margin-bottom: 1rem;
+		& > div {
+			border: 1px solid $black_sub3;
+			height: 100%;
+			padding: 40px;
+			text-align: center;
+			transition: 0.3s;
+			&:hover {
+				border-bottom: 4px solid black;
+				margin-top: -3px;
+			}
+		}
+		svg {
+			margin-bottom: 20px;
+		}
+		.title {
+			font-weight: 500;
+		}
+	}
+	.logos-partial {
+		margin-top: 80px;
+	}
+}
+
+#services-single-checklist {
+	background: black;
+	color: white;
+	ul {
+		padding-left: 0;
+		li {
+			display: block;
+			list-style: none;
+			padding: 10px 0 0;
+			// Cannot use a border because the row has 0.5rem negative margins left/right.
+			&:before {
+				content: '';
+				width: 100%;
+				border-bottom: 1px solid $black_sub1;
+				display: block;
+				margin-bottom: 10px;
+			}
+			&:last-of-type {
+				&:after {
+					content: '';
+					width: 100%;
+					border-bottom: 1px solid $black_sub1;
+					display: block;
+					margin-top: 10px;
+				}
+			}
+		}
+    }
+}
+
+#services-single-kpis {
+	border-bottom: 1px solid $black_sub3;
+	h2 {
+		margin: 15px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+#services-single-points {
+	.title {
+		font-weight: 500;
+		border-bottom: 1px solid $black_sub3;
+		padding-bottom: 1em;
+		transition: border-color 0.4s;
+	}
+	.smaller {
+		max-width: 320px;
+	}
+	.numbers:hover {
+		.title {
+			border-color: black;
+		}
+	}
 }
 	
