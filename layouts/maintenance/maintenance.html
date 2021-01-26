@@ -1,0 +1,36 @@
+{{- define "header" -}}<!---->{{end}}
+{{- define "main" -}}
+<div id="home-hero">
+    <div class="container">
+        <div class="row middle-xs bottom-sm">
+            <div class="col-md-10">
+                <h1 class="home">{{.Params.h1}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="home-portfolio">
+    <div id="carousel-container">
+        <div id="carousel">
+            {{- range .Params.portfolio -}}
+            <div class="home-slides">
+                {{- range .images -}}
+                <img src="{{- .src -}}" alt="{{- .title -}}">
+                {{- end -}}
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+
+<div id="home-we-do" class="section"  style="border-bottom: 1px solid #d7d7d7;">
+    <div class="container">
+        {{- partial "site/logos" (dict "context" . "logos" .Params.logos) -}}
+    </div>
+</div>
+
+{{- partial "site/companies" . -}}
+
+{{end}}
+{{- define "footer" -}}<!---->{{end}}
