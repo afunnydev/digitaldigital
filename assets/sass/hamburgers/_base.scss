@@ -3,7 +3,7 @@
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
-  cursor: pointer;
+  cursor: $hover;
 
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -25,6 +25,10 @@
     @else {
       opacity: $hamburger-hover-opacity;
     }
+  }
+
+  &:active {
+    cursor: $click;
   }
 
   &.is-active {

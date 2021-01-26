@@ -14,9 +14,7 @@
             {{- range .Params.portfolio -}}
             <div class="home-slides">
                 {{- range .images -}}
-                <a href="{{- .url -}}" title="{{- .title -}}">
                     <img src="{{- .src -}}" alt="{{- .title -}}">
-                </a>
                 {{- end -}}
             </div>
             {{- end -}}

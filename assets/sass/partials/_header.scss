@@ -31,6 +31,9 @@
         font-size: 1.0625rem;
         line-height: 1.59em;
         vertical-align: middle;
+        &:active {
+            cursor: $click;
+        }
     }
     button {
         outline: none !important;
@@ -81,6 +84,9 @@
             color: inherit;
             text-decoration: none;
         }
+        a:active {
+            cursor: $click;
+        }
     }
     .col-xs-7 li {
         line-height: 3.125rem;
@@ -118,6 +124,7 @@
             font-size: 1.0625rem;
             line-height: 2.18em;
             display: block;
+
         }
         &.active a {
             text-decoration: underline;
@@ -134,7 +141,10 @@
         a {
             padding: 15px 0;
             &:hover{
-                cursor: pointer;
+                cursor: $hover;
+            }
+            &:active {
+                cursor: $click;
             }
         }
         li {

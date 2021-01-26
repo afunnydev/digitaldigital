@@ -27,9 +27,13 @@
             margin-top: 5px;
         }
         &:hover {
+            cursor: $hover;
             .gif {
                 display: block;
             }
+        }
+        &:active {
+            cursor: $click;
         }
         @include breakpoint(sm-down) {
 			.name {

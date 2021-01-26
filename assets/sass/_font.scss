@@ -1,3 +1,8 @@
+// HTML elements
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "SuisseIntl";
     src: url("/fonts/SuisseIntl-Light-WebS.woff") format('woff'),
@@ -88,7 +93,7 @@ h6 {
     &.with-dash {
         position: relative;
         display: inline-block;
-        cursor: pointer;
+        cursor: $normal;
         padding-left: 45px;
         transition: 0.4s;
         &:before {
@@ -104,10 +109,14 @@ h6 {
             border-color: white;
         }
         &:hover {
+            cursor: $hover;
             padding-left: 60px;
             &:before {
                 width: 50px;
             }
+        }
+        &:active {
+          cursor: $click;
         }
     }
 }
@@ -180,6 +189,10 @@ a {
     font-weight: 300;
     color: inherit;
     text-decoration: none;
+    cursor: $hover;
+    &:active{
+        cursor: $click;
+    }
     &.small {
         font-size: 0.9375em;
     }
