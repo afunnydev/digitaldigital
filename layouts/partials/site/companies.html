@@ -9,13 +9,15 @@
                 <h6>{{- .title -}}</h6>
             </div>
         </div>
-        <div class="row between-xs middle-xs spaced companies">
+        <div class="row between-xs spaced companies">
             {{- range .companies -}}
             <div class="col-xs-12 col-sm-6 col-md-3 content">
                 {{- partial (printf "icons/%s.html" .icon) -}}
                 <p>
                     {{- .text -}}<br><br>
-                    <a href="{{- .link -}}">Visit Website</a>
+                    {{ if .link }}
+                    <a href="{{- .link -}}" target="_blank">Visit Website</a>
+                    {{end}}
                 </p>
             </div>
             {{- end -}}

@@ -43,6 +43,8 @@ function getCookie(name) {
 // Open the menu overlay on click
 function header() {
     var menuBtn = document.getElementById('menu-icon');
+    // Prevent page breaking on Maintenance page. Because menuBtn don't exist, it breaks the page
+    if(menuBtn == null) return;
     menuBtn.addEventListener('click', function(e) {
         if (!menuBtn.classList.contains('is-active')) {
             menuBtn.classList.add('is-active');
