@@ -19,5 +19,5 @@
 [[redirects]]
     from = "/*"
     to = "/maintenance"
-    status = 200
-    force = false
+    status = 302
+    force = true
