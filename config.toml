@@ -1,4 +1,4 @@
-baseURL = "https://sad-mahavira-ae3c1a.netlify.app/"
+baseURL = "https://www.digitaldigital.ca/"
 languageCode = "en-ca"
 title = "DigitalDigital"
 
@@ -6,7 +6,7 @@ enableRobotsTXT = true
 disableAliases = true
 
 [params]
-disallow_search_engines = false # set robots.txt to disallow everything
+disallow_search_engines = true # set robots.txt to disallow everything
 
 # add redirects/headers
 [outputs]

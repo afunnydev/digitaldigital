@@ -17,7 +17,7 @@
     command = "hugo -b $DEPLOY_PRIME_URL"
 
 [[redirects]]
-    from = "/*"
+    from = "/"
     to = "/maintenance"
     status = 302
     force = true
