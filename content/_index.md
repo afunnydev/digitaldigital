@@ -7,10 +7,10 @@ portfolio:
   - images:
     - url: '#'
       title: 'Test'
-      src: /img/deux-par-deux-portfolio.png
+      src: /img/americaindairy.png
     - url: '#'
       title: 'Test'
-      src: /img/dormani-portfolio.png
+      src: /img/thebedtime.png
   - images:
     - url: '#'
       title: 'Test'
@@ -21,45 +21,75 @@ portfolio:
   - images:
     - url: '#'
       title: 'Test'
-      src: /img/dormani-portfolio.png
+      src: /img/mogo.png
+    - url: '#'
+      title: 'Test'
+      src: /img/phoneloops.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/newbalance.png
     - url: '#'
       title: 'Test'
       src: /img/deux-par-deux-portfolio.png
   - images:
     - url: '#'
       title: 'Test'
-      src: /img/inbeat-portfolio.png
+      src: /img/ecologi.png
+    - url: '#'
+      title: 'Test'
+      src: /img/7eleven.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/iba.png
+    - url: '#'
+      title: 'Test'
+      src: /img/brigil.png
+
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/americaindairy.png
+    - url: '#'
+      title: 'Test'
+      src: /img/thebedtime.png
+  - images:
     - url: '#'
       title: 'Test'
       src: /img/cna-portfolio.png
+    - url: '#'
+      title: 'Test'
+      src: /img/inbeat-portfolio.png
   - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/mogo.png
+    - url: '#'
+      title: 'Test'
+      src: /img/phoneloops.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/newbalance.png
     - url: '#'
       title: 'Test'
       src: /img/deux-par-deux-portfolio.png
-    - url: '#'
-      title: 'Test'
-      src: /img/dormani-portfolio.png
   - images:
     - url: '#'
       title: 'Test'
-      src: /img/cna-portfolio.png
+      src: /img/ecologi.png
     - url: '#'
       title: 'Test'
-      src: /img/inbeat-portfolio.png
+      src: /img/7eleven.png
   - images:
     - url: '#'
       title: 'Test'
-      src: /img/dormani-portfolio.png
+      src: /img/iba.png
     - url: '#'
       title: 'Test'
-      src: /img/deux-par-deux-portfolio.png
-  - images:
-    - url: '#'
-      title: 'Test'
-      src: /img/inbeat-portfolio.png
-    - url: '#'
-      title: 'Test'
-      src: /img/cna-portfolio.png
+      src: /img/brigil.png
+
 section3:
   title: We do
   subtitle: '& believe in strategic creativity based on data and analytics.'

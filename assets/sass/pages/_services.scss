@@ -102,9 +102,6 @@
 				border-bottom: 4px solid black;
 				margin-top: -3px;
 			}
-			&:active {
-				cursor: $click;
-			}
 		}
 		svg {
 			margin-bottom: 20px;
@@ -172,11 +169,6 @@
 		cursor: $hover;
 		.title {
 			border-color: black;
-		}
-	}
-	.numbers{
-		&:active {
-			cursor: $click;
 		}
 	}
 }

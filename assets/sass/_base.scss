@@ -7,9 +7,7 @@ body {
     overflow-x: hidden;
     color: $black;
     margin: 0;
-    cursor: $normal;
     font-family: $pfont;
-
 }
 
 // Elements
@@ -22,18 +20,13 @@ body {
 	padding: 12px 36px;
 	font-size: 16px;
 	transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
-    cursor: $normal;
     display: inline-block;
     &.full{
         width: 100%;
         text-align: center;
     }
     &:hover {
-        cursor: $hover;
         padding: 12px 45px;
-    }
-    &:active {
-      cursor: $click;
     }
 }
 

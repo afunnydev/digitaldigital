@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6 {
     &.no-margin {
         margin-bottom: 0;
     }
+    cursor: $text;
+    &:active{
+        cursor: $click;
+    }
 }
 
 h1 {
@@ -93,7 +97,6 @@ h6 {
     &.with-dash {
         position: relative;
         display: inline-block;
-        cursor: $normal;
         padding-left: 45px;
         transition: 0.4s;
         &:before {
@@ -109,14 +112,10 @@ h6 {
             border-color: white;
         }
         &:hover {
-            cursor: $hover;
             padding-left: 60px;
             &:before {
                 width: 50px;
             }
-        }
-        &:active {
-          cursor: $click;
         }
     }
 }
