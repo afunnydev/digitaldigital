@@ -32,9 +32,6 @@
                 display: block;
             }
         }
-        &:active {
-            cursor: $click;
-        }
         @include breakpoint(sm-down) {
 			.name {
 				padding-top: 20px;
