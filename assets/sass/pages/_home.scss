@@ -14,11 +14,8 @@
 		overflow: hidden;
 		background-color: $black;
 		height: 800px;
-		cursor: $draggable;
-		&:active {
-		cursor: $dragging;
-		}
 	}
+	
 	#carousel {
 		position: absolute;
 		left: 0;

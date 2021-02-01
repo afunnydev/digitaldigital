@@ -87,6 +87,7 @@ function scrollAnchors(e, respond) {
 function homeSlider() {
     // Infinite slider that slides and stops on hover.
     var hovered = false,
+        dragOffset = 0; 
         offset = 0;
     var viewportWidth = window.innerWidth;
     // A bit arbitrary, but the wider the screen, the less fast we want it to scroll.
@@ -156,6 +157,24 @@ function homeSlider() {
     carousel.addEventListener("mouseleave", function() {
         hovered = false;
     });
+
+    carousel.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+        carousel.style.cursor = "url('/img/cursor/DRAGGING.svg'), auto"; //Because of the preventDefault, we have to force change the cursor
+        canDrag = true;
+        dragOffset = e.clientX - carousel.getBoundingClientRect().left - offset;
+        document.onmousemove = dragCarousel;
+    });
+
+    document.addEventListener("mouseup", function () {
+        canDrag = false;
+        carousel.style.cursor = "url('/img/cursor/DRAGGABLE.svg'), auto";
+    });
+
+    function dragCarousel(e){
+        if(!canDrag) return
+        carousel.style.left = e.pageX - dragOffset + 'px';
+    }
 }
 
 function mobileMenu(){
