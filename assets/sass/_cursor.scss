@@ -8,9 +8,8 @@ body{
 }
 
  // Button & Links
-a, button{
-    cursor: $hover;
-}
+ ::-webkit-any-link:hover{cursor: $hover;}
+ ::-webkit-any-link:active {cursor: pointer;}
 
 // Text
 h1, h2, h3, h4, h5, h6, p{
