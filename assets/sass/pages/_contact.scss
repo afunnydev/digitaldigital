@@ -1,0 +1,19 @@
+#contact {
+    .contact-infos {
+        p:not(:first-child) {
+            margin: 0;
+        }
+
+        .info {
+            margin: 25px 0;
+
+            p:first-child {
+                padding-bottom: 10px;
+            }
+
+            @include breakpoint(md) {
+                margin: 0;
+            }
+        }
+    }
+}

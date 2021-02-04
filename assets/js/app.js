@@ -216,6 +216,7 @@ function icons() {
 
 function bouncingBall(){
     var container = document.getElementById('cta-section');
+    if(container === null) return;
     var ball = document.getElementById('ballObject');
     var resize = false;
     var resizeTimelapse;
