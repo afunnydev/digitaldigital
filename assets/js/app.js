@@ -214,10 +214,102 @@ function icons() {
     }); 
 }
 
+function bouncingBall(){
+    var container = document.getElementById('cta-section');
+    var ball = document.getElementById('ballObject');
+    var resize = false;
+    var resizeTimelapse;
+    let canvas = {
+        element: document.getElementById('canvas'),
+        width: container.offsetWidth, // Get the current container Width
+        height: container.offsetHeight, // Get the current container Height
+        initialize: function () {
+            this.element.style.width = this.width + 'px';
+            this.element.style.height = this.height + 'px';
+        }
+    };
+    var Ball = {
+        colors: ['#0038FF', '#72FF71', '#B494F7', '#DBFC7D', '#FE2611', '#FFCDF3', '#FFBE41'],
+        currentCol: null,
+        // Ball constructor on initialize
+        initialize: function (dx, dy, size) {
+            Object.create(this);
+            this.dx = dx;
+            this.dy = dy;
+            this.width = size;
+            this.height = size;
+            this.element = ball;
+            ball.style.width = this.width + 'px';
+            ball.style.height = this.height + 'px';
+            return this;
+        },
+        direction: function (x, y) {
+            // Set the ball direction
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+            // Check for x and y axis collision. If it hits, change color and swap direction
+            if (x < 0 || x > canvas.width - this.width) {
+                this.randomColor();
+                this.dx = -this.dx;
+            }
+            if (y < 0 || y > canvas.height - this.height) {
+                this.randomColor();
+                this.dy = -this.dy;
+            }
+        },
+        randomColor: function () {
+            // Get a random number from the colors list
+            randomNumber = Math.floor(Math.random() * this.colors.length);
+
+            // Set the ball color and save the color has current color
+            ball.style.backgroundColor = this.colors[randomNumber];
+            currentCol = this.colors[randomNumber];
+        },
+        draw: function (x, y) {
+            // reassign this
+            var _this  = this;
+
+            // Update the ball direction
+            this.direction(x, y);
+
+            // Loop this fucntion to constantly update ball position
+            setTimeout(function () {
+                // There,s a bug when we resize the windows, the ball glitch on the side. To prevent that (for now) reset the position to the new canvas size position
+                if (resize) {
+                    x = canvas.width / 2;
+                    y = canvas.height / 2;
+                }
+                // Draw the new ball position every 16.6ms
+                _this.draw(x + _this.dx, y + _this.dy);
+            }, 1000 / 60);
+        }
+    };
+
+    // Check for resize windows
+    window.onresize = function () {
+        // Resize the canvas bound when windows resize
+        canvas.width = container.offsetWidth;
+        canvas.initialize();
+        // Asign resize to true and clear the current timout
+        resize = true;
+        clearTimeout(resizeTimelapse);
+        // Check for when the event stop and asign resize to false
+        resizeTimelapse = setTimeout(function () {
+            resize = false;
+        }, 100);
+    };
+
+    // Init the canvas
+    canvas.initialize();
+    // Init ball
+    Ball.initialize(3, 3, 252).draw(canvas.width / 2, canvas.height / 2);
+}
+
 (function() {
     scrollTo();
     header();
     home();
     icons();
     mobileMenu();
+    bouncingBall();
 })();

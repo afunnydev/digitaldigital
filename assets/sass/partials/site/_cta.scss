@@ -1,12 +1,37 @@
 #cta-section {
-    background: $accent;
+    background: $white;
     padding-top: 10em;
     padding-bottom: 10em;
+    position: relative;
+    border-top: 1px solid $black_sub2;
+    #canvas{
+        .ball {
+            display: none;
+            @include breakpoint(sm) {
+                z-index: 0;
+                background-color: $white;
+                position: absolute;
+                display: inline-block;
+                border-radius: 50%; 
+            }
+
+        }
+        position: absolute;
+        top: 0%;
+        left: 0;
+    }
     h3 {
+        position: relative;
+        z-index: 100;
         max-width: 400px;
+    }
+    a, .with-dash{
+        z-index: 10;
     }
     .btn{
         display: block;
+        z-index: 10;
+        position: relative;
         @include breakpoint(sm) {
             display: none;
         }
