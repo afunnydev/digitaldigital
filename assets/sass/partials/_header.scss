@@ -54,6 +54,12 @@
             margin-left: 20px;
         }
     }
+    .hamburger{
+        cursor: $hover;
+        &:active{
+            cursor: $click;
+        }
+    }
     .hamburger-box {
         vertical-align: middle;
     }
