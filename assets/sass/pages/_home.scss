@@ -1,7 +1,6 @@
 #home-hero {
 	.row {
     height: calc(100vh - 18em);	
-
 		@include breakpoint(sm) {
       height: calc(100vh - 5.25em);			
 		}
@@ -41,7 +40,7 @@
 #home-we-do {
 	h4 {
 		padding-bottom: 30px;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid $black_sub3;
 		a {
 			display: inline-block;
 			width: calc(100% - 55px);

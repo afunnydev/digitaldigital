@@ -1,0 +1,23 @@
+/* The animation code */
+@keyframes LineDelayAnim {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.lineDelayAnim--item {
+	opacity: 0;
+}
+
+/* The element to apply the animation to */
+.lineDelayAnim {
+	animation-fill-mode: forwards;
+	animation-direction: normal;
+	animation-name: LineDelayAnim;
+	animation-duration: 1s;
+}

@@ -1,13 +1,16 @@
 {{- define "main" -}}
+
 <div id="home-hero">
     <div class="container">
         <div class="row middle-xs bottom-sm">
             <div class="col-md-10">
-                <h1 class="home">{{- .Params.h1 -}}</h1>
+                <h1 class="home lineDelayAnim--item">{{- .Params.h1 -}}</h1>
             </div>
         </div>
     </div>
 </div>
+
+ <div id="main-content"> 
 <div id="home-portfolio">
     <div id="carousel-container">
         <div id="carousel">
@@ -25,9 +28,9 @@
 {{- with .Params.section3 -}}
 <div id="home-we-do" class="section">
     <div class="container">
-        <h2>{{- .title -}}</h2>
+        <h2 class="lineDelayAnim--item">{{- .title -}}</h2>
         {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
-        <h4><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
+        <h4 class="lineDelayAnim--item"><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
         {{- end -}}
         <div class="row sub between-xs">
             <div class="col-md-6 col-lg-6">
@@ -46,10 +49,10 @@
 <div id="home-our-work" class="section">
     <div class="container">
         <div class="row between-xs">
-            <div class="col-sm-8 col-md-5">
+            <div class="col-sm-8 col-md-5 lineDelayAnim--item">
                 <h4>{{- .subtitle -}}</h4>
             </div>
-            <div class="col-sm-4 align-right">
+            <div class="col-sm-4 align-right lineDelayAnim--item">
                 <h6 class="with-dash white">
                     <a href="#" title="{{- .title -}}">{{- .title -}}</a>
                 </h6>
@@ -93,4 +96,5 @@
 {{- partial "site/companies" . -}}
 {{- partial "site/cta" . -}}
 {{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
+</div>
 {{- end -}}
