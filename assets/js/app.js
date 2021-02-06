@@ -54,6 +54,14 @@ function header() {
       document.body.classList.remove('with-menu');
     }
   });
+  window.addEventListener("keydown", function (e) {
+    if(e.key === "Escape") {
+      if (menuBtn.classList.contains('is-active')) {
+        menuBtn.classList.remove('is-active');
+        document.body.classList.remove('with-menu');
+      }
+    }
+  });
 }
 
 // Vanilla JS Smooth Scroll
