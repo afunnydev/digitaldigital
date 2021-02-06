@@ -331,6 +331,27 @@ function lineDelayAnim() {
   }
 }
 
+function articleScrollBar(){
+  const footer = document.querySelector("footer")
+  const progressBar = document.querySelectorAll(".progress-bar");
+  // Split width of progress bar to viewport (now theres only one bar tho)
+  for(var i = 0; i< progressBar.length; i++){
+    progressBar[i].style.width = 100/progressBar.length  + "%"
+    progressBar[i].style.left = progressBar[i].offsetWidth * i + "px";
+  }
+  document.addEventListener("scroll",
+    function() {
+      const scrollTop =  document.documentElement["scrollTop"] || document.body["scrollTop"]  ;
+      const scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight - footer.offsetHeight/2 ;
+      let scrollPercentValue = scrollTop / scrollBottom * 100;
+      for(var i = 0; i < progressBar.length; i++){
+          progressBar[i].style.setProperty("--scroll", scrollPercentValue  + "%");
+      }
+    },
+    { passive: true }
+  );
+}
+
 (function () {
   scrollTo();
   header();
@@ -339,4 +360,5 @@ function lineDelayAnim() {
   mobileMenu();
   bouncingBall();
   lineDelayAnim();
+  articleScrollBar();
 })();

@@ -17,6 +17,15 @@ main.article {
 }
 
 #article-info {
+    .progress-bar--container {
+        .progress-bar{
+            background: linear-gradient(to right,rgb(0, 0, 0) var(--scroll),transparent 0);
+            position: fixed;
+            height: 4px;
+            top:0px;
+            z-index: 100;
+        }
+    }
     h1 {
         font-size: 3.4365rem;
         line-height: 1.27em;

@@ -1,5 +1,8 @@
 {{- define "main" -}}
 <div id="article-info" class="section">
+<div class="progress-bar--container">
+    <div class="progress-bar"></div>
+</div>
     <div class="container">
         <h1>{{ .Title }}</h1>
         <h6>By {{ .Params.author }}, {{ .ReadingTime }} min read  |  {{.Date.Format "Jan 2 2006"}}</h6>
