@@ -2,7 +2,11 @@ members:
   - name: Alexandra Kazakova
     city: Budapest
     gif: /img/team/daniel-test.gif
-    position: Operations
+    position: Head of operations
+  - name: Börcz Réka 
+    city: New York
+    gif: /img/team/daniel-test.gif
+    position: Editor
   - name: Catherine Morin
     city: Montreal
     gif: /img/team/daniel-test.gif
@@ -10,19 +14,27 @@ members:
   - name: Daniel Cruz
     city: Montreal
     gif: /img/team/daniel-test.gif
-    position: Direction
+    position: Chief Creative Officer
   - name: David Morneau
     city: Montreal
     gif: /img/team/daniel-test.gif
-    position: Direction
+    position: Chief Executive Officer
   - name: Félix DeBlois-Beaucage
     city: Montreal
     gif: /img/team/daniel-test.gif
     position: Programming
+  - name: Ines Hamzakadic
+    city: Russia
+    gif: /img/team/daniel-test.gif
+    position: Content
   - name: John Barry
     city: Montreal
     gif: /img/team/daniel-test.gif
     position: Design
+  - name: Jumel Cepeda
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: SEO
   - name: Michael Parasotskiy 
     city: Russia
     gif: /img/team/daniel-test.gif
@@ -35,6 +47,10 @@ members:
     city: Montreal
     gif: /img/team/daniel-test.gif
     position: Operations
+  - name: Maggie
+    city: Montreal
+    gif: /img/team/daniel-test.gif
+    position: Sales
   - name: Ye Fang Kuang
     city: Ottawa
     gif: /img/team/daniel-test.gif
