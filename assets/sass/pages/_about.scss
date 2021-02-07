@@ -1,0 +1,14 @@
+#about{
+    #team-section{
+        background-color: $white;
+        color: $black;
+    }
+    #our-subsidiary-companies{
+        background-color: $black;
+        color:  $white;
+
+        svg path{
+            fill: $white;
+        }
+    }
+}

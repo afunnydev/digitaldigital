@@ -25,11 +25,11 @@
     <div class="container hide-sm">
         <div class="row">
             {{- range $.Site.Data.menu.main -}}
-            <div class="{{- .class -}}">
-                <p class="title">{{- .title -}}</p>
+            <div class="{{- .class -}} ">
+                <p class="title lineDelayAnim--item">{{- .title -}}</p>
                 <ul class="desktop-main">
                     {{- range .links -}}
-                    <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
+                    <li><a class="lineDelayAnim--item" href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
                     {{- end -}}
                 </ul>
             </div>
