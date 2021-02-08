@@ -46,6 +46,13 @@ portfolio:
     - url: '#'
       title: 'Test'
       src: /img/brigil.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/bluehouse-salmon.png
+    - url: '#'
+      title: 'Test'
+      src: /img/taiga-board.png
 
   - images:
     - url: '#'
@@ -89,6 +96,13 @@ portfolio:
     - url: '#'
       title: 'Test'
       src: /img/brigil.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/bluehouse-salmon.png
+    - url: '#'
+      title: 'Test'
+      src: /img/taiga-board.png
 
 section3:
   title: We do
