@@ -64,48 +64,39 @@ mobile:
     link: 
 footer:
   - title: Contact Us
-    class: col-md-4 col-xs-12 big
+    class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Book a call
         link: '#'
       - text: Send an message
         link: '#'
+      - text: More Information
+        link: '#'
   - title: Main
-    class: col-sm-3 col-md-2 col-xs-6
+    class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Home
         link: ''
-      - text: Case Studies
-        link: '#'
-      - text: Articles
-        link: '#'
       - text: About
         link: '#'
+      - text: Contact
+        link: '#'
+      - text: Articles
+        link: '#'
   - title: Work
-    class: col-sm-3 col-md-2 col-xs-6
+    class: col-lg-2 col-md-2 col-xs-6
     links:
-      - text: Home
-        link: ''
       - text: Case Studies
+        link: ''
+      - text: Services
         link: '#'
-      - text: Articles
-        link: '#'
-  - title: Lorem
-    class: col-sm-3 col-md-2 col-xs-6
+  - title: Social
+    class: col-lg-2 col-md-2 col-xs-6
     links:
-      - text: Home
+      - text: Facebook
         link: ''
-      - text: Case Studies
+      - text: Instagram
         link: '#'
-      - text: Articles
-        link: '#'
-  - title: Lorem
-    class: col-sm-3 col-md-2 col-xs-6
-    links:
-      - text: Home
-        link: ''
-      - text: Case Studies
-        link: '#'
-      - text: Articles
+      - text: Linkedin
         link: '#'
     

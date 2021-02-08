@@ -1,6 +1,7 @@
 <footer class="site-footer" role="contentinfo">
     <div class="container">
         <div class="row">
+        <div class="col-lg-4 col-md-4 col-xs-12 dd-icon">{{- partial (printf "icons/digitaldigital-ico.html") -}}</div>
             {{- range $.Site.Data.menu.footer -}}
             <div class="{{- .class -}}">
                 <p class="small hide-sm">{{- .title -}}</p>

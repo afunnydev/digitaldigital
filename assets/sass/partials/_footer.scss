@@ -3,11 +3,20 @@
     color: white;
     border-top: 1px solid white;
     padding: 40px 0 0;
+    .dd-icon{
+        padding-top:50px;
+        padding-bottom: 50px;
+        @include breakpoint(md) {
+            padding-top:0;
+            padding-bottom: 0;
+        }
+    }
     .subfooter {
         margin-top: 40px;
     }
     p.small {
         font-weight: 600;
+        margin-top: 0;
     }
     ul {
         margin-top: 20px;
