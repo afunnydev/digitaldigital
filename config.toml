@@ -1,6 +1,6 @@
 baseURL = "https://www.digitaldigital.ca/"
 languageCode = "en-ca"
-title = "DigitalDigital"
+title = "Digital Digital"
 
 enableRobotsTXT = true
 disableAliases = true

@@ -2,7 +2,7 @@
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    background-color: $white;
+    background-color: none;
     color: black;
     &.black {
         background-color: black;
@@ -102,29 +102,69 @@
     bottom: 0;
     opacity: 0;
     display: none;
-    background-color: $black;
+    background-color: none;
     transition: opacity 0.2s;
     padding-top: 200px;
     overflow-y: auto;
-    p.title {
-        font-size: 1.75rem;
-        line-height: 1.36em;
+
+    .subheader{
+        position: absolute;
+        bottom: 0;
         color: $white;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        padding: 25px 0;
+        svg{
+            width: 12px;
+            margin-right: 12px;
+        }
+    }
+    .row{
+        margin-top:0px;
+        @include breakpoint(md) {
+            margin-top:100px;
+        }
+    }
+    .main-link a {
+        font-size: 1.75rem;
+    }
+    .title {
+        margin-top: 0;
+        margin-bottom:25px;
+        //font-size: 1.75rem;
+        line-height: 2.18em;
+        color: $white;
+        @include breakpoint(md) {
+            margin-bottom: 100px;
+        }
     }
     ul.desktop-main {
-        margin-top: 100px;
         padding-left: 0px;
         list-style: none;
         color: white;
     }
-    li {
+    li, .title {
         a {
             color: white !important;
             text-decoration: none;
-            font-size: 1.0625rem;
             line-height: 2.18em;
-            display: block;
-
+            transition: all 0.25s ease-in-out;
+            &:hover {
+              margin-left: 35px;
+              &:before{
+                opacity: 1;
+                left: 0px;
+              }
+            }
+            &:before {
+                content: '→';
+                transition: all 0.25s ease-in-out;
+                opacity: 0;
+                left: -10px;
+                width: 32px;
+                position: absolute;
+            }
         }
         &.active a {
             text-decoration: underline;
@@ -135,18 +175,25 @@
         padding: 0;
     }
     padding-top: 100px;
+
     ul.mobile-main { 
         padding: 0 20px;
         margin: 0;
+        list-style-type: none;
         a {
-            padding: 15px 0;
+            margin-left: 0px;
+            &:before {
+              display: none;
+            }
             &:hover{
                 cursor: $hover;
             }
         }
         li {
+            padding: 15px 0;
             border-bottom: 1px solid $white;
             a {
+                text-decoration: none;
                 font-size: 1.375rem;
                 line-height: 1.5em;
             }
@@ -196,29 +243,35 @@
         }
     }
 }
-
+.bar--container {
+    width: 100%;
+    .bar{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 100;
+        height: 3px;
+    }
+}
 .with-menu {
     overflow-y: hidden;
+    .overlay-background{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background-color: $black;
+        z-index: -1;
+        width: 100%;
+    }
+
+
     #menu-overlay {
         display: block;
         opacity: 1;
     }
-
-    #header {
-        .logo, ul li a {
-            color: white;
-        }
-        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-            background-color: white;
-        }
-        button {
-            color: white !important;
-        }
-    }
     #header-main {
         z-index: 12;
         position: relative;
-        background: $black;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         a, li {
             position: relative;

@@ -2,7 +2,7 @@
 @keyframes LineDelayAnim {
 	from {
 		opacity: 0;
-		transform: translateY(10px);
+		transform: translateY(15px);
 	}
 	to {
 		opacity: 1;
@@ -10,14 +10,85 @@
 	}
 }
 
-.lineDelayAnim--item {
-	opacity: 0;
+@keyframes openMenu {
+	from {
+		transform: translateY(-100vh);
+	}
+	to {
+		transform: translateY(0vh);
+	}
+}
+
+@keyframes colorText {
+	from {
+		color: $black;
+	}
+	to {
+		color: $white;
+	}
+}
+@keyframes HamburgerBackgroundColor {
+	from {
+		background-color: $black;
+	}
+	to {
+		background-color: $white;
+	}
+}
+
+@keyframes headerBackgroundColor {
+	from {
+		background-color: none;
+	}
+	to {
+		background-color: $black;
+	}
+}
+
+@mixin animationOptions {
+	animation-fill-mode: forwards;
+	animation-direction: normal;
+}
+
+.with-menu{
+	#header-main{
+		@include animationOptions();
+		animation-name: headerBackgroundColor;
+		animation-delay: .2s;
+		animation-duration: .2s;	
+	}
+	#header {
+		.logo, ul li a, button {
+			@include animationOptions();
+			animation-name: colorText;
+			animation-delay: .2s;
+			animation-duration: .2s;
+		}
+		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+			@include animationOptions();
+			animation-name: HamburgerBackgroundColor;
+			animation-delay: .2s;
+			animation-duration: .2s;
+		}
+	}
+}
+
+.overlay-background {
+	@include animationOptions();
+	animation-timing-function: cubic-bezier(1,0,.25,1);
+	animation-name: openMenu;
+	animation-duration: .5s;
 }
 
 /* The element to apply the animation to */
 .lineDelayAnim {
-	animation-fill-mode: forwards;
-	animation-direction: normal;
+	@include animationOptions();
+	animation-timing-function: ease-in-out;
 	animation-name: LineDelayAnim;
 	animation-duration: 1s;
+}
+
+
+.lineDelayAnim--item {
+	opacity: 0;
 }
