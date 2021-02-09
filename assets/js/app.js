@@ -41,9 +41,9 @@ function getCookie(name) {
 }
 
 // Open the menu overlay on click
+const barBG = ['#F2300F', '#BE96FB', '#F3845D', '#0085FF', '#9C035A', '#176973', '#259E42']
 function header() {
   var menuBtn = document.getElementById('menu-icon');
-  const barBG = ['#F2300F', '#BE96FB', '#F3845D', '#0085FF', '#9C035A', '#176973', '#259E42']
   const scrollbarWidth = window.innerWidth - document.body.offsetWidth
   // Prevent page breaking on Maintenance page. Because menuBtn don't exist, it breaks the page
   if (menuBtn == null) return;
@@ -53,9 +53,9 @@ function header() {
       document.body.classList.add('with-menu');
       document.body.style.paddingRight = scrollbarWidth + "px"
       const bar = document.querySelectorAll(".bar");
-      for(var i = 0; i< bar.length; i++){
-        bar[i].style.width = 100/bar.length  + "%"
-        bar[i].style.left = 100/bar.length * i + "%";
+      for (var i = 0; i < bar.length; i++) {
+        bar[i].style.width = 100 / bar.length + "%"
+        bar[i].style.left = 100 / bar.length * i + "%";
         bar[i].style.backgroundColor = barBG[i]
       }
     } else {
@@ -341,25 +341,36 @@ function lineDelayAnim() {
   }
 }
 
-function articleScrollBar(){
+function articleProgressBar() {
   const footer = document.querySelector("footer")
   const progressBar = document.querySelectorAll(".progress-bar");
-  // Split width of progress bar to viewport (now theres only one bar tho)
-  for(var i = 0; i< progressBar.length; i++){
-    progressBar[i].style.width = 100/progressBar.length  + "%"
-    progressBar[i].style.left = progressBar[i].offsetWidth * i + "px";
+  const barWidth = 100 / progressBar.length;
+
+  for (var i = 0; i < progressBar.length; i++) {
+    progressBar[i].style.left = barWidth * i + "%";
   }
+
   document.addEventListener("scroll",
-    function() {
-      const scrollTop =  document.documentElement["scrollTop"] || document.body["scrollTop"]  ;
-      const scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight - footer.offsetHeight/2 ;
-      let scrollPercentValue = scrollTop / scrollBottom * 100;
-      for(var i = 0; i < progressBar.length; i++){
-          progressBar[i].style.setProperty("--scroll", scrollPercentValue  + "%");
-      }
+    function () {
+      getScroll()
     },
     { passive: true }
   );
+
+  function getScroll(){
+    const scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
+    const scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight - footer.offsetHeight / 2;
+    let scrollPercentValue = scrollTop / scrollBottom * 100;
+    for (var i = 0; i < progressBar.length; i++) {
+      progressBar[i].style.backgroundColor = barBG[i]
+      if (scrollPercentValue >= barWidth * i) {
+        progressBar[i].style.width = scrollPercentValue - barWidth * i + "%";
+      } else {
+        progressBar[i].style.width = 0 + "%";
+      }
+    }
+  }
+  getScroll();
 }
 
 (function () {
@@ -370,5 +381,5 @@ function articleScrollBar(){
   mobileMenu();
   bouncingBall();
   lineDelayAnim();
-  articleScrollBar();
+  articleProgressBar();
 })();

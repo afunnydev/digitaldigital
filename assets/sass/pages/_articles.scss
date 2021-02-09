@@ -19,10 +19,11 @@ main.article {
 #article-info {
     .progress-bar--container {
         .progress-bar{
-            background: linear-gradient(to right,rgb(0, 0, 0) var(--scroll),transparent 0);
+            background: #4caf50;
             position: fixed;
-            height: 4px;
+            height: 3px;
             top:0px;
+            width: 0%;
             z-index: 100;
         }
     }
