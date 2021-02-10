@@ -1,5 +1,16 @@
 $link-card-height: 160px;
 $link-card-with-info-height: 260px;
+$borderStyle: 8px solid;
+@mixin borderType() {
+	&.--consulting-advising{ border-bottom: $borderStyle $consultingAdvising;}
+	&.--design-branding-systems{ border-bottom: $borderStyle $designGraphicSystems};
+	&.--digital-marketing {border-bottom: $borderStyle $digitalMarketing;}
+	&.--digital-strategy-building {border-bottom: $borderStyle $digitalStrategy;}
+	&.--search-engine-optimization{border-bottom: $borderStyle $searchEngineOptimisation;}
+	&.--software-web-development {border-bottom: $borderStyle $softwareWebDevelopment;}
+	&.--user-interface-experience {border-bottom: $borderStyle $userInterfaceAndExperience;}
+}
+
 .link-card {
 	margin-bottom: 1rem;
 	.inner {
@@ -11,8 +22,6 @@ $link-card-with-info-height: 260px;
 		transition: 0.15s cubic-bezier(0.45, 0.21, 0.24, 0.87);
 		display: flex;
 		padding: 25px;
-		cursor: pointer;
-	
 		.content {
 			align-self: flex-end;
 			h5{
@@ -49,22 +58,22 @@ $link-card-with-info-height: 260px;
 			opacity: 0;
 			transform: translateY(10px);
 		}
-		&:hover {
-			cursor: $hover;
-			@include breakpoint(sm) {
-			border-bottom: 8px solid #0066ff;
-			// 8px is 0.5rem, which is the half of the spacing between the cards.
-			// Can't use .rem because not the same unit.
-			min-height: $link-card-height + 8px;
-			margin-top: -8px;
-			&.with-info {
-				min-height: $link-card-with-info-height + 8px;
-			}
+	}
 
-				&:hover .link-arrow {
-					opacity: 1;
-					transform: translateY(0px);
-				}
+	&.has-link:hover .inner{
+		cursor: $hover;
+		@include breakpoint(sm) {
+		@include borderType();
+		// 8px is 0.5rem, which is the half of the spacing between the cards.
+		// Can't use .rem because not the same unit.
+		min-height: $link-card-height + 8px;
+		margin-top: -8px;
+		&.with-info {
+			min-height: $link-card-with-info-height + 8px;
+		}
+			&:hover .link-arrow {
+				opacity: 1;
+				transform: translateY(0px);
 			}
 		}
 	}

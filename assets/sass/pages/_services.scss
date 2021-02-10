@@ -10,8 +10,7 @@
 #services-all-hero {
 	background-color: black;
     .row {
-    
-    height: calc(100vh - 20em);
+    	height: calc(100vh - 20em);
 		h1 {
 			color: white;
 			margin-bottom: 2rem;
@@ -44,9 +43,22 @@
 
 #services-list-hero {
     .row {
-    height: calc(100vh - 21.875em);
-		@include breakpoint(sm) {
-      height: calc(100vh - 5.25em);
+		h1{
+			font-size: 4.375rem;
+		}
+		padding-bottom: 25px;
+		#shape{
+			.head-shapes{
+				@include breakpoint(sm) {
+					margin: 25px 0;
+					float: right;
+					display: block;
+					svg{
+						width: auto;
+					}
+				}
+				display: none;
+			}
 		}
 	}
 }

@@ -2,7 +2,8 @@
 title: Software & Web Developpement
 description: DigitalDigital Software & Web Developpement
 h1: Software & Web Developpement
-explanation: Fix deliverability issues and optimize conversion rates through A/B tests and user-segmentation to increase average customer LTV.
+h2: Marketing Services
+explanation: Tailored & complete digital marketing strategies
 weight: 6
 services:
   - name: Website Architecture

@@ -3,7 +3,7 @@ title: Search Engine Optimization
 description: DigitalDigital Search Engine Optimization
 h1: Search Engine Optimization
 h2: SEO Services
-explanation: Build relevant backlinks through blogger outreach and PR mentions to increase authority and keyword rankings.
+explanation: Systemized & efficient SEO for global or local ranking.  
 weight: 2
 services:
   - name: Local SEO

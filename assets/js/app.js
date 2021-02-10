@@ -204,23 +204,24 @@ function home() {
   homeSlider();
 }
 
-function icons() {
-  var icon = document.getElementById('service-icon');
-  if (!icon) {
-    return;
-  }
+function icons(){
+  var icons = document.getElementById("shape");
+  if(!icons) return;
+  var iconContainer = icons.firstElementChild;
   var anim = bodymovin.loadAnimation({
-    container: icon, // Required
-    path: '/animations/test.json', // Required
+    container: iconContainer, // Required
+    path: `/animations/${iconContainer.id}.json`, // Required
     renderer: 'svg', // Required
     loop: false, // Optional
     autoplay: false, // Optional
   });
-  icon.addEventListener('mouseenter', function (e) {
+
+  icons.children[0].addEventListener('mouseenter', function (e) {
+    anim.setDirection(1);
     anim.play();
   });
-  icon.addEventListener('mouseleave', function (e) {
-    anim.stop();
+  icons.children[0].addEventListener('mouseleave', function (e) {
+    anim.setDirection(-1);
   });
 }
 

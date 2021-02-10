@@ -1,13 +1,18 @@
 {{- define "main" -}}
 <div id="services-list-hero">
     <div class="container">
-        <div class="row middle-xs spaced">
+        <div class="row middle-xs spaced section">
             <div class="col-xs-12 col-md-8">
                 <h1>{{- .Params.h1 -}}</h1>
             </div>
             <div class="col-xs-12 col-md-4">
                 <h4>{{- .Params.explanation -}}</h4>
             </div>
+        </div>
+        <div class="row end-xs">
+        <div class="col-md-12 " id="shape">
+            <div id="{{- path.Base .Permalink -}}" class="head-shapes"></div>
+        </div>
         </div>
     </div>
 </div>
@@ -24,7 +29,7 @@
                 </h6>
             </div>
             {{- range .Pages -}}
-            {{- partial "site/linkcard" (dict "context" . "name" .Params.listing.title "info" .Params.listing.description "url" .Permalink "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
+            {{- partial "site/linkcard" (dict "context" . "name" .Params.listing.title "info" .Params.listing.description "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
             {{- end -}}
         </div>
         {{- with .Params.clients -}}

@@ -3,8 +3,8 @@
 {{- $title = (printf "<h5>%s</h5>" .name) -}}
 {{- end -}}
 <div class="link-card {{ .class }}">
-	<a href="{{- .url -}}" title="{{- .name -}}">
-		<div class="inner{{ if .info }} with-info{{ end }}">
+	<a {{ if .url }} href="{{- .url -}}"{{ end }} title="{{- .name -}}">
+		<div class="--{{.page}} inner{{ if .info }} with-info{{ end }}">
 			<div class="content">
 				{{- $title | safeHTML -}}
 				{{- if .info -}}

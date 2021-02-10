@@ -2,7 +2,8 @@
 title: Digital Marketing
 description: DigitalDigital Digital Marketing
 h1: Digital Marketing
-explanation: Map and prioritize issues regarding indexation and website structure to facilitate search engine indexation.
+h2: Marketing Services
+explanation: Optimized & repeatable digital marketing systems
 weight: 1
 services:
   - name: Social Media Ads.
