@@ -2,46 +2,46 @@ main:
   - class: col-md-4 col-sm-6 main-link
     links:
       - text: Home
-        link: ''
+        link: '/'
       - text: About
-        link: '#'
+        link: '/about'
       - text: Contact
-        link: '#'
+        link: '/contact'
   - class: col-md-4 col-sm-6 main-link
     links:
       - text: Case Studies
         link: '#'
       - text: Articles
-        link: '#'
+        link: '/articles'
   - title: All Services
-    link: '#'
+    link: '/services'
     class: col-md-4 col-sm-6 small
     links:
       - text: Search Engine Optimization
-        link: ''
+        link: '/services/search-engine-optimization'
       - text: E-Commerce
-        link: '#'
+        link: '/services/digital-marketing'
       - text: Consulting + Advising
-        link: '#'
+        link: '/services/consulting-advising'
       - text: Digital Strategy Building
-        link: '#'
+        link: '/services/digital-strategy-building'
       - text: User Interface & Experience
-        link: '#'
+        link: '/services/user-interface-experience'
       - text: Software + Web Developpement
-        link: '#'
+        link: '/services/software-web-development'
       - text: Design & Branding Systems
-        link: '#'
+        link: '/services/design-branding-systems'
 mobile:
   - title: Home
-    link: 
+    link: "/"
   - title: About
-    link: '#'
+    link: '/about'
   - title: Contact
-    link: " "
+    link: "/contact"
   - title: Case Studies
     link: " "
   - title: Articles
-    link: " "
+    link: "/articles"
 footer:
   - title: Contact Us
     class: col-lg-2 col-md-2 col-xs-6
@@ -56,20 +56,20 @@ footer:
     class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Home
-        link: ''
+        link: '/'
       - text: About
-        link: '#'
+        link: '/about'
       - text: Contact
-        link: '#'
+        link: '/contact'
       - text: Articles
-        link: '#'
+        link: '/articles'
   - title: Work
     class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Case Studies
         link: ''
       - text: Services
-        link: '#'
+        link: '/services'
   - title: Social
     class: col-lg-2 col-md-2 col-xs-6
     links:

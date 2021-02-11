@@ -13,7 +13,7 @@
             </div>
             <div class="col-xs-6 col-sm-6 hide-sm">
                 <ul class="right">
-                    <li><a href="#" title="Contact">Contact</a></li>
+                    <li><a href="/contact" title="Contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -33,10 +33,10 @@
         <div class="row">
             {{- range $.Site.Data.menu.main -}}
             <div class="{{- .class -}}">
-          {{ if isset . "title" }}  <div class="title lineDelayAnim--item"><a   href="{{- .linn -}}">{{- .title -}} </a> </div>{{ end }}
+          {{ if isset . "title" }}  <div class="title lineDelayAnim--item"><a href="{{- .link -}}">{{- .title -}} </a> </div>{{ end }}
                 <ul  class="desktop-main lineDelayAnim--item">
                     {{- range .links -}}
-                    <li class="lineDelayAnim--item"><a class="" href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
+                    <li class="lineDelayAnim--item"><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
                     {{- end -}}
                 </ul>
             </div>
