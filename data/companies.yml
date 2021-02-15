@@ -8,8 +8,9 @@ content:
       link: 'https://inbeat.co/'
     - icon: hashtag-food
       text: Hashtag Food is a set of systemized services for franchised restaurants to optimize their digital strategies. By DigitalDigital, 2015.
-    - icon: leadlabs
-      text: Leadlabs is a technical SEO agency that specializes in large-scale optimization procedures. By DigitalDigital, 2014.
+      link: 'https://hashtagfood.ca/'
+    - icon: breeeze
+      text: Breeze is a set of SEO services that allow large-scale optimization strategies. By DigitalDigital, 2014.
     - icon: inbeat-agency
       text: Inbeat.agency is a cross-platform influencer agency that builds & deploys creative influencer marketing campaigns. By DigitalDigital, 2018.
       link: 'https://inbeat.agency/'

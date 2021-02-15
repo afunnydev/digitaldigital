@@ -10,7 +10,7 @@
     </div>
 </div>
 
- <div id="main-content"> 
+
 <div id="home-portfolio">
     <div id="carousel-container">
         <div id="carousel">
@@ -30,7 +30,9 @@
     <div class="container">
         <h2 class="lineDelayAnim--item">{{- .title -}}</h2>
         {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
-        <h4 class="lineDelayAnim--item"><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
+            {{ if .Params.h1 }}
+                <h4 class="lineDelayAnim--item"><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
+            {{ end }}
         {{- end -}}
         <div class="row sub between-xs">
             <div class="col-md-6 col-lg-6">
@@ -59,7 +61,7 @@
             </div>
         </div>
         {{- partial "site/casestudy" .casestudy -}}
-        {{- with .industries -}}
+       <!-- {{- with .industries -}} Launching without industries
         <div class="row">
             <div class="col-xs-12">
                 <h2>{{- .title -}}</h2>
@@ -68,7 +70,7 @@
             {{- partial "site/linkcard" (dict "context" . "name" .name "info" "" "url" "#" "class" "col-xs-12 col-sm-4 col-md-3") -}}
             {{- end -}}
         </div>
-        {{- end -}}
+        {{- end -}} -->
     </div>
 </div>
 {{- end -}}
@@ -96,5 +98,5 @@
 {{- partial "site/companies" . -}}
 {{- partial "site/cta" . -}}
 {{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
-</div>
+
 {{- end -}}
