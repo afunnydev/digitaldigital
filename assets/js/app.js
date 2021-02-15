@@ -44,15 +44,14 @@ function getCookie(name) {
 const barBG = ['#F2300F', '#BE96FB', '#F3845D', '#0085FF', '#9C035A', '#176973', '#259E42']
 function header() {
   var menuBtn = document.getElementById('menu-icon');
+  const bar = document.querySelectorAll(".bar");
   const scrollbarWidth = window.innerWidth - document.body.offsetWidth
-  // Prevent page breaking on Maintenance page. Because menuBtn don't exist, it breaks the page
   if (menuBtn == null) return;
   menuBtn.addEventListener('click', function (e) {
     if (!menuBtn.classList.contains('is-active')) {
       menuBtn.classList.add('is-active');
       document.body.classList.add('with-menu');
       document.body.style.paddingRight = scrollbarWidth + "px"
-      const bar = document.querySelectorAll(".bar");
       for (var i = 0; i < bar.length; i++) {
         bar[i].style.width = 100 / bar.length + "%"
         bar[i].style.left = 100 / bar.length * i + "%";
