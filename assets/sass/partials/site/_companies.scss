@@ -12,11 +12,20 @@
 			text-decoration: underline;
 		}
 		.content{
-			padding-top: 25px;
-			padding-bottom: 25px;
+			position: relative;
+			margin-bottom: 50px;
+			a{
+				position: absolute;
+				bottom:0;
+			}
+			p{
+				margin-top: 15px;
+				padding-bottom: 10px;
+			}
 			svg{
 				margin: 0;
 			}
+
 		}
 	}
 }

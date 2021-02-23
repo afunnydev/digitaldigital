@@ -266,9 +266,11 @@
 
 
     #menu-overlay {
-        overflow-y: hidden;
         display: block;
         opacity: 1;
+        @include breakpoint(sm) {
+            overflow-y: hidden;
+        }
     }
     #header-main {
         z-index: 12;

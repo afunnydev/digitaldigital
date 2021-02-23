@@ -212,15 +212,7 @@ function icons(){
     path: `/animations/${iconContainer.id}.json`, // Required
     renderer: 'svg', // Required
     loop: false, // Optional
-    autoplay: false, // Optional
-  });
-
-  icons.children[0].addEventListener('mouseenter', function (e) {
-    anim.setDirection(1);
-    anim.play();
-  });
-  icons.children[0].addEventListener('mouseleave', function (e) {
-    anim.setDirection(-1);
+    autoplay: true, // Optional
   });
 }
 
@@ -313,7 +305,7 @@ function bouncingBall() {
   // Init the canvas
   canvas.initialize();
   // Init ball
-  Ball.initialize(3, 3, 252).draw(canvas.width / 2, canvas.height / 2);
+  Ball.initialize(1.5, 1.5, 252).draw(canvas.width / 2, canvas.height / 2);
 }
 
 

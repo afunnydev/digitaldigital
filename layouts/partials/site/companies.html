@@ -13,12 +13,13 @@
             {{- range .companies -}}
             <div class="col-xs-12 col-sm-6 col-md-3 content">
                 {{- partial (printf "icons/%s.html" .icon) -}}
-                <p>
+                <p class="smaller">
                     {{- .text -}}<br><br>
                     {{ if .link }}
-                    <a href="{{- .link -}}" target="_blank">Visit Website</a>
+                    
                     {{end}}
                 </p>
+               <a class="smaller" href="{{- .link -}}" target="_blank">Visit Website</a>
             </div>
             {{- end -}}
         </div>

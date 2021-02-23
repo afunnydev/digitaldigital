@@ -16,11 +16,11 @@ services:
     description: Deploy a paid advertising strategy that leverages in-house data to scale sales and optimize CPAs across our digital campaigns.
   - name: Amazon Product SEO
     description: Fix deliverability issues and optimize conversion rates through A/B tests and user-segmentation to increase average customer LTV.
-clients:
-  - icon: leadlabs
+logos:
   - icon: nissan
-  - icon: billygoat
+  - icon: got-milk
+  - icon: new-balance
   - icon: moose
-  - icon: loop
+  - icon: nac
   - icon: bedtime
 ---

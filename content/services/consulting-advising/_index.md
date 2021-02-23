@@ -11,7 +11,7 @@ services:
   - name: Advertising
   - name: Marketing
   - name: CRO Consulting
-clients:
+logos:
   - icon: leadlabs
   - icon: nissan
   - icon: billygoat

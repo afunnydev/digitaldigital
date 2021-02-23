@@ -1,10 +1,18 @@
 #services-list {
-	.logos {
+	.logos-partial  {
 		padding-top: 8em;
-		svg {
-			fill: white;
+		svg, svg path {
+			fill: white !important;
 		}
 	}
+	.align-right{
+		text-align: left !important;
+		@include breakpoint(sm) {
+			text-align: right !important;
+		}
+	}
+
+
 }
 
 #services-all-hero {
@@ -21,6 +29,7 @@
 		@include breakpoint(sm) {
 		  height: calc(100vh - 5.25em);	
 		}
+
 	}
 }
 
@@ -43,10 +52,10 @@
 
 #services-list-hero {
     .row {
-		h1{
-			font-size: 4.375rem;
-		}
 		padding-bottom: 25px;
+		h1{
+			margin-bottom: 50px;
+		}
 		#shape{
 			.head-shapes{
 				@include breakpoint(sm) {

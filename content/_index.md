@@ -108,8 +108,7 @@ section3:
   title: We do
   subtitle: '& believe in strategic creativity based on data and analytics.'
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing
+    We build solutions on a first-principle understanding of consumer psychology. We validate our approach by mining insights from your data in real time.
   logos:
     - icon: nissan
     - icon: got-milk
