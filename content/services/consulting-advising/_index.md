@@ -11,4 +11,11 @@ services:
   - name: Advertising
   - name: Marketing
   - name: CRO Consulting
+clients:
+  - icon: leadlabs
+  - icon: nissan
+  - icon: billygoat
+  - icon: moose
+  - icon: loop
+  - icon: bedtime
 ---

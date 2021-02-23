@@ -10,4 +10,11 @@ services:
   - name: E-Mail Marketing
   - name: Google Ads
   - name: Influencer Marketing
+clients:
+  - icon: leadlabs
+  - icon: nissan
+  - icon: billygoat
+  - icon: moose
+  - icon: loop
+  - icon: bedtime
 ---

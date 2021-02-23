@@ -10,4 +10,11 @@ services:
   - name: E-Commerce
   - name: Wordpress & CMS
   - name: Cusom Dev.
+clients:
+  - icon: leadlabs
+  - icon: nissan
+  - icon: billygoat
+  - icon: moose
+  - icon: loop
+  - icon: bedtime
 ---

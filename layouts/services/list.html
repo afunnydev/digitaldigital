@@ -42,6 +42,15 @@
     </div>
 </div>
 
+<div class="container section" id='all-services-list'>
+    <h2 class="lineDelayAnim--item title">Services</h2>
+    {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
+        {{ if .Params.h1 }}
+            <h6 class="lineDelayAnim--item"><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h6>
+        {{ end }}
+    {{- end -}}
+</div>
+
 {{- partial "site/cta" . -}}
 {{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
 {{- end -}}

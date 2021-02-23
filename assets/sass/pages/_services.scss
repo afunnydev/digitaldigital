@@ -63,6 +63,36 @@
 	}
 }
 
+#all-services-list{
+	.title{
+		margin-bottom: 100px;
+	}
+	h6 {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $black_sub3;
+		a {
+			display: inline-block;
+			width: calc(100% - 55px);
+		}
+		&:after {
+			content: '→';
+			float: right;
+			opacity: 0;
+			padding-right: 20px;
+			transition: 0.4s;
+		}
+		&:hover::after {
+			opacity: 1;
+			padding-right: 0;
+		}
+		&:hover {
+			cursor: $hover;
+		}
+		&:active::after{
+			cursor: $click;
+		}
+	}
+} 
 #services-single-hero {
 	background-color: black;
 	color: white;
