@@ -8,10 +8,11 @@
           height: calc(70vh - 5.25em);	
         }
     }
-    background-color: #E3D7FD;
+    background-color: black;
+    color: $white;
     h1{
         @include breakpoint(sm) {
-            margin-bottom: 2rem;	
+            margin-bottom: 0rem;	
         }
     }
 }

@@ -6,9 +6,9 @@ date:
 listing:
   img: /img/featured-shopify.png
   description: description
-subtitle: American Dairy
+subtitle: "#GotMilk Challenge"
 infos:
-  - tagline: American Dairy came to us with a need to create relatable content on TikTok to promote the #Gotmilk challenge.
+  - tagline: 'American Dairy came to us with a need to create relatable content on TikTok to promote the #Gotmilk challenge.'
     url : "#"
     client: American Dairy Association
     year: 2020
