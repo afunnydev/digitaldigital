@@ -11,8 +11,6 @@ main:
     links:
       - text: Case Studies
         link: '/case-studies'
-      - text: Articles
-        link: '/articles'
   - title: All Services
     link: '/services'
     class: col-md-4 col-sm-6 small
@@ -38,8 +36,7 @@ mobile:
     link: '/about'
   - title: Case Studies
     link: '/case-studies'
-  - title: Articles
-    link: "/articles"
+
 footer:
   - title: Contact Us
     class: col-lg-2 col-md-2 col-xs-6
@@ -59,8 +56,6 @@ footer:
         link: '/about'
       - text: Contact
         link: '/contact'
-      - text: Articles
-        link: '/articles'
   - title: Work
     class: col-lg-2 col-md-2 col-xs-6
     links:

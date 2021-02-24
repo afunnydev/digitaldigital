@@ -36,3 +36,9 @@ notAlternative = true
 
 [permalinks]
   singles = "/:slug/"
+
+[[redirects]]
+  from = "/articles"
+  to = "/"
+  status = 302
+  force = true 
