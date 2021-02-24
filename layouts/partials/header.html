@@ -23,11 +23,6 @@
 <div id="menu-overlay">
 
 <div class="overlay-background"> 
-<div class="bar--container">
-    {{ range $i, $sequence :=  (seq 7) }}
-        <div class="bar lineDelayAnim--item"></div>
-    {{ end }}
-</div>
 </div>
     <div class="container hide-sm">
         <div class="row">
@@ -50,7 +45,6 @@
                 </p>
             </div>
         </div>
-
     </div>
     <div class="container hide-sm-up">
         <ul class="mobile-main lineDelayAnim--item">
@@ -72,5 +66,12 @@
                </ul>
             </li>
         </ul>
+        <div class="contact-cta lineDelayAnim--item"><a href="/contact" class="btn full is-white">Contact Us</a>
+        <div class="bar--container">
+            {{ range $i, $sequence :=  (seq 7) }}
+                <div class="bar "></div>
+            {{ end }}
+        </div>
+        </div>
     </div>
 </div>

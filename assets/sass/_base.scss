@@ -33,6 +33,10 @@ body {
         width: 100%;
         text-align: center;
     }
+    &.is-white{
+        background-color: $white;
+        color: $black;
+    }
     &:hover {
         padding: 12px 45px;
     }
