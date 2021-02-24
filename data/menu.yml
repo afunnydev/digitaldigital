@@ -36,8 +36,6 @@ mobile:
     link: "/"
   - title: About
     link: '/about'
-  - title: Contact
-    link: "/contact"
   - title: Case Studies
     link: '/case-studies'
   - title: Articles

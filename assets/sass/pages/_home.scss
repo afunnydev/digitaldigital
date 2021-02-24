@@ -29,9 +29,12 @@
 			top: 0;
 			padding: 60px 30px;
 			img {
-				width: 100%;
+				width: 80%;
 				height: auto;
 				margin-bottom: 30px;
+				@include breakpoint(sm) {
+					width: 100%;		
+				}
 			}
 		}
 	}
