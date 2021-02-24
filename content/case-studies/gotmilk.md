@@ -1,11 +1,10 @@
 ---
 title: "#Gotmilk"
-description:
 h1: In the case
 date:
 listing:
   img: /img/featured-shopify.png
-  description: description
+  description: "American Dairy came to us with a need to create relatable content on TikTok to promote the #Gotmilk challenge."
 subtitle: "#GotMilk Challenge"
 infos:
   - tagline: 'American Dairy came to us with a need to create relatable content on TikTok to promote the #Gotmilk challenge.'

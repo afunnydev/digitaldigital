@@ -55,7 +55,7 @@
 <div id="case-studies-challenge" class="section">
   {{- with .Params.challenges -}}
   <div class="container">
-    <div class="row between-xs">
+    <div class="row between-xs content">
       <div class="col-sm-8 col-md-5">
         <p class="tiny">{{ .title }}</p>
         <p>{{ .description }}</p>
@@ -66,6 +66,7 @@
         </h6>
       </div>
     </div>
+    {{- if .stats -}}
     <div class="row casestudy middle-lg">
       <div class="col-lg-4 col-xs-12">
         <p class="smaller"><b>Result</b></p>
@@ -73,16 +74,18 @@
       </div>
       <div class="col-xs-12 col-lg-6 col-lg-offset-2 datas">
         <div class="row">
-          {{- range .stats -}}
-          <div class="col-xs-12 col-sm-4 content">
-            <h4>{{- .value -}}</h4>
-            <p class="smaller">{{- .name -}}</p>
-          </div>
-          {{- end -}}
+            {{- range .stats -}}
+            <div class="col-xs-12 col-sm-4 content">
+              <h4>{{- .value -}}</h4>
+              <p class="smaller">{{- .name -}}</p>
+            </div>
+            {{- end -}}
         </div>
       </div>
     </div>
+    {{ end }}
     {{- end -}}
+    {{ if .Params.videoThumbnails }}
     <div id="video-thumbnails">
       <div class="container">
         <div class="row  middle-xs">
@@ -96,9 +99,37 @@
         </div>
       </div>
     </div>
+    {{- end -}}
+    {{ if .Params.imagesThumbnails }}
+    <div id="images-thumbnails">
+      <div class="container">
+        <div class="items-container row">
+          {{ range .Params.imagesThumbnails }}
+          <div class=" item col-xs-12 {{ .class }}">
+           <img src="{{ .src }}"  alt="">
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{- end -}}
+
+  </div>
+</div>
+{{ if .Params.gallery }}
+<div id="images-gallery" class="section">
+  <div class="">
+    <div class="row between-xs">
+      {{ range .Params.gallery }}
+      <div class="col-xs-12 col-sm-3 item">
+       <img src="{{ .src }}"  alt="">
+      </div>
+      {{ end }}
+    </div>
   </div>
 </div>
 
+{{- end -}}
 {{ $currentlink := .URL| absURL }}
 <div id="case-studies-list" class="section first">
   <div class="container">
