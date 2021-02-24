@@ -1,4 +1,4 @@
-#casestudies-info{
+#case-studies-info{
     @include breakpoint(sm-down) {
         padding-bottom: 0;
         padding-top:  18em;	
@@ -17,13 +17,13 @@
     }
 }
     
-#casestudies-content{
+#case-studies-content{
     .tagline{
         margin-bottom: 50px;
     }
 }
 
-#casestudies-challenge{
+#case-studies-challenge{
     background-color: black;
     color: white;
     .casestudy {
@@ -50,6 +50,6 @@
     }
 }
 
-#casestudies-list{
+#case-studies-list{
     border-top: 1px solid $black_sub3 !important;
 }

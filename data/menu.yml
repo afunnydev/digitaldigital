@@ -10,7 +10,7 @@ main:
   - class: col-md-4 col-sm-6 main-link
     links:
       - text: Case Studies
-        link: '/casestudies'
+        link: '/case-studies'
       - text: Articles
         link: '/articles'
   - title: All Services
@@ -39,7 +39,7 @@ mobile:
   - title: Contact
     link: "/contact"
   - title: Case Studies
-    link: '/casestudies'
+    link: '/case-studies'
   - title: Articles
     link: "/articles"
 footer:
@@ -67,7 +67,7 @@ footer:
     class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Case Studies
-        link: '/casestudies'
+        link: '/case-studies'
       - text: Services
         link: '/services'
   - title: Social

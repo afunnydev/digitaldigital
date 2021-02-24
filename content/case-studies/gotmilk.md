@@ -14,12 +14,12 @@ infos:
     year: 2020
     deliverables: ['Influencer sourcing', 'Creative direction', 'Content distribution']
     goals: "Appeal to Generation-Z through young opinion leaders. Increase awareness of the #Gotmilk challenge across the North-East of the US."
-videoPath: "/img/casestudies/gotmilk/CaseStudy_GotMilk.mp4"
+videoPath: "/img/case-studies/gotmilk/GotMilk.mp4"
 videoThumbnails:
-  - src: "/img/casestudies/gotmilk/GotMilk_1.mp4"
-  - src: "/img/casestudies/gotmilk/GotMilk_2.mp4"
-  - src: "/img/casestudies/gotmilk/GotMilk_3.mp4"
-  - src: "/img/casestudies/gotmilk/GotMilk_4.mp4"
+  - src: "/img/case-studies/gotmilk/GotMilk_1.mp4"
+  - src: "/img/case-studies/gotmilk/GotMilk_2.mp4"
+  - src: "/img/case-studies/gotmilk/GotMilk_3.mp4"
+  - src: "/img/case-studies/gotmilk/GotMilk_4.mp4"
 challenges:
   title: Challenges
   description: American Dairy wanted to build awareness amongst a Gen-Z demographic, a generation notoriously un-trusting of traditional advertising. Additionally, they wanted to maximize brand reach, while ensuring brand safety.

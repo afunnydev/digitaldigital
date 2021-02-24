@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 date: 2021-02-04T10:57:57-05:00
+layout: contact
 links:
   - text: Book a call
     link: '#'

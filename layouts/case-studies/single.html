@@ -1,5 +1,5 @@
 {{- define "main" -}}
-<div id="casestudies-info" class="section">
+<div id="case-studies-info" class="section">
   <div class="container">
     <div class='row bottom-sm'>
       <div class='col-lg-12'>
@@ -10,7 +10,7 @@
     </div>
   </div>
 </div>
-<div id="casestudies-content">
+<div id="case-studies-content">
   <div class="container">
     <div class="infos section">
       {{ range .Params.infos }}
@@ -52,7 +52,7 @@
   </div>
 </div>
 
-<div id="casestudies-challenge" class="section">
+<div id="case-studies-challenge" class="section">
   {{- with .Params.challenges -}}
   <div class="container">
     <div class="row between-xs">
@@ -100,13 +100,13 @@
 </div>
 
 {{ $currentlink := .URL| absURL }}
-<div id="casestudies-list" class="section first">
+<div id="case-studies-list" class="section first">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <h3>Other Studies</h3>
       </div>
-      {{ range first 2 (where (where $.Site.Pages "Type" "casestudies") ".Params.external" "!=" false) }}
+      {{ range first 2 (where (where $.Site.Pages "Type" "case-studies") ".Params.external" "!=" false) }}
       {{ $permalink := .Permalink | absURL }}
       {{ if ne $currentlink $permalink }}
       {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Permalink "class" "col-xs-12 col-md-6") -}}

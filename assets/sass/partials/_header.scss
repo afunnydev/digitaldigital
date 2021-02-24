@@ -19,6 +19,9 @@
 #header {
     height: $mobilenavheight;
     margin: 0;
+    >div{
+        padding: 0;
+    }
     @include breakpoint(sm) {
         height: $navheight;
         padding-left: 0;
