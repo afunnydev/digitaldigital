@@ -12,10 +12,10 @@ services:
   - name: Marketing
   - name: CRO Consulting
 logos:
-  - icon: leadlabs
   - icon: nissan
-  - icon: billygoat
+  - icon: got-milk
+  - icon: new-balance
   - icon: moose
-  - icon: loop
+  - icon: nac
   - icon: bedtime
 ---

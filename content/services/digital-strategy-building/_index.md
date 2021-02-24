@@ -11,11 +11,11 @@ services:
   - name: Competitor Analysis
   - name: Media Buying
   - name: Consumer Surveys
-clients:
-  - icon: leadlabs
+logos:
   - icon: nissan
-  - icon: billygoat
+  - icon: got-milk
+  - icon: new-balance
   - icon: moose
-  - icon: loop
+  - icon: nac
   - icon: bedtime
 ---

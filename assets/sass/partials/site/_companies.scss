@@ -1,4 +1,13 @@
 #our-subsidiary-companies {
+	padding-top: 4em;
+	padding-bottom: 4em;
+	@include breakpoint(sm) {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
+	h2{
+		margin-bottom: 0;
+	}
 	h6{
 		text-align: left;
 		@include breakpoint(md) {
