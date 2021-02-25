@@ -3,7 +3,7 @@ title: New Balance
 h1: In the case
 date:
 listing:
-  img: /img/featured-shopify.png
+  img: /img/case-studies/newbalance/nb-thumbnail.png
   description: "The client approached us to cast a series of micro-influencers for a social media campaign"
 subtitle: Influencer Casting
 infos:
