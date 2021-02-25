@@ -42,11 +42,11 @@ footer:
     class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Book a call
-        link: '#'
+        link: 'https://teaminbeat.typeform.com/to/EU16Cd0J'
       - text: Send an message
-        link: '#'
+        link: 'https://teaminbeat.typeform.com/to/EU16Cd0J'
       - text: More Information
-        link: '#'
+        link: '/about'
   - title: Main
     class: col-lg-2 col-md-2 col-xs-6
     links:

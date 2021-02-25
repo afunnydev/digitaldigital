@@ -123,19 +123,19 @@ section4:
     infos:
       name: Kohezion
       tagline: Multi-channel international health and supplements brand.
-      url: '#'
+      url: '/contact'
     quote: 
       text: >-
-        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.” et dolore magna aliqua. Ut enim ad minim veniam.”
+        “Digital Digital took in charge SEO, a website re-design, blog post writing, website copywriting & developped a video tutorial educational system for Kohezion’s users. Each & every service they provided was best in class.”
       author:
         name: Thierry Tremblay
         position: Executive Director
-        imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyscorporate.com%2Fwp-content%2Fuploads%2F2017%2F09%2FPhoto-de-profil-professionnelle-par-photographe-6.jpg&f=1&nofb=1'
+        imgUrl: '/img/thierrytremblay.png'
     stats:
-      - name: Gor lorem ipsum
-        value: 120k
-      - name: Growth ipsum
-        value: +10k
+      - name: Qualified Leads
+        value: + 250%
+      - name: In Keyword Search
+        value: 2nd
   industries:
     title: Industries
     list:

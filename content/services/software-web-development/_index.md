@@ -1,7 +1,7 @@
 ---
-title: Software & Web Developpement
+title: Software & Web Development
 description: DigitalDigital Software & Web Developpement
-h1: Software & Web Developpement
+h1: Software & Web Development
 h2: Marketing Services
 explanation: Tailored & complete digital marketing strategies
 weight: 6

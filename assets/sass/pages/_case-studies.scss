@@ -112,6 +112,30 @@
     }
    
 }
-#case-studies-list {
-    border-top: 1px solid $black_sub3 !important;
+
+#carousel-container {
+    background-color: $white;
+    height: 1000px;
+    #case-studies-carousel {
+        position: absolute;
+        left: 0;
+        width: 100%;
+
+        .slides {
+            width: 400px;
+            position: absolute !important;
+            top: 0;
+            padding: 60px 30px;
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+#case-studies-list{
+    border-top: 1px solid $black_sub3;
 }

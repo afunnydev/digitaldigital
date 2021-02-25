@@ -113,22 +113,18 @@
       </div>
     </div>
     {{- end -}}
-
   </div>
 </div>
 {{ if .Params.gallery }}
-<div id="images-gallery" class="section">
-  <div class="">
-    <div class="row between-xs">
-      {{ range .Params.gallery }}
-      <div class="col-xs-12 col-sm-3 item">
-       <img src="{{ .src }}"  alt="">
+<div id="carousel-container" class="section gallery">
+  <div id="case-studies-carousel" >
+      {{- range .Params.gallery -}}
+      <div class="slides" >
+        <img src="{{- .src -}}">
       </div>
-      {{ end }}
-    </div>
+      {{- end -}}
   </div>
 </div>
-
 {{- end -}}
 {{ $currentlink := .URL| absURL }}
 <div id="case-studies-list" class="section first">
