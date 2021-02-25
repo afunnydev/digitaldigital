@@ -63,13 +63,11 @@ footer:
         link: '/case-studies'
       - text: Services
         link: '/services'
-  - title: Social
+  - title: Featured
     class: col-lg-2 col-md-2 col-xs-6
     links:
-      - text: Facebook
-        link: ''
-      - text: Instagram
-        link: '#'
-      - text: Linkedin
-        link: '#'
+      - text: "#Gotmilk"
+        link: '/case-studies/gotmilk'
+      - text: New Balance
+        link: '/case-studies/newbalance'
     

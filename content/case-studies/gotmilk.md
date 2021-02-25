@@ -24,10 +24,10 @@ challenges:
   description: American Dairy wanted to build awareness amongst a Gen-Z demographic, a generation notoriously un-trusting of traditional advertising. Additionally, they wanted to maximize brand reach, while ensuring brand safety.
   result: "20+ young athletes and artists with a strong local following participated in the #Gotmilk challenge, generating over 10,000 likes and comments and 250,000 unique views."
   stats:
-    - name: Gor lorem ipsum
-      value: 120k
-    - name: Growth ipsum
-      value: +10k
-    - name: Growth ipsum
-      value: +10k
+    - name: Likes
+      value: +10,000
+    - name: Unique Views
+      value: 250,000
+    - name: Impressions
+      value: 250,000
 ---

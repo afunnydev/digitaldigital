@@ -4,9 +4,9 @@ date: 2021-02-04T10:57:57-05:00
 layout: contact
 links:
   - text: Book a call
-    link: '#'
+    link: 'https://teaminbeat.typeform.com/to/EU16Cd0J'
   - text: Send a message
-    link: '#'
+    link: 'https://teaminbeat.typeform.com/to/EU16Cd0J'
 contact:
   - name: Book a call
     text: 5255 Boulevard Lasalle, H4H1P1, 
