@@ -44,6 +44,7 @@ function getCookie(name) {
 const barBG = ['#F2300F', '#BE96FB', '#F3845D', '#0085FF', '#9C035A', '#176973', '#259E42']
 function header() {
   var menuBtn = document.getElementById('menu-icon');
+  var navContainer = document.querySelector('#header-main .container');
   const bar = document.querySelectorAll(".bar");
   const scrollbarWidth = window.innerWidth - document.body.offsetWidth
   if (menuBtn == null) return;
@@ -52,6 +53,11 @@ function header() {
       menuBtn.classList.add('is-active');
       document.body.classList.add('with-menu');
       document.body.style.paddingRight = scrollbarWidth + "px"
+      navContainer.style.left = -scrollbarWidth/2 + "px"
+      if(window.innerWidth <= 768){
+        navContainer.style.left =  "0px"
+        menuBtn.style.left = -scrollbarWidth + "px"
+      }
       for (var i = 0; i < bar.length; i++) {
         bar[i].style.width = 100 / bar.length + "%"
         bar[i].style.left = 100 / bar.length * i + "%";
@@ -61,6 +67,8 @@ function header() {
       menuBtn.classList.remove('is-active');
       document.body.classList.remove('with-menu');
       document.body.style.paddingRight = "0px"
+      navContainer.style.left = "0px"
+      menuBtn.style.left = "0px"
     }
   });
 }
@@ -365,6 +373,43 @@ function articleProgressBar() {
   getScroll();
 }
 
+
+function navbarOnScroll(){
+ var prevScroll = window.scrollY || document.documentElement.scrollTop;
+ var currentScroll;
+ var direction = 0;
+ var prevDirection = 0;
+ var header = document.getElementById('header-main');
+ var navbarHeight = header.offsetHeight;
+
+ function toggleNav(direction, currentScroll) {
+   if (direction === 2 && currentScroll > 52) { 
+     header.style.top = -navbarHeight*2 +"px"; 
+     prevDirection = direction;
+   }
+   else if (direction === 1) {
+    header.style.top = "0px";
+    prevDirection = direction;
+   }
+ };
+
+ window.addEventListener('scroll', function(){
+    currentScroll = document.documentElement.scrollTop;
+    if (currentScroll > prevScroll) { 
+      direction = 2;
+    }
+    else if (currentScroll < prevScroll) { 
+      direction = 1;
+    }
+    if (direction !== prevDirection) {
+      if(document.body.classList.contains('with-menu')) return
+      toggleNav(direction, currentScroll);
+    }
+    prevScroll = currentScroll;
+ });
+}
+
+
 (function () {
   scrollTo();
   header();
@@ -374,4 +419,5 @@ function articleProgressBar() {
   bouncingBall();
   lineDelayAnim();
   articleProgressBar();
+  navbarOnScroll();
 })();

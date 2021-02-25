@@ -1,9 +1,24 @@
+.nav-up {
+    top: -40px;
+}
 #header-main {
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     background-color: none;
     color: black;
+    position: fixed;
+    background: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    transition: all .3s ease;
+    .container{
+        position: relative;
+    }
+    &.hide {
+        top: -53px;
+    }
     &.black {
         background-color: black;
         color: white;
@@ -280,6 +295,7 @@
     }
 }
 .with-menu {
+
     overflow-y: hidden;
     .overlay-background{
         position: fixed;
@@ -300,7 +316,9 @@
     }
     #header-main {
         z-index: 12;
-        position: relative;
+        top: 0px;
+        //position: fixed;
+        
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         a, li {
             position: relative;
