@@ -1,3 +1,8 @@
+.case-studies-list{
+    .subtext {
+        margin-top: 8em;
+    }
+}
 #case-studies-info {
     @include breakpoint(sm-down) {
         padding-bottom: 0;

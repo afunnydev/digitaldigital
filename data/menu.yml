@@ -17,7 +17,7 @@ main:
     links:
       - text: Search Engine Optimization
         link: '/services/search-engine-optimization'
-      - text: E-Commerce
+      - text: Digital Marketing
         link: '/services/digital-marketing'
       - text: Consulting + Advising
         link: '/services/consulting-advising'
@@ -25,7 +25,7 @@ main:
         link: '/services/digital-strategy-building'
       - text: User Interface & Experience
         link: '/services/user-interface-experience'
-      - text: Software + Web Developpement
+      - text: Software + Web Development
         link: '/services/software-web-development'
       - text: Design & Branding Systems
         link: '/services/design-branding-systems'

@@ -18,7 +18,7 @@
         <div class="col-lg-6 col-sm-12 tagline">
           <h3> {{ .tagline }} </h3>
           <a href={{ .url }}>
-            <h6 class="with-dash"> Watch Study </h6>
+            <h6 class="with-dash" ><a href="#video">Watch Study</a></h6>
           </a>
         </div>
         <div class="col-sm-12 col-lg-5 col-lg-offset-1">
@@ -44,10 +44,13 @@
           </div>
         </div>
       </div>
+      <div id="video" class="anchor" style="padding-top: 100px;"></div>
       {{ end }}
-      <video width=100% controls>
-        <source src={{ .Params.videoPath }} type="video/webm">
-      </video>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="{{ .Params.videoPath }}" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   </div>
 </div>

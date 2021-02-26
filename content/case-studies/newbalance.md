@@ -13,7 +13,7 @@ infos:
     year: 2020
     deliverables: ['Influencer sourcing']
     goals: "Cast 7 influencers to promote local New Balance stores in a series of social media content. "
-videoPath: "/img/case-studies/newbalance/newbalance.mp4"
+videoPath: "https://player.vimeo.com/video/515940868?color=FFF&title=0&byline=0"
 imagesThumbnails:
   - src: "/img/case-studies/newbalance/Montayla Running Hoizontal.png"
     class: "a"
@@ -38,6 +38,6 @@ gallery:
   - src: "/img/case-studies/newbalance/slide/Jordan Dunking Vertical 1slide.png"
 challenges:
   title: Challenges
-  description: American Dairy wanted to build awareness amongst a Gen-Z demographic, a generation notoriously un-trusting of traditional advertising. Additionally, they wanted to maximize brand reach, while ensuring brand safety.
+  description: New Balance wanted to gain authority casting relatable & local micro-influencers to promote their physical stores & present their InStore 3D Fit Scanner.
   result: "20+ young athletes and artists with a strong local following participated in the #Gotmilk challenge, generating over 10,000 likes and comments and 250,000 unique views."
 ---

@@ -13,7 +13,7 @@ infos:
     year: 2020
     deliverables: ['Influencer sourcing', 'Creative direction', 'Content distribution']
     goals: "Appeal to Generation-Z through young opinion leaders. Increase awareness of the #Gotmilk challenge across the North-East of the US."
-videoPath: "/img/case-studies/gotmilk/GotMilk.mp4"
+videoPath: "https://player.vimeo.com/video/515939185?color=E4D6FD&title=0&byline=0"
 videoThumbnails:
   - src: "/img/case-studies/gotmilk/GotMilk_1.mp4"
   - src: "/img/case-studies/gotmilk/GotMilk_2.mp4"

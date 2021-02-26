@@ -2,7 +2,7 @@
 title: DigitalDigital
 description: DigitalDigital
 date: 2019-03-17T18:18:43Z
-h1: is a digital marketing agency that specializes in client and lead aquisitions
+h1: is a digital marketing agency that specializes in client and lead acquisitions
 portfolio:
   - images:
     - url: '#'
@@ -122,11 +122,11 @@ section4:
   casestudy:
     infos:
       name: Kohezion
-      tagline: Multi-channel international health and supplements brand.
+      tagline: No-code online database & application builder.
       url: '/contact'
     quote: 
       text: >-
-        “Digital Digital took in charge SEO, a website re-design, blog post writing, website copywriting & developped a video tutorial educational system for Kohezion’s users. Each & every service they provided was best in class.”
+        “Digital Digital took in charge SEO, a website re-design, blog post writing, website copywriting & developed a video tutorial educational system for Kohezion’s users. Each & every service they provided was best in class.”
       author:
         name: Thierry Tremblay
         position: Executive Director
@@ -156,7 +156,7 @@ section4:
       - name: Direct to consumer
         url: '#'
 section5:
-  title: All Articles
-  subtitle: '& we write stuff, from time to time.'
+  title: All Case Studies
+  subtitle: 'Featured Case Studies.'
 ---
 
