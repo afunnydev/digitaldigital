@@ -167,34 +167,34 @@ function homeSlider() {
   // Translate the container
   setInterval(infiniteScroll, 10);
 
-  carousel.addEventListener("mouseenter", function () {
-    //preload DRAGGING cursor before mousedown, so there no delay on click
-    draggingCursor = new Image();
-    draggingCursor.src = '/img/cursor/DRAGGING.svg';
-    hovered = true;
-  });
+  // carousel.addEventListener("mouseenter", function () {
+  //   //preload DRAGGING cursor before mousedown, so there no delay on click
+  //   draggingCursor = new Image();
+  //   draggingCursor.src = '/img/cursor/DRAGGING.svg';
+  //   hovered = true;
+  // });
 
-  carousel.addEventListener("mouseleave", function () {
-    hovered = false;
-  });
+  // carousel.addEventListener("mouseleave", function () {
+  //   hovered = false;
+  // });
 
-  carousel.addEventListener("mousedown", function (e) {
-    e.preventDefault();
-    carousel.style.cursor = `url(${draggingCursor.src}), auto`; //Because of the preventDefault, we have to force change the cursor
-    canDrag = true;
-    dragOffset = e.clientX - carousel.getBoundingClientRect().left - offset;
-    document.onmousemove = dragCarousel;
-  });
+  // carousel.addEventListener("mousedown", function (e) {
+  //   e.preventDefault();
+  //   carousel.style.cursor = `url(${draggingCursor.src}), auto`; //Because of the preventDefault, we have to force change the cursor
+  //   canDrag = true;
+  //   dragOffset = e.clientX - carousel.getBoundingClientRect().left - offset;
+  //   document.onmousemove = dragCarousel;
+  // });
 
-  document.addEventListener("mouseup", function () {
-    canDrag = false;
-    carousel.style.cursor = "url('/img/cursor/DRAGGABLE.svg'), auto";
-  });
+  // document.addEventListener("mouseup", function () {
+  //   canDrag = false;
+  //   carousel.style.cursor = "url('/img/cursor/DRAGGABLE.svg'), auto";
+  // });
 
-  function dragCarousel(e) {
-    if (!canDrag) return
-    carousel.style.left = e.pageX - dragOffset + 'px';
-  }
+  // function dragCarousel(e) {
+  //   if (!canDrag) return
+  //   carousel.style.left = e.pageX - dragOffset + 'px';
+  // }
 }
 
 function mobileMenu() {
