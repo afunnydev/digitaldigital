@@ -29,6 +29,13 @@ gallery:
   - src: "/img/case-studies/newbalance/slide/CJ Posing 9x16 Vertical 1slide.png"
   - src: "/img/case-studies/newbalance/slide/Genesis Training Vertical 1slide.png"
   - src: "/img/case-studies/newbalance/slide/Jordan Dunking Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/Montayla Running 9x16 Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/Sarah Soccer 9x16 Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/Sidney Training 9x16 Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/Sitting On Sidewalk 9x16 Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/CJ Posing 9x16 Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/Genesis Training Vertical 1slide.png"
+  - src: "/img/case-studies/newbalance/slide/Jordan Dunking Vertical 1slide.png"
 challenges:
   title: Challenges
   description: American Dairy wanted to build awareness amongst a Gen-Z demographic, a generation notoriously un-trusting of traditional advertising. Additionally, they wanted to maximize brand reach, while ensuring brand safety.

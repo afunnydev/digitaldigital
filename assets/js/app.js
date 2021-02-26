@@ -410,6 +410,30 @@ function navbarOnScroll(){
 }
 
 
+function casestudiesCarousel(){
+  var offset = 0;
+  var viewportWidth = window.innerWidth;
+  var offsetUnit = -100 / viewportWidth;
+  var carousel = document.getElementById('carousel-container');
+  if (!carousel) return;
+  carousel.style.width = viewportWidth + 'px';
+  var slides = document.getElementsByClassName('slides');
+  var nbSlides = slides.length;
+  var slideWidthProportion = (slides[0].offsetWidth / viewportWidth) * 100;
+  var offsetUnitsPerSlide = -(Math.round(slideWidthProportion / offsetUnit));
+
+  for (let i = 0; i < nbSlides; i++) {
+    slides[i].style.left = (slideWidthProportion * i) + '%';
+  }
+  setInterval(() => {
+    offset += 1;
+    if(offset === offsetUnitsPerSlide * nbSlides/2){
+      offset = 0;
+    }
+    carousel.style.transform = 'translateX(' + (offset * offsetUnit) + '%)';
+  }, 10);
+}
+
 (function () {
   scrollTo();
   header();
@@ -420,4 +444,5 @@ function navbarOnScroll(){
   lineDelayAnim();
   articleProgressBar();
   navbarOnScroll();
+  casestudiesCarousel();
 })();
