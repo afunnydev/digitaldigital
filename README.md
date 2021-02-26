@@ -1,25 +1,23 @@
-[![Atlas, Hugo Boilerplate](https://atlas.indigotree.co.uk/images/github-banner.png)](https://github.com/indigotree/atlas)
+## Digital Digital
 
-![](http://forthebadge.com/images/badges/uses-badges.svg) ![](http://forthebadge.com/images/badges/built-by-developers.svg) ![](http://forthebadge.com/images/badges/gluten-free.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b1dbc7c-6af5-49d7-bd46-a25cc13e8e56/deploy-status)](https://app.netlify.com/sites/confident-ritchie-c0a827/deploys)
 
-# Atlas
+## Atlas
 
-The [Hugo](https://gohugo.io/) boilerplate we use for our projects.
+The [Hugo](https://gohugo.io/) boilerplate we use for this project.
 
-**Disclaimer** - This boilerplate has been heavily integrated with [Netlify](https://www.netlify.com/), and therefore many features are specific to the Netlify platform and may not work with other hosting providers.
-
-**Disclaimer** - Atlas is a boilerplate (starter kit) for bespoke Hugo projects. It's not a Hugo theme and cannot be placed inside the `/themes` directory. Check the [theme](#themes) docs for more information.
+**Disclaimer** - Atlas is a boilerplate (starter kit) for bespoke Hugo projects. It's not a Hugo theme.
 
 ## Features
 
 Atlas provides the following features out of the box:
 
-* Pre configured support for Hugo Pipes, with SASS and Autoprefixer
-* Environment driven `robots.txt` file (disallows robots on everything other than production)
-* Base HTML templates with easy customisation/extension
-* [Configuration](/netlify.toml) for Netlify deployments
-* [Better defaults](#security-headers) for configuring HTTPS
-* [Better redirects](#redirects) with Netlify instead of `<meta http-equiv="refresh">`
+- Pre configured support for Hugo Pipes, with SASS and Autoprefixer
+- Environment driven `robots.txt` file (disallows robots on everything other than production)
+- Base HTML templates with easy customisation/extension
+- [Configuration](/netlify.toml) for Netlify deployments
+- [Better defaults](#security-headers) for configuring HTTPS
+- [Better redirects](#redirects) with Netlify instead of `<meta http-equiv="refresh">`
 
 ## Prerequisite
 
@@ -38,9 +36,9 @@ npm run server
 
 There are 3 commands available:
 
-* `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
-* `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
-* `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
+- `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
+- `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
+- `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
 
 ## Robots.txt
 
@@ -105,7 +103,6 @@ Atlas files will take priority over your theme due to the order Hugo looks for f
 
 If you wish the develop your site as a theme inside Atlas, you can copy `/layouts` into your theme and update the references within the `gulpfile.babel.js`.
 
-
 ## File Structure
 
 ```
@@ -143,12 +140,6 @@ If you wish the develop your site as a theme inside Atlas, you can copy `/layout
 │ package.json
 ```
 
-## Deploy to Netlify
-
-You can deploy directly to Netlify using this button:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/indigotree/atlas)
-
-## License
+## Atlas License
 
 MIT © [Indigo Tree](https://indigotree.co.uk)
