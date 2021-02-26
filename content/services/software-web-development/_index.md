@@ -1,12 +1,20 @@
 ---
-title: Software & Web Developpement
-description: DigitalDigital Software & Web Developpement
-h1: Software & Web Developpement
-explanation: Fix deliverability issues and optimize conversion rates through A/B tests and user-segmentation to increase average customer LTV.
+title: Software & Web Development
+description: DigitalDigital Software & Web Development
+h1: Software & Web Development
+h2: Marketing Services
+explanation: Tailored & complete digital marketing strategies
 weight: 6
 services:
   - name: Website Architecture
   - name: E-Commerce
-  - name: Wordpress & CMS
-  - name: Cusom Dev.
+  - name: WordPress & CMS
+  - name: Custom Dev.
+logos:
+  - icon: nissan
+  - icon: got-milk
+  - icon: new-balance
+  - icon: moose
+  - icon: nac
+  - icon: bedtime
 ---

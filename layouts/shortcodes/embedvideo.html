@@ -1,0 +1,7 @@
+{{- $controls := .Get "controls" -}}
+{{- $autoplay := .Get "autoplay" -}}
+ 
+<video width=100% {{ if $controls }} {{ $controls }} {{ end }} {{ if $autoplay }} autoplay={{ $autoplay }} muted {{ end }}>
+    <source src={{ .Params.src }}  type="video/webm">
+    Your browser does not support the video tag.  
+</video>

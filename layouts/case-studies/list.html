@@ -1,0 +1,25 @@
+{{- define "main" -}}
+<div id="case-studies-hero" class="section">
+    <div class="container section">
+        <div class="row bottom-xs section">
+            <div class="col-md-10">
+                <h1 class="home">{{- .Params.h1 -}}</h1>
+            </div>
+        </div>
+        <div class="case-studies-list first">
+            <div class="container">
+                <div class="row">
+                    {{ range where (where $.Site.Pages "Type" "case-studies") ".Params.external" "!=" false }}
+                        {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Permalink "class" "col-xs-12 col-md-6") -}}
+                    {{ end }}
+                    {{- range .Pages -}}
+                    {{- end -}}
+                </div>
+                <p class="subtext">More are being added</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{- end -}}

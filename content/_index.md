@@ -2,7 +2,7 @@
 title: DigitalDigital
 description: DigitalDigital
 date: 2019-03-17T18:18:43Z
-h1: is a digital marketing agency that specializes in client and lead aquisitions
+h1: is a digital marketing agency that specializes in client and lead acquisitions
 portfolio:
   - images:
     - url: '#'
@@ -46,6 +46,13 @@ portfolio:
     - url: '#'
       title: 'Test'
       src: /img/brigil.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/bluehouse-salmon.png
+    - url: '#'
+      title: 'Test'
+      src: /img/taiga-board.png
 
   - images:
     - url: '#'
@@ -89,13 +96,19 @@ portfolio:
     - url: '#'
       title: 'Test'
       src: /img/brigil.png
+  - images:
+    - url: '#'
+      title: 'Test'
+      src: /img/bluehouse-salmon.png
+    - url: '#'
+      title: 'Test'
+      src: /img/taiga-board.png
 
 section3:
   title: We do
   subtitle: '& believe in strategic creativity based on data and analytics.'
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing
+    We build solutions on a first-principle understanding of consumer psychology. We validate our approach by mining insights from your data in real time.
   logos:
     - icon: nissan
     - icon: got-milk
@@ -109,20 +122,20 @@ section4:
   casestudy:
     infos:
       name: Kohezion
-      tagline: Multi-channel international health and supplements brand.
-      url: '#'
+      tagline: No-code online database & application builder.
+      url: '/contact'
     quote: 
       text: >-
-        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.” et dolore magna aliqua. Ut enim ad minim veniam.”
+        “Digital Digital took in charge SEO, a website re-design, blog post writing, website copywriting & developed a video tutorial educational system for Kohezion’s users. Each & every service they provided was best in class.”
       author:
         name: Thierry Tremblay
         position: Executive Director
-        imgUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fyscorporate.com%2Fwp-content%2Fuploads%2F2017%2F09%2FPhoto-de-profil-professionnelle-par-photographe-6.jpg&f=1&nofb=1'
+        imgUrl: '/img/thierrytremblay.png'
     stats:
-      - name: Gor lorem ipsum
-        value: 120k
-      - name: Growth ipsum
-        value: +10k
+      - name: Qualified Leads
+        value: + 250%
+      - name: In Keyword Search
+        value: 2nd
   industries:
     title: Industries
     list:
@@ -143,7 +156,7 @@ section4:
       - name: Direct to consumer
         url: '#'
 section5:
-  title: All Articles
-  subtitle: '& we write stuff, from time to time.'
+  title: All Case Studies
+  subtitle: 'Featured Case Studies.'
 ---
 

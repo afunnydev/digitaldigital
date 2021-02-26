@@ -1,8 +1,9 @@
 ---
-title: Digital Strategy Building
+title: Digital Strategy
 description: DigitalDigital Digital Strategy Building
-h1: Digital Strategy Building
-explanation: Deploy a paid advertising strategy that leverages in-house data to scale sales and optimize CPAs across our digital campaigns.
+h1: Digital Strategy
+h2: Digital Strategies
+explanation: Tailored & complete digital marketing strategies
 weight: 4
 services:
   - name: Complete Strategies
@@ -10,4 +11,11 @@ services:
   - name: Competitor Analysis
   - name: Media Buying
   - name: Consumer Surveys
+logos:
+  - icon: nissan
+  - icon: got-milk
+  - icon: new-balance
+  - icon: moose
+  - icon: nac
+  - icon: bedtime
 ---

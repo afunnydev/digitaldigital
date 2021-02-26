@@ -1,4 +1,13 @@
 #our-subsidiary-companies {
+	padding-top: 4em;
+	padding-bottom: 4em;
+	@include breakpoint(sm) {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
+	h2{
+		margin-bottom: 0;
+	}
 	h6{
 		text-align: left;
 		@include breakpoint(md) {
@@ -12,11 +21,20 @@
 			text-decoration: underline;
 		}
 		.content{
-			padding-top: 25px;
-			padding-bottom: 25px;
+			position: relative;
+			margin-bottom: 50px;
+			a{
+				position: absolute;
+				bottom:0;
+			}
+			p{
+				margin-top: 15px;
+				padding-bottom: 10px;
+			}
 			svg{
 				margin: 0;
 			}
+
 		}
 	}
 }

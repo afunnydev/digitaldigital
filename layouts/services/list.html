@@ -1,13 +1,18 @@
 {{- define "main" -}}
 <div id="services-list-hero">
-    <div class="container">
-        <div class="row middle-xs spaced">
+    <div class="container section">
+        <div class="row top-xs spaced">
             <div class="col-xs-12 col-md-8">
-                <h1>{{- .Params.h1 -}}</h1>
+                <h1 class="home">{{- .Params.h1 -}}</h1>
             </div>
             <div class="col-xs-12 col-md-4">
                 <h4>{{- .Params.explanation -}}</h4>
             </div>
+        </div>
+        <div class="row end-xs">
+        <div class="col-md-12 " id="shape">
+            <div id="{{- path.Base .Permalink -}}" class="head-shapes"></div>
+        </div>
         </div>
     </div>
 </div>
@@ -15,28 +20,30 @@
 <div id="services-list" class="section">
     <div class="container">
         <div class="row middle-xs">
-            <div class="col-xs-7">
+            <div class="col-sm-7 col-xs-12">
                 <h2>{{- .Params.h2 | default "Services" -}}</h2>
             </div>
-            <div class="col-xs-5 align-right">
+            <div class="col-sm-5 col-xs-12 align-right hide-sm">
                 <h6 class="with-dash white">
                     <a href="#" title="Unsure which one is best for you? ">Unsure which one is best for you?</a>
                 </h6>
             </div>
             {{- range .Pages -}}
-            {{- partial "site/linkcard" (dict "context" . "name" .Params.listing.title "info" .Params.listing.description "url" .Permalink "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
+            {{- partial "site/linkcard" (dict "context" . "name" .Params.listing.title "info" .Params.listing.description "class" "col-xs-12 col-sm-6 col-md-4" "big" true) -}}
             {{- end -}}
         </div>
-        {{- with .Params.clients -}}
-        <div class="row middle-xs between-xs logos">
-            {{- range . -}}
-                {{- partial (printf "icons/%s.html" .icon) -}}
-            {{- end -}}
-        </div>
-        {{- end -}}
+            {{- partial "site/logos" (dict "context" . "logos" .Params.logos) -}}
     </div>
 </div>
 
+<div class="container section" id='all-services-list'>
+    <h2 class="lineDelayAnim--item title">Services</h2>
+    {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
+        {{ if .Params.h1 }}
+            <h6 class="lineDelayAnim--item"><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h6>
+        {{ end }}
+    {{- end -}}
+</div>
+
 {{- partial "site/cta" . -}}
-{{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
 {{- end -}}

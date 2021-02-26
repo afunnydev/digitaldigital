@@ -1,5 +1,10 @@
 {{- define "main" -}}
 <div id="article-info" class="section">
+<div class="progress-bar--container">
+    {{ range $i, $sequence :=  (seq 7) }}
+        <div class="progress-bar"></div>
+    {{ end }}
+</div>
     <div class="container">
         <h1>{{ .Title }}</h1>
         <h6>By {{ .Params.author }}, {{ .ReadingTime }} min read  |  {{.Date.Format "Jan 2 2006"}}</h6>

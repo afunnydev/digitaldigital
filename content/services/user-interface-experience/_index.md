@@ -2,6 +2,14 @@
 title: User Interface & Experience
 description: DigitalDigital User Interface & Experience
 h1: User Interface & Experience
-explanation: Fix deliverability issues and optimize conversion rates through A/B tests and user-segmentation to increase average customer LTV.
+h2: Interactive Design
+explanation: Refined interfaces for mobile & desktop applications
 weight: 5
+clients:
+    - icon: leadlabs
+    - icon: nissan
+    - icon: billygoat
+    - icon: moose
+    - icon: loop
+    - icon: bedtime
 ---

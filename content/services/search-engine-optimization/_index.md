@@ -3,7 +3,7 @@ title: Search Engine Optimization
 description: DigitalDigital Search Engine Optimization
 h1: Search Engine Optimization
 h2: SEO Services
-explanation: Build relevant backlinks through blogger outreach and PR mentions to increase authority and keyword rankings.
+explanation: Systemized & efficient SEO for global or local ranking.  
 weight: 2
 services:
   - name: Local SEO
@@ -16,11 +16,11 @@ services:
     description: Deploy a paid advertising strategy that leverages in-house data to scale sales and optimize CPAs across our digital campaigns.
   - name: Amazon Product SEO
     description: Fix deliverability issues and optimize conversion rates through A/B tests and user-segmentation to increase average customer LTV.
-clients:
-  - icon: leadlabs
+logos:
   - icon: nissan
-  - icon: billygoat
+  - icon: got-milk
+  - icon: new-balance
   - icon: moose
-  - icon: loop
+  - icon: nac
   - icon: bedtime
 ---

@@ -1,0 +1,149 @@
+{{- define "main" -}}
+<div id="case-studies-info" class="section">
+  <div class="container">
+    <div class='row bottom-sm'>
+      <div class='col-lg-12'>
+        <h1>{{ .Title }}</h1>
+        <h6> {{ .Params.subtitle }} </h6>
+        <img src="{{- .Params.image -}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="case-studies-content">
+  <div class="container">
+    <div class="infos section">
+      {{ range .Params.infos }}
+      <div class="row section">
+        <div class="col-lg-6 col-sm-12 tagline">
+          <h3> {{ .tagline }} </h3>
+          <a href={{ .url }}>
+            <h6 class="with-dash" ><a href="#video">Watch Study</a></h6>
+          </a>
+        </div>
+        <div class="col-sm-12 col-lg-5 col-lg-offset-1">
+          <div class="row">
+            <div class="col-lg-6 col-sm-3 col-xs-12">
+              <p></p><b>Client</b></p>
+              <p>{{ .client }}</p>
+            </div>
+            <div class="col-lg-6 col-sm-3 col-xs-12">
+              <p><b>Year</b></p>
+              <p>{{ .year }}</p>
+            </div>
+            <div class="col-lg-6 col-sm-3 col-xs-12">
+              <p><b>Deliverables</b></p>
+              {{ range .deliverables }}
+              <p>{{ . }}</p>
+              {{ end }}
+            </div>
+            <div class="col-lg-6 col-sm-3 col-xs-12">
+              <p><b>Goals</b></p>
+              <p>{{ .goals }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="video" class="anchor" style="padding-top: 100px;"></div>
+      {{ end }}
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="{{ .Params.videoPath }}" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+  </div>
+</div>
+
+<div id="case-studies-challenge" class="section">
+  {{- with .Params.challenges -}}
+  <div class="container">
+    <div class="row between-xs content">
+      <div class="col-sm-8 col-md-5">
+        <p class="tiny">{{ .title }}</p>
+        <p>{{ .description }}</p>
+      </div>
+      <div class="col-sm-4 align-right">
+        <h6 class="with-dash white">
+          <a href="/contact" title="">Work with us</a>
+        </h6>
+      </div>
+    </div>
+    {{- if .stats -}}
+    <div class="row casestudy middle-lg">
+      <div class="col-lg-4 col-xs-12">
+        <p class="smaller"><b>Result</b></p>
+        <p>{{ .result }}</p>
+      </div>
+      <div class="col-xs-12 col-lg-6 col-lg-offset-2 datas">
+        <div class="row">
+            {{- range .stats -}}
+            <div class="col-xs-12 col-sm-4 content">
+              <h4>{{- .value -}}</h4>
+              <p class="smaller">{{- .name -}}</p>
+            </div>
+            {{- end -}}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+    {{- end -}}
+    {{ if .Params.videoThumbnails }}
+    <div id="video-thumbnails">
+      <div class="container">
+        <div class="row  middle-xs">
+          {{ range .Params.videoThumbnails }}
+          <div class="col-lg-3 col-sm-4 col-xs-12">
+            <video width=100% autoplay muted loop>
+              <source src={{ .src }} type="video/webm">
+            </video>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{- end -}}
+    {{ if .Params.imagesThumbnails }}
+    <div id="images-thumbnails">
+      <div class="container">
+        <div class="items-container row">
+          {{ range .Params.imagesThumbnails }}
+          <div class=" item col-xs-12 {{ .class }}">
+           <img src="{{ .src }}"  alt="">
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{- end -}}
+  </div>
+</div>
+{{ if .Params.gallery }}
+<div id="carousel-container" class="section gallery">
+  <div id="case-studies-carousel" >
+      {{- range .Params.gallery -}}
+      <div class="slides" >
+        <img src="{{- .src -}}">
+      </div>
+      {{- end -}}
+  </div>
+</div>
+{{- end -}}
+{{ $currentlink := .URL| absURL }}
+<div id="case-studies-list" class="section first">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Other Studies</h3>
+      </div>
+      {{ range first 2 (where (where $.Site.Pages "Type" "case-studies") ".Params.external" "!=" false) }}
+      {{ $permalink := .Permalink | absURL }}
+      {{ if ne $currentlink $permalink }}
+      {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Permalink "class" "col-xs-12 col-md-6") -}}
+      {{ end }}
+      {{- end -}}
+    </div>
+  </div>
+</div>
+{{- partial "site/cta" . -}}
+{{- end -}}

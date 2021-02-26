@@ -1,13 +1,16 @@
 {{- define "main" -}}
+
 <div id="home-hero">
     <div class="container">
         <div class="row middle-xs bottom-sm">
-            <div class="col-md-10">
-                <h1 class="home">{{- .Params.h1 -}}</h1>
+            <div class="col-md-10 col-xs-12">
+                <h1 class="home lineDelayAnim--item">{{- .Params.h1 -}}</h1>
             </div>
         </div>
     </div>
 </div>
+
+
 <div id="home-portfolio">
     <div id="carousel-container">
         <div id="carousel">
@@ -25,9 +28,11 @@
 {{- with .Params.section3 -}}
 <div id="home-we-do" class="section">
     <div class="container">
-        <h2>{{- .title -}}</h2>
+        <h2 class="lineDelayAnim--item">{{- .title -}}</h2>
         {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
-        <h4><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
+            {{ if .Params.h1 }}
+                <h4 class="lineDelayAnim--item"><a href="{{- .Permalink -}}">{{- .Params.h1 -}}</a></h4>
+            {{ end }}
         {{- end -}}
         <div class="row sub between-xs">
             <div class="col-md-6 col-lg-6">
@@ -46,17 +51,17 @@
 <div id="home-our-work" class="section">
     <div class="container">
         <div class="row between-xs">
-            <div class="col-sm-8 col-md-5">
+            <div class="col-sm-8 col-md-5 lineDelayAnim--item">
                 <h4>{{- .subtitle -}}</h4>
             </div>
-            <div class="col-sm-4 align-right">
+            <div class="col-sm-4 align-right lineDelayAnim--item">
                 <h6 class="with-dash white">
-                    <a href="#" title="{{- .title -}}">{{- .title -}}</a>
+                    <a href="case-studies" title="{{- .title -}}">{{- .title -}}</a>
                 </h6>
             </div>
         </div>
         {{- partial "site/casestudy" .casestudy -}}
-        {{- with .industries -}}
+       <!-- {{- with .industries -}} Launching without industries
         <div class="row">
             <div class="col-xs-12">
                 <h2>{{- .title -}}</h2>
@@ -65,7 +70,7 @@
             {{- partial "site/linkcard" (dict "context" . "name" .name "info" "" "url" "#" "class" "col-xs-12 col-sm-4 col-md-3") -}}
             {{- end -}}
         </div>
-        {{- end -}}
+        {{- end -}} -->
     </div>
 </div>
 {{- end -}}
@@ -79,12 +84,15 @@
             </div>
             <div class="col-md-6 align-right">
                 <h6 class="with-dash">
-                    <a href="#" title="{{- .title -}}">{{- .title -}}</a>
+                    <a href="/case-studies" title="case=studies">{{- .title -}}</a>
                 </h6>
             </div>
-            {{- range where (where $.Site.RegularPages "Type" "articles") "Params.external" true -}}
+            <!-- {{- range where (where $.Site.RegularPages "Type" "articles") "Params.external" true -}}
             {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Params.canonical "class" "col-xs-12 col-sm-6") -}}
-            {{- end -}}
+            {{- end -}} -->
+            {{ range where (where $.Site.Pages "Type" "case-studies") ".Params.external" "!=" false }}
+                {{- partial "site/articlecard" (dict "context" . "img" .Params.listing.img "description" .Params.listing.description "url" .Permalink "class" "col-xs-12 col-md-6") -}}
+            {{ end }}
         </div>
     </div>
 </div>
@@ -93,4 +101,5 @@
 {{- partial "site/companies" . -}}
 {{- partial "site/cta" . -}}
 {{- partial "site/team" (dict "context" . "members" $.Site.Data.team.members) -}}
+
 {{- end -}}

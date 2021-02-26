@@ -1,6 +1,6 @@
 baseURL = "https://www.digitaldigital.ca/"
 languageCode = "en-ca"
-title = "DigitalDigital"
+title = "Digital Digital"
 
 enableRobotsTXT = true
 disableAliases = true
@@ -34,3 +34,11 @@ notAlternative = true
 [markup.goldmark.renderer]
   unsafe= true
 
+[permalinks]
+  singles = "/:slug/"
+
+[[redirects]]
+  from = "/articles"
+  to = "/"
+  status = 302
+  force = true 

@@ -1,9 +1,8 @@
 #home-hero {
 	.row {
-    height: calc(100vh - 18em);	
-
+    height: calc(95vh - 18em);	
 		@include breakpoint(sm) {
-      height: calc(100vh - 5.25em);			
+      height: calc(95vh - 5.25em);			
 		}
 	}
 }
@@ -14,10 +13,10 @@
 		overflow: hidden;
 		background-color: $black;
 		height: 800px;
-		cursor: $draggable;
-		&:active {
-		cursor: $dragging;
-		}
+		// cursor: $draggable;
+		// &:active {
+		// cursor: $dragging;
+		// }
 	}
 	#carousel {
 		position: absolute;
@@ -39,9 +38,13 @@
 }
 
 #home-we-do {
+	padding-bottom: 4em;
+	@include breakpoint(sm) {
+		padding-bottom: 8em;
+	}
 	h4 {
 		padding-bottom: 30px;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid $black_sub3;
 		a {
 			display: inline-block;
 			width: calc(100% - 55px);
@@ -65,8 +68,12 @@
 		}
 	}
 	.sub {
-		margin-top: 150px;
-		margin-bottom: 150px;
+		margin-top: 75px;
+		margin-bottom: 75px;
+		@include breakpoint(sm) {
+			margin-top: 150px;
+			margin-bottom: 150px;
+		}
 	}
 
 	svg {
@@ -75,8 +82,14 @@
 }
 
 #home-our-work {
+	padding-top: 4em;
+	padding-bottom: 4em;
 	background-color: $black;
 	color: $white;
+	@include breakpoint(sm) {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
 	.casestudy {
 		margin: 80px 0;
 		background-color: $white;
@@ -86,8 +99,15 @@
 			padding: 125px 60px;
 		}
 	}
+
 }
 
 #home-we-write {
+	padding-top: 4em;
+	padding-bottom: 4em;
 	border-bottom: 1px solid $black_sub3;
+	@include breakpoint(sm) {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
 }

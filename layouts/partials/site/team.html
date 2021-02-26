@@ -1,18 +1,18 @@
 <div id="team-section" class="section hide-sm">
-    <div class="container">
+    <div class="container" >
         <h4>Core Team</h4>
         {{- range .members -}}
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 name">
-                <p class="small"><strong>{{ .name }}</strong></p>
+        <div class="row ">
+            <div class="col-xs-12 col-sm-4 name lineDelayAnim--item">
+                <p class="small name">{{ .name }}</p>
             </div>
-            <div class="col-xs-8 col-sm-4">
+            <div class="col-xs-8 col-sm-4 lineDelayAnim--item">
                 <p class="small">{{ .position }}</p>
             </div>
-            <div class="col-xs-4 col-sm-2">
+            <div class="col-xs-4 col-sm-2 lineDelayAnim--item">
                 <img src="{{- .gif -}}" alt="{{- .name -}}" class="gif">
             </div>
-            <div class="col-xs-12 col-sm-2">
+            <div class="col-xs-12 col-sm-2 lineDelayAnim--item">
                 <p class="small">{{ .city }}</p>
             </div>
         </div>

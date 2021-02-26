@@ -1,17 +1,24 @@
 #services-list {
-	.logos {
+	.logos-partial  {
 		padding-top: 8em;
-		svg {
-			fill: white;
+		svg, svg path {
+			fill: white !important;
 		}
 	}
+	.align-right{
+		text-align: left !important;
+		@include breakpoint(sm) {
+			text-align: right !important;
+		}
+	}
+
+
 }
 
 #services-all-hero {
 	background-color: black;
     .row {
-    
-    height: calc(100vh - 20em);
+    	height: calc(100vh - 20em);
 		h1 {
 			color: white;
 			margin-bottom: 2rem;
@@ -22,6 +29,7 @@
 		@include breakpoint(sm) {
 		  height: calc(100vh - 5.25em);	
 		}
+
 	}
 }
 
@@ -43,14 +51,61 @@
 }
 
 #services-list-hero {
+	padding-top: 12em;
+	.section{
+		padding-bottom: 0;
+	}
     .row {
-    height: calc(100vh - 21.875em);
-		@include breakpoint(sm) {
-      height: calc(100vh - 5.25em);
+		padding-bottom: 25px;
+		h1{
+			margin-bottom: 50px;
+		}
+		#shape{
+			.head-shapes{
+				@include breakpoint(sm) {
+					margin: 25px 0;
+					float: right;
+					display: block;
+					svg{
+						width: auto;
+					}
+				}
+				display: none;
+			}
 		}
 	}
 }
 
+#all-services-list{
+	.title{
+		margin-bottom: 100px;
+	}
+	h6 {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $black_sub3;
+		a {
+			display: inline-block;
+			width: calc(100% - 55px);
+		}
+		&:after {
+			content: '→';
+			float: right;
+			opacity: 0;
+			padding-right: 20px;
+			transition: 0.4s;
+		}
+		&:hover::after {
+			opacity: 1;
+			padding-right: 0;
+		}
+		&:hover {
+			cursor: $hover;
+		}
+		&:active::after{
+			cursor: $click;
+		}
+	}
+} 
 #services-single-hero {
 	background-color: black;
 	color: white;

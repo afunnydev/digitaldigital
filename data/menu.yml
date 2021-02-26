@@ -1,111 +1,73 @@
 main:
-  - title: Main
-    class: col-md-2 col-sm-6
+  - class: col-md-4 col-sm-6 main-link
     links:
       - text: Home
-        link: ''
-      - text: Case Studies
-        link: '#'
-      - text: Articles
-        link: '#'
+        link: '/'
       - text: About
-        link: '#'
-  - title: Contact Us
-    class: col-md-2 col-md-offset-1 col-sm-6
+        link: '/about'
+      - text: Contact
+        link: '/contact'
+  - class: col-md-4 col-sm-6 main-link
     links:
-      - text: Schedule a call
-        link: '#'
-      - text: Send an Email
-        link: '#'
-  - title: Industries
-    class: col-md-3 col-md-offset-1 col-sm-6
-    links:
-      - text: Search Engine Optimization
-        link: ''
-      - text: E-Commerce
-        link: '#'
-      - text: Consulting + Advising
-        link: '#'
-      - text: Digital Strategy Building
-        link: '#'
-      - text: User Interface & Experience
-        link: '#'
-      - text: Software + Web Developpement
-        link: '#'
-      - text: Design & Branding Systems
-        link: '#'
-  - title: Services
-    class: col-md-3 col-sm-6
+      - text: Case Studies
+        link: '/case-studies'
+  - title: All Services
+    link: '/services'
+    class: col-md-4 col-sm-6 small
     links:
       - text: Search Engine Optimization
-        link: ''
-      - text: E-Commerce
-        link: '#'
+        link: '/services/search-engine-optimization'
+      - text: Digital Marketing
+        link: '/services/digital-marketing'
       - text: Consulting + Advising
-        link: '#'
+        link: '/services/consulting-advising'
       - text: Digital Strategy Building
-        link: '#'
+        link: '/services/digital-strategy-building'
       - text: User Interface & Experience
-        link: '#'
-      - text: Software + Web Developpement
-        link: '#'
+        link: '/services/user-interface-experience'
+      - text: Software + Web Development
+        link: '/services/software-web-development'
       - text: Design & Branding Systems
-        link: '#'
+        link: '/services/design-branding-systems'
 mobile:
   - title: Home
-    link: 
-  - title: Case Studies
-    link: '#'
-  - title: Articles
-    link: articles
+    link: "/"
   - title: About
-    link: 
-  - title: Careers
-    link: 
+    link: '/about'
+  - title: Case Studies
+    link: '/case-studies'
+
 footer:
   - title: Contact Us
-    class: col-md-4 col-xs-12 big
+    class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Book a call
-        link: '#'
+        link: 'https://teaminbeat.typeform.com/to/EU16Cd0J'
       - text: Send an message
-        link: '#'
+        link: 'https://teaminbeat.typeform.com/to/EU16Cd0J'
+      - text: More Information
+        link: '/about'
   - title: Main
-    class: col-sm-3 col-md-2 col-xs-6
+    class: col-lg-2 col-md-2 col-xs-6
     links:
       - text: Home
-        link: ''
-      - text: Case Studies
-        link: '#'
-      - text: Articles
-        link: '#'
+        link: '/'
       - text: About
-        link: '#'
+        link: '/about'
+      - text: Contact
+        link: '/contact'
   - title: Work
-    class: col-sm-3 col-md-2 col-xs-6
+    class: col-lg-2 col-md-2 col-xs-6
     links:
-      - text: Home
-        link: ''
       - text: Case Studies
-        link: '#'
-      - text: Articles
-        link: '#'
-  - title: Lorem
-    class: col-sm-3 col-md-2 col-xs-6
+        link: '/case-studies'
+      - text: Services
+        link: '/services'
+  - title: Featured
+    class: col-lg-2 col-md-2 col-xs-6
     links:
-      - text: Home
-        link: ''
-      - text: Case Studies
-        link: '#'
-      - text: Articles
-        link: '#'
-  - title: Lorem
-    class: col-sm-3 col-md-2 col-xs-6
-    links:
-      - text: Home
-        link: ''
-      - text: Case Studies
-        link: '#'
-      - text: Articles
-        link: '#'
+      - text: "#Gotmilk"
+        link: '/case-studies/gotmilk'
+      - text: New Balance
+        link: '/case-studies/newbalance'
     

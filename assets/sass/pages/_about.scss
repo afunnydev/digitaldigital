@@ -1,0 +1,17 @@
+#about{
+    .home{
+        margin-top: 100px;
+    }
+    #team-section{
+        background-color: $white;
+        color: $black;
+    }
+    #our-subsidiary-companies{
+        background-color: $black;
+        color:  $white;
+
+        svg, svg path{
+            fill: $white;
+        }
+    }
+}

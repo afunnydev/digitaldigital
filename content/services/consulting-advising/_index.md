@@ -2,7 +2,8 @@
 title: Consulting + Advising
 description: DigitalDigital Consulting + Advising
 h1: Consulting + Advising
-explanation: Understand user behaviors to build an action plan to increase your conversion rate and average order value.
+h2: Capabilities
+explanation: Complete analysis of active channels & growth strategies
 weight: 3
 services:
   - name: Brand Consulting
@@ -10,4 +11,11 @@ services:
   - name: Advertising
   - name: Marketing
   - name: CRO Consulting
+logos:
+  - icon: nissan
+  - icon: got-milk
+  - icon: new-balance
+  - icon: moose
+  - icon: nac
+  - icon: bedtime
 ---

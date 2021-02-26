@@ -9,35 +9,43 @@
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
-                    <span class="text">Esc</span>
                 </button>
             </div>
             <div class="col-xs-6 col-sm-6 hide-sm">
                 <ul class="right">
-                    <li><a href="#" title="Contact">Contact</a></li>
+                    <li><a href="/contact" title="Contact">Contact</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
 </header>
 <div id="menu-overlay">
+<div class="overlay-background"> 
+</div>
     <div class="container hide-sm">
         <div class="row">
             {{- range $.Site.Data.menu.main -}}
             <div class="{{- .class -}}">
-                <p class="title">{{- .title -}}</p>
-                <ul class="desktop-main">
+          {{ if isset . "title" }}  <div class="title lineDelayAnim--item"><a href="{{- .link -}}">{{- .title -}} </a> </div>{{ end }}
+                <ul  class="desktop-main lineDelayAnim--item">
                     {{- range .links -}}
-                    <li><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
+                    <li class="lineDelayAnim--item"><a href="{{- $.Site.BaseURL -}}{{- .link -}}" title="{{- .text -}}">{{- .text -}}</a></li>
                     {{- end -}}
                 </ul>
             </div>
             {{- end -}}
         </div>
+        <div class="row"> 
+            <div class="col-xs-12 subheader bottom-xs lineDelayAnim--item">
+            {{- partial (printf "icons/digitaldigital-ico.html") -}}
+                <p class="tiny">
+                    &copy; <a href="{{ .Site.BaseURL }}"> {{ .Site.Title }} </a> {{- now.Format "2006" -}}
+                </p>
+            </div>
+        </div>
     </div>
     <div class="container hide-sm-up">
-        <ul class="mobile-main">
+        <ul class="mobile-main lineDelayAnim--item">
             {{- range $.Site.Data.menu.mobile -}}
             <li>
                 <a href="{{- $.Site.BaseURL -}}{{- .link -}}">{{- .title -}}</a>
@@ -45,7 +53,7 @@
             {{- end -}}
             <li class="has-sublinks">
                 <a href="{{- $.Site.BaseURL -}}services">
-                    <span>Services</span>
+                    <span>All Services</span>
                     <span class="icon plus-icon">{{- partial "icons/plus.html" -}}</span>
                     <span class="icon arrow-top-icon">{{- partial "icons/arrow-top.html" -}}</span>
                 </a>
@@ -53,12 +61,15 @@
                     {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
                     <li><a href="{{ .Permalink }}" title="{{- .Params.h1 -}}">{{- .Params.h1 -}}</a></li>
                     {{- end -}}
-                    {{ range where (where (where $.Site.Pages "Type" "services") "IsNode" true) ".File.Dir" "!=" "services/" }}
-                    <li><a href="{{ .Permalink }}" title="{{- .Params.h1 -}}">{{- .Params.h1 -}}</a></li>
-                    {{- end -}}
-                    <li><a href="{{- $.Site.BaseURL -}}services" title="All Services">All Services</a></li>                
                </ul>
             </li>
         </ul>
+        <div class="contact-cta lineDelayAnim--item"><a href="/contact" class="btn full is-white">Contact Us</a>
+        <div class="bar--container">
+            {{ range $i, $sequence :=  (seq 7) }}
+                <div class="bar "></div>
+            {{ end }}
+        </div>
+        </div>
     </div>
 </div>

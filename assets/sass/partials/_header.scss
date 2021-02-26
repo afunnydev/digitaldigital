@@ -1,9 +1,24 @@
+.nav-up {
+    top: -40px;
+}
 #header-main {
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    background-color: $white;
+    background-color: none;
     color: black;
+    position: fixed;
+    background: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    transition: all .3s ease;
+    .container{
+        position: relative;
+    }
+    &.hide {
+        top: -53px;
+    }
     &.black {
         background-color: black;
         color: white;
@@ -14,11 +29,19 @@
             color: black;
         }
     }
+    ul, li{
+        &:hover{
+            cursor: $hover;
+        }
+    }
 }
 
 #header {
     height: $mobilenavheight;
     margin: 0;
+    >div{
+        padding: 0;
+    }
     @include breakpoint(sm) {
         height: $navheight;
         padding-left: 0;
@@ -52,6 +75,12 @@
         @include breakpoint(sm) {
             display: inline-block;
             margin-left: 20px;
+        }
+    }
+    .hamburger{
+        cursor: $hover;
+        &:active{
+            cursor: $click;
         }
     }
     .hamburger-box {
@@ -96,29 +125,76 @@
     bottom: 0;
     opacity: 0;
     display: none;
-    background-color: $black;
+    background-color: none;
     transition: opacity 0.2s;
     padding-top: 200px;
     overflow-y: auto;
-    p.title {
-        font-size: 1.75rem;
-        line-height: 1.36em;
+    .contact-cta{
+        margin: 20px;
+        a{
+           margin: 0;
+           font-size: 1.5625rem; 
+           padding: 20px 10px;
+        }
+    }
+    .subheader{
+        position: absolute;
+        bottom: 0;
         color: $white;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        padding: 25px 0;
+        svg{
+            width: 12px;
+            margin-right: 12px;
+        }
+    }
+    .row{
+        margin-top:0px;
+        @include breakpoint(md) {
+            margin-top:100px;
+        }
+    }
+    .main-link a {
+        font-size: 1.75rem;
+    }
+    .title {
+        margin-top: 0;
+        margin-bottom:25px;
+        //font-size: 1.75rem;
+        line-height: 2.18em;
+        color: $white;
+        @include breakpoint(md) {
+            margin-bottom: 100px;
+        }
     }
     ul.desktop-main {
-        margin-top: 100px;
         padding-left: 0px;
         list-style: none;
         color: white;
     }
-    li {
+    li, .title {
         a {
             color: white !important;
             text-decoration: none;
-            font-size: 1.0625rem;
             line-height: 2.18em;
-            display: block;
-
+            transition: all 0.25s ease-in-out;
+            &:hover {
+              margin-left: 35px;
+              &:before{
+                opacity: 1;
+                left: 0px;
+              }
+            }
+            &:before {
+                content: '→';
+                transition: all 0.25s ease-in-out;
+                opacity: 0;
+                left: -10px;
+                width: 32px;
+                position: absolute;
+            }
         }
         &.active a {
             text-decoration: underline;
@@ -129,23 +205,37 @@
         padding: 0;
     }
     padding-top: 100px;
+
     ul.mobile-main { 
-        padding: 0 20px;
+        padding: 0px;
         margin: 0;
+        list-style-type: none;
         a {
-            padding: 15px 0;
+            margin-left: 0px;
+            &:before {
+              display: none;
+            }
             &:hover{
                 cursor: $hover;
             }
         }
+        .collapse{
+            padding: 0;
+            margin-top: 20px;
+        }
         li {
-            border-bottom: 1px solid $white;
+           
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             a {
+                padding:  20px;
+                display: flex;
+                text-decoration: none;
                 font-size: 1.375rem;
                 line-height: 1.5em;
             }
             &.has-sublinks {
                 a {
+                    
                     display: flex;
                     justify-content: space-between;
                 }
@@ -154,15 +244,19 @@
                 }
                 .content {
                     display: none;
-                    li:last-child {
-                        padding-bottom: 25px;
+           
+                    li{
+                        a{
+                            padding:  10px 20px;
+                            font-size: 1.125rem;
+                        }
                     }
                 }
                 li {
-                    &:last-child {
-                        border-bottom: none;
-                    }
+                    padding-left: 0;
+                    border-bottom: none;
                 }
+
                 &.opened {
                     .plus-icon{
                         display: none;
@@ -190,29 +284,41 @@
         }
     }
 }
-
+.bar--container {
+    width: 100%;
+    .bar{
+        position: absolute;
+       // bottom: 0;
+        width: 100%;
+        z-index: 100;
+        height: 4px;
+    }
+}
 .with-menu {
+
     overflow-y: hidden;
+    .overlay-background{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background-color: $black;
+        z-index: -1;
+        width: 100%;
+    }
+
+
     #menu-overlay {
         display: block;
         opacity: 1;
-    }
-
-    #header {
-        .logo, ul li a {
-            color: white;
-        }
-        .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-            background-color: white;
-        }
-        button {
-            color: white !important;
+        @include breakpoint(sm) {
+            overflow-y: hidden;
         }
     }
     #header-main {
         z-index: 12;
-        position: relative;
-        background: $black;
+        top: 0px;
+        //position: fixed;
+        
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         a, li {
             position: relative;

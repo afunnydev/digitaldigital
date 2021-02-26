@@ -3,6 +3,15 @@
     box-sizing: border-box;
 }
 
+::selection {
+  background: black;
+  color: white;
+}
+::-moz-selection {
+  background: black;
+  color: white;
+}
+
 body {
     overflow-x: hidden;
     color: $black;
@@ -11,7 +20,6 @@ body {
 }
 
 // Elements
-
 .btn {
 	inset: all;
 	background-color: $black;
@@ -24,6 +32,10 @@ body {
     &.full{
         width: 100%;
         text-align: center;
+    }
+    &.is-white{
+        background-color: $white;
+        color: $black;
     }
     &:hover {
         padding: 12px 45px;

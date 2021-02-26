@@ -1,0 +1,24 @@
+{{- define "main" -}}
+<div id="contact" class="section">
+    <div class="container section">
+        <div class="row section">
+            <div class="col-12">
+                {{- range .Params.links -}}
+                <h1 class="home with-dash" ><a href="{{ .link }}" target="_blank" title="contact">{{ .text }}</a></h1>
+                {{- end -}}
+            </div>
+        </div>
+        <div class="row contact-infos  around-xs">
+            {{- range .Params.contact -}}
+            <div class="col-lg col-sm-6 col-md-3 col-xs-12 info">
+                <p>{{ .name }}</p>
+                <p>{{ .text }}</p>
+                {{ if isset . "subtext" }}
+                <p>{{ .subtext }}</p>
+                {{- end -}}
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+{{- end -}}

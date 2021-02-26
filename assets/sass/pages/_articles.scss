@@ -17,6 +17,16 @@ main.article {
 }
 
 #article-info {
+    .progress-bar--container {
+        .progress-bar{
+            background: #4caf50;
+            position: fixed;
+            height: 3px;
+            top:0px;
+            width: 0%;
+            z-index: 100;
+        }
+    }
     h1 {
         font-size: 3.4365rem;
         line-height: 1.27em;
