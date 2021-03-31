@@ -6,103 +6,118 @@ h1: is a digital marketing agency that specializes in client and lead acquisitio
 portfolio:
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Americain Dairy'
       src: /img/americaindairy.png
     - url: '#'
-      title: 'Test'
+      title: 'The bedtime'
       src: /img/thebedtime.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'CNA'
       src: /img/cna-portfolio.png
     - url: '#'
-      title: 'Test'
+      title: 'Inbeat'
       src: /img/inbeat-portfolio.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Mogo'
       src: /img/mogo.png
     - url: '#'
-      title: 'Test'
+      title: 'PhoneLoops'
       src: /img/phoneloops.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'New Balance'
       src: /img/newbalance.png
     - url: '#'
-      title: 'Test'
+      title: 'Deux par Deux'
       src: /img/deux-par-deux-portfolio.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Ecologie'
       src: /img/ecologi.png
     - url: '#'
-      title: 'Test'
+      title: '7eleven'
       src: /img/7eleven.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'IBA'
       src: /img/iba.png
     - url: '#'
-      title: 'Test'
+      title: 'Brigil'
       src: /img/brigil.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Bluehouse Salmon'
       src: /img/bluehouse-salmon.png
     - url: '#'
-      title: 'Test'
+      title: 'Taigaboard'
       src: /img/taiga-board.png
+  - images:
+    - url: '#'
+      title: 'Soylent'
+      src: /img/Soylent.png
+    - url: '#'
+      title: 'Wildfang'
+      src: /img/Wildfang.png
 
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Americain Dairy'
       src: /img/americaindairy.png
     - url: '#'
-      title: 'Test'
+      title: 'The bedtime'
       src: /img/thebedtime.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'CNA'
       src: /img/cna-portfolio.png
     - url: '#'
-      title: 'Test'
+      title: 'Inbeat'
       src: /img/inbeat-portfolio.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Mogo'
       src: /img/mogo.png
     - url: '#'
-      title: 'Test'
+      title: 'PhoneLoops'
       src: /img/phoneloops.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'New Balance'
       src: /img/newbalance.png
     - url: '#'
-      title: 'Test'
+      title: 'Deux par Deux'
       src: /img/deux-par-deux-portfolio.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Ecologie'
       src: /img/ecologi.png
     - url: '#'
-      title: 'Test'
+      title: '7eleven'
       src: /img/7eleven.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'IBA'
       src: /img/iba.png
     - url: '#'
-      title: 'Test'
+      title: 'Brigil'
       src: /img/brigil.png
   - images:
     - url: '#'
-      title: 'Test'
+      title: 'Bluehouse Salmon'
       src: /img/bluehouse-salmon.png
     - url: '#'
-      title: 'Test'
+      title: 'Taigaboard'
       src: /img/taiga-board.png
+  - images:
+    - url: '#'
+      title: 'Soylent'
+      src: /img/Soylent.png
+    - url: '#'
+      title: 'Wildfang'
+      src: /img/Wildfang.png
+
 
 section3:
   title: We do
@@ -116,6 +131,12 @@ section3:
     - icon: moose
     - icon: nac
     - icon: bedtime
+    - icon: nordstorm
+    - icon: soylent
+    - icon: teamviewer
+    - icon: mogo
+    - icon: wildfang
+    - icon: melio
 section4:
   title: Our Work
   subtitle: We partner with companies in fast growing industries to drive customer acquisition

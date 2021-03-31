@@ -2,7 +2,9 @@
 	margin-right: 0;
 	margin-left: 0;
     .icons {
+		margin-bottom:120px;
 		@include breakpoint(md-down) {
+			margin-bottom:0px;
 			flex-basis:33.33333%;
 			&:nth-child(3n + 2) {
 				text-align: center;
