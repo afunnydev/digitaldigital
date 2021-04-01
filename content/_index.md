@@ -1,6 +1,6 @@
 ---
-title: DigitalDigital
-description: DigitalDigital
+title: Marketing Agency
+description: is a digital marketing agency that specializes in client and lead acquisitions
 date: 2019-03-17T18:18:43Z
 h1: is a digital marketing agency that specializes in client and lead acquisitions
 portfolio:
@@ -91,7 +91,7 @@ portfolio:
       src: /img/deux-par-deux-portfolio.png
   - images:
     - url: '#'
-      title: 'Ecologie'
+      title: 'Ecologi'
       src: /img/ecologi.png
     - url: '#'
       title: '7eleven'
