@@ -1,5 +1,5 @@
 <div class="row middle-xs between-xs logos-partial {{ .class }}">
     {{- range .logos -}}
-      <div class="icons">{{- partial (printf "icons/%s.html" .icon) -}} </div>
+      <div class="icons col-lg-2 col-md-2 col-xs-4">{{- partial (printf "icons/%s.html" .icon) -}} </div>
     {{- end -}}
 </div>
